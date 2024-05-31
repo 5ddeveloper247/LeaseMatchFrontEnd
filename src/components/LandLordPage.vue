@@ -64,28 +64,42 @@ const previousTab = () => {
 
 
 
-// Creating a ref for file input
-const fileInput = ref(null);
-// Creating a ref for storing the URLs of selected images
-const imageUrls = ref([]);
-
-// Function to handle file input change event
-const handleFileInput = (event) => {
-    const files = event.target.files;
-    if (files && files.length > 0) {
-        // Iterate through each selected file
+$(document).ready(() => {
+    const selectedFiles = [];
+    $('#file-input').on('change', function (event) {
+        const files = event.target.files;
+        const $imageContainer = $('#image-container');
+        $imageContainer.empty(); // Clear previous images
+        // Add selected files to the selectedFiles array
         for (let i = 0; i < files.length; i++) {
-            const file = files[i];
-            // Read the file as a data URL
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                // Push the URL of the selected image into the imageUrls array
-                imageUrls.value.push(e.target.result);
-            };
-            reader.readAsDataURL(file);
+            selectedFiles.push(files[i]);
         }
+        // Update the display
+        displaySelectedFiles();
+    });
+    function displaySelectedFiles() {
+        const $imageContainer = $('#image-container');
+        $imageContainer.empty(); // Clear previous images
+        selectedFiles.forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const $imageDiv = $('<div>').addClass('image-item');
+                const $image = $('<img>').attr('src', e.target.result);
+                $imageDiv.append($image);
+                const $fileName = $('<p>').text(file.name);
+                $imageDiv.append($fileName);
+                const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon');
+                $cancelButton.on('click', function () {
+                    selectedFiles.splice(index, 1);
+                    displaySelectedFiles();
+                });
+                $imageDiv.append($cancelButton);
+                $imageContainer.append($imageDiv);
+            }
+            reader.readAsDataURL(file);
+        });
     }
-};
+})
 </script>
 
 
@@ -304,37 +318,22 @@ const handleFileInput = (event) => {
                                 <label class="fieldlabels p-0">Special Instructions or Notes</label>
                                 <textarea></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
-                                <div class="row pt-2">
-                                    <div class="image-upload">
-                                        <!-- Use a label to wrap the upload icon -->
-                                        <label for="file-input">
-                                            <div>
-                                                <div class="image-container">
-                                                    <!-- File input element -->
-                                                    <input ref="fileInput" id="file-input" type="file" accept="image/*"
-                                                        multiple @change="handleFileInput" />
-                                                    <!-- Displaying the selected images -->
-                                                    <div v-for="(image, index) in imageUrls" :key="index"
-                                                        class="image-item">
-                                                        <img :src="image" alt="Selected Image"
-                                                            style="max-width: 100%; max-height: 200px;">
-                                                    </div>
-                                                    <!-- Hide the upload icon and other elements when a file is selected -->
-                                                    <div v-if="!imageUrl">
-                                                        <label for="file-input">
-                                                            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                                                        </label>
-                                                        <div class="image-info">
-                                                            <p id="file-name"></p>
-                                                        </div>
-                                                        <!-- <p class="text-white p-0" id="upload-text">Upload Image</p> -->
-                                                    </div>
-                                                </div>
+                                <div class="row">
+                                    <div class="group col-md-12">
+                                        <div class="image-upload">
+                                            <div class="upload-container">
+                                                <label for="file-input">
+                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                                </label>
+                                                <p class="site-color p-0" id="upload-text">Upload document</p>
                                             </div>
-                                        </label>
-
+                                            <input type="file" id="file-input" name="files" multiple>
+                                            <div id="image-container"></div>
+                                            <div class="image-info">
+                                                <p id="file-names"></p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- <p class="text-white p-0" id="upload-text">Upload Image</p> -->
                                 </div>
                             </div>
 

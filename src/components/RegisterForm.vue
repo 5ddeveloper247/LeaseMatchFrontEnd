@@ -60,34 +60,44 @@ export default {
             }
         });
 
-        document.getElementById('file-input').addEventListener('change', function (event) {
-            const files = event.target.files;
-            if (files.length > 0) {
-                const imageContainer = document.getElementById('image-container');
-                imageContainer.innerHTML = '';  // Clear previous images
-                const fileNamesElement = document.getElementById('file-names');
-                fileNamesElement.textContent = "";
-
+        $(document).ready(() => {
+            const selectedFiles = [];
+            $('#file-input').on('change', function (event) {
+                const files = event.target.files;
+                const $imageContainer = $('#image-container');
+                $imageContainer.empty(); // Clear previous images
+                // Add selected files to the selectedFiles array
                 for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-                    const reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        const imageDiv = document.createElement('div');
-                        imageDiv.classList.add('image-item');
-                        const image = new Image();
-                        image.src = e.target.result;
-                        imageDiv.appendChild(image);
-                        const fileName = document.createElement('p');
-                        fileName.textContent = file.name;
-                        imageDiv.appendChild(fileName);
-                        imageContainer.appendChild(imageDiv);
-                    };
-
-                    reader.readAsDataURL(file);
+                    selectedFiles.push(files[i]);
                 }
+                // Update the display
+                displaySelectedFiles();
+            });
+            function displaySelectedFiles() {
+                const $imageContainer = $('#image-container');
+                $imageContainer.empty(); // Clear previous images
+                selectedFiles.forEach((file, index) => {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const $imageDiv = $('<div>').addClass('image-item');
+                        const $image = $('<img>').attr('src', e.target.result);
+                        $imageDiv.append($image);
+                        const $fileName = $('<p>').text(file.name);
+                        $imageDiv.append($fileName);
+                        const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon');
+                        $cancelButton.on('click', function () {
+                            selectedFiles.splice(index, 1);
+                            displaySelectedFiles();
+                        });
+                        $imageDiv.append($cancelButton);
+                        $imageContainer.append($imageDiv);
+                    }
+                    reader.readAsDataURL(file);
+                });
             }
-        });
+        })
+
+
     }
 }
 
@@ -573,20 +583,19 @@ export default {
                                 <!-- 3 -->
                                 <div class="row">
                                     <div class="group col-md-12">
-                                        <div class="image-upload ">
-                                            <div class="upload-container d-flex flex-column align-items-center">
+                                        <div class="image-upload">
+                                            <div class="upload-container">
                                                 <label for="file-input">
                                                     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                                                 </label>
-                                                <p class="site-color p-0" id="upload-text">Upload Image</p>
+                                                <p class="site-color p-0" id="upload-text">Upload document</p>
                                             </div>
-                                            <input id="file-input" type="file" accept="image/*" multiple />
+                                            <input type="file" id="file-input" name="files" multiple>
                                             <div id="image-container"></div>
                                             <div class="image-info">
                                                 <p id="file-names"></p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
 
@@ -664,7 +673,7 @@ export default {
 
 
 
-<style scoped>
+<style>
 .modal-dialog {
     position: fixed;
     top: 12%;
@@ -691,14 +700,14 @@ export default {
     position: relative;
 }
 
-​ .register-overlay {
+/* ​ .register-overlay {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     background-color: #013539b8;
-}
+} */
 
 ​ .user-container {
     border: 1px solid var(--tex-color);
@@ -872,19 +881,20 @@ export default {
     color: #fff !important;
 }
 
-/* ​@media screen and (max-width: 767px) {
-    ​#progressbar li:before {
+@media screen and (max-width: 767px) {
+
+    #progressbar li:before {
         width: 25px !important;
         height: 25px !important;
         line-height: 20px !important;
         font-size: 12px !important;
     }
 
-    ​#progressbar li:after {
+    #progressbar li:after {
         top: 13px !important;
     }
 
-    ​#progressbar li {
+    #progressbar li {
         font-size: 10px;
         width: 18%;
         display: -webkit-box;
@@ -893,17 +903,25 @@ export default {
         overflow: hidden;
     }
 
-    ​.fs-title {
+    .fs-title {
         font-size: 18px !important;
     }
 
-    ​.steps {
+    .steps {
         font-size: 20px !important;
     }
-} */
+}
 
 #image-container {
-    margin-left: 5% !important;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-upload {
@@ -911,7 +929,7 @@ export default {
     display: flex;
 }
 
-​ .image-upload img {
+.image-upload img {
     width: 70px;
     height: 70px;
     object-fit: cover;
@@ -919,14 +937,15 @@ export default {
     border-radius: 50px;
 }
 
-​ .image-upload input[type="file"] {
+.image-upload input[type="file"] {
     display: none;
 }
 
-​ .image-upload label {
-    position: relative;
-    width: 70px;
-    height: 70px;
+.image-upload label {
+    position: relative !important;
+    width: 70px !important;
+    height: 70px !important;
+    /* Increased height to accommodate text below */
     border: 1px solid var(--tex-color);
     display: flex;
     align-items: center;
@@ -935,13 +954,13 @@ export default {
     border-radius: 50px;
 }
 
-​ .image-upload label i {
+.image-upload label i {
     font-size: 2rem;
     color: var(--tex-color);
     position: absolute;
 }
 
-​ .image-info {
+.image-info {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -953,7 +972,8 @@ export default {
     object-fit: cover
 }
 
-​ .image-item {
+.image-item {
+    position: relative !important;
     display: inline-block;
     margin-right: 20px;
     width: 80px;
@@ -976,5 +996,17 @@ export default {
     border-radius: 50px;
     margin-bottom: 5px;
     /* Added margin below images */
+}
+
+.cancel-icon {
+    position: absolute !important;
+    top: 0px !important;
+    right: 0px !important;
+    background: red !important;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px 8px;
+    font-size: 14px;
 }
 </style>

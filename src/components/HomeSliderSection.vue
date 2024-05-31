@@ -508,3 +508,10 @@ export default {
         </div>
     </section>
 </template>
+
+
+<style scoped>
+p {
+    color: #000 !important;
+}
+</style>
