@@ -111,7 +111,7 @@ export default {
         <div class="register-overlay"></div>
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-9 user-container my-5 px-5">
+                <div class="col-9 user-container my-5 px-5" style = "background-color: #fff; position: relative; border-radius: 10px; " >
 
                     <form id="msform">
 
@@ -588,7 +588,7 @@ export default {
                                                 <label for="file-input">
                                                     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                                                 </label>
-                                                <p class="site-color p-0" id="upload-text">Upload document</p>
+                                                <p class="site-color text-center p-0" id="upload-text">Upload document</p>
                                             </div>
                                             <input type="file" id="file-input" name="files" multiple>
                                             <div id="image-container"></div>
@@ -713,6 +713,9 @@ export default {
     border: 1px solid var(--tex-color);
     background: #ffffff;
     border-radius: 10px;
+    position: relative;
+    z-index: 9;
+    border-radius: 20px;
 }
 
 ​ #heading {

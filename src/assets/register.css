@@ -43,6 +43,14 @@
     margin-top: 20px
 }
 
+​#user-container1 {
+    border: 1px solid #051855 !important;
+    background: #ffffff !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    z-index: 9 !important;
+}
+
 #msform fieldset {
     background: white;
     border: 0 none;

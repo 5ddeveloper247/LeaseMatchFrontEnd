@@ -8,6 +8,7 @@ body {
     letter-spacing: .05em;
 }
 
+
 :root {
     --tex-color:
         #051855;
@@ -93,6 +94,7 @@ body {
     transition: top 0.3s;
     background-color: #ffffff;
     top: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .bg-dark-custom {
@@ -1960,6 +1962,7 @@ color: var(--tex-color);
     background: var(--tex-color);
     transition: all 0.2s ease;
     font-size: smaller;
+    z-index: 99;
 }
 
 body.show-chatbot .chatbot-toggler {

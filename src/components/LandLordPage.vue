@@ -105,8 +105,22 @@ $(document).ready(() => {
 
 
 <template>
-    <div class="container p-0 img-con">
-        <img class="w-100" src="../assets/images/form-wizard.jpg" alt="">
+    <div class="container p-0 img-con text-center">
+        <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
+        <div class="img-text px-1 px-md-5">
+            <div class="img-heading px-1 px-md-5 py-3">
+                <h2 class="text-white">
+                JOIN OUR EXCLUSIVE LEASE MATCH NETWORK
+            </h2>
+            <p class="">
+                Welcome to Lease Match! Our quick intake form is your gateway to accessing a curated list of vetted
+                renters in New York City. By filling out this form, you’ll be added to our comprehensive database of
+                distinguished properties. Rest assured, a member of our team will review your submission and reach out
+                to you within 24 hours. We’re excited to partner with you in finding the perfect match for your rental
+                property.
+            </p>
+            </div>
+        </div>
     </div>
     <section class="new-form-section container p-5">
         <div class="row">
@@ -183,7 +197,8 @@ $(document).ready(() => {
                                     <input type="number" name="yearBuilt" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Year of Last Major Renovation (if applicable)</label>
+                                    <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
+                                        applicable)</label>
                                     <input type="number" name="renovationYear" />
                                 </div>
                             </div>
@@ -433,7 +448,27 @@ fieldset {
 }
 
 .img-con {
-    margin-top: 10rem
+    background-image: url('../assets/images/form-wizard.jpg');
+    /* position: relative; */
+    margin-top: 10rem;
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    width: 100%;
+}
+
+.img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.img-heading {
+    border: 1px solid #fff;
+    background-color: #0000003a;
 }
 
 .nav-link {
