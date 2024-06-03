@@ -1,26 +1,10 @@
-<script setup>
-var swiper = new Swiper('.swiper-container', {
-    slidesOffsetBefore: 250,
-    loop: true,
-    infinite: true,
-    slidePerView: 3,
-    spaceBetween: 10,
-    autoplay: true,
-    direction: 'vertical',
-    loopAddBlankSlides: false,
-});
-</script>
-
-
-
-
 <template>
     <!-- login -->
     <section class="login_sec bg-light">
-        <div class="container-fluid" style="background: linear-gradient(45deg,transparent, var(--tex-color));">
+        <div class="container-fluid" style="background-color: #fff">
             <div class="container py-4">
-                <div class="row justify-content-around py-2">
-                    <div class="col-sm-6 col-lg-4">
+                <div class="row gy-4 justify-content-around form-con py-2">
+                    <div class="col-md-6 col-lg-5">
                         <div class="position-relative site-login">
                             <div class="custom-shape-divider-top-1716874915">
                                 <span class="lease-match-text font-weight">LeaseMatch</span>
@@ -36,30 +20,22 @@ var swiper = new Swiper('.swiper-container', {
                             <div class="circle2"></div>
                             <div class="circle3"></div>
                             <h5 class="position-absolute login-heading-pic">Hi, Welcome Back</h5>
-                            <div class="position-relative" style="overflow: hidden;overflow: hidden;
-                           height: 79%;
-                           bottom: -21%;">
+                            <div class="position-relative" style="overflow: hidden; height: 79%; bottom: -21%;">
                                 <div class="login-image">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide"><img src="../assets/images/login.jpg"
-                                                    class="h-100 w-100">
-                                            </div>
-                                            <div class="swiper-slide"> <img src="../assets/images/about-3.webp"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
+                                            <div class="swiper-slide"><img src="../assets/images/about-3.webp"
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/banner.png"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/login.jpg"
-                                                    class="h-100 w-100">
-                                            </div>
-                                            <div class="swiper-slide"> <img src="../assets/images/about-3.webp"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
+                                            <div class="swiper-slide"><img src="../assets/images/about-3.webp"
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/banner.png"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -67,69 +43,36 @@ var swiper = new Swiper('.swiper-container', {
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide"><img src="../assets/images/login.jpg"
-                                                    class="h-100 w-100">
-                                            </div>
-                                            <div class="swiper-slide"> <img src="../assets/images/about-3.webp"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
+                                            <div class="swiper-slide"><img src="../assets/images/about-3.webp"
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/banner.png"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/login.jpg"
-                                                    class="h-100 w-100">
-                                            </div>
-                                            <div class="swiper-slide"> <img src="../assets/images/about-3.webp"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
+                                            <div class="swiper-slide"><img src="../assets/images/about-3.webp"
+                                                    class="h-100 w-100"></div>
                                             <div class="swiper-slide"><img src="../assets/images/banner.png"
-                                                    class="h-100 w-100">
-                                            </div>
+                                                    class="h-100 w-100"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="border-column col-lg d-none d-lg-block"></div>
                     <!-- form -->
-                    <div class="col-sm-6 col-lg-4 d-flex flex-column justify-content-center">
+                    <div class="col-md-6 form col-lg-5 d-flex flex-column justify-content-center">
                         <h3>Sign In</h3>
                         <form class="mt-4">
-
-                            <!-- <div class="login_social-links d-flex justify-content-between" style="gap: 10px;">
-                                <a data-mdb-ripple-init class="btn btn-lg btn-block" style="color: 	#1877F2;" href="#!"
-                                    role="button">
-                                    <i class="fab fa-facebook-f me-2"></i>
-                                </a>
-                                <a data-mdb-ripple-init class="btn  btn-lg btn-block" style="color: #F56040" href="#!"
-                                    role="button">
-                                    <i class="fab fa-instagram me-2"></i>
-                                </a>
-                                <a data-mdb-ripple-init class="btn  btn-lg btn-block" style="color: #FF0000" href="#!"
-                                    role="button">
-                                    <i class="fab fa-youtube me-2"></i>
-                                </a>
-                                <a data-mdb-ripple-init class="btn btn-lg btn-block" style="color:	#1DA1F2" href="#!"
-                                    role="button">
-                                    <i class="fab fa-twitter me-2"></i></a>
-                                <a data-mdb-ripple-init class="btn btn-lg btn-block" style="color: #0088cc" href="#!"
-                                    role="button">
-                                    <i class="fab fa-telegram me-2"></i></a>
-                            </div> -->
-
-                            <!-- <div class="divider d-flex align-items-center my-4">
-                                <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-                            </div> -->
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="email" id="form1Example13" class="form-control form-control-md"
                                     placeholder="Email address">
-
                             </div>
-
                             <!-- Password input -->
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="password" id="form1Example23" class="form-control form-control-md"
                                     placeholder="Password">
-
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <!-- Checkbox -->
@@ -143,7 +86,6 @@ var swiper = new Swiper('.swiper-container', {
                             <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                 class="btn btn-lg d-flex w-100 align-items-center justify-content-center login-btn">Sign
                                 in</button>
-
                         </form>
                     </div>
                 </div>
@@ -153,7 +95,38 @@ var swiper = new Swiper('.swiper-container', {
 </template>
 
 
+
+<script>
+import { onMounted } from 'vue';
+
+export default {
+    setup() {
+        onMounted(() => {
+            new Swiper('.swiper-container', {
+                slidesOffsetBefore: 250,
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                direction: 'vertical',
+            });
+        });
+    }
+}
+</script>
+
+
+
+
 <style scoped>
+
+.form-con {
+    display: flex;
+}
+
 .swiper-wrapper {
     display: flex;
     flex-direction: column;
@@ -166,4 +139,13 @@ var swiper = new Swiper('.swiper-container', {
     height: 100%;
     object-fit: cover;
 }
+
+.border-column {
+    border-left: 1.5px solid #0e0d0d66; 
+    height: 45vh;
+    margin: 8rem 0 0 7rem;
+}
+
+
+
 </style>

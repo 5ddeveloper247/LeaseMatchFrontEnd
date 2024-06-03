@@ -136,9 +136,9 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="button main-content-btn theme_btn1" href="contact-us.html">Get in Touch
+                        <RouterLink class="button main-content-btn theme_btn1" to="/contact">Get in Touch
                             <span></span><span></span><span></span><span></span>
-                        </a>
+                        </RouterLink>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@ onMounted(() => {
         opacity: 0,
         y: 10,
         ease: "power2.out",
-        stagger: 0.1
+        stagger: 0.03
     });
 
     gsap.set([paragraphElement, spanElement, enrollLinkElement], {
@@ -230,11 +230,11 @@ onMounted(() => {
     const timeline = gsap.timeline();
     timeline.add(headingAnimation);
     timeline.to([paragraphElement, spanElement, enrollLinkElement], {
-        duration: 0.7,
+        duration: 0.4,
         opacity: 1,
         y: 0,
         ease: "power2.out",
-        stagger: 1
+        stagger: .1
     });
 });
 </script>

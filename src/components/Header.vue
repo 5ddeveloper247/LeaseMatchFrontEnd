@@ -42,9 +42,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top container bg-header">
         <!-- <div class="container bg-light"> -->
-        <a class="navbar-brand mx-3 p-0" href="index.html">
+        <RouterLink class="navbar-brand mx-3 p-0" to="/">
             <img src="../assets/images/logo-dark-150.png" alt="" width="150" height="50">
-        </a>
+        </RouterLink>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

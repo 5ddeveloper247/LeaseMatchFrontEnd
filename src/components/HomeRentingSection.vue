@@ -132,7 +132,7 @@ export default {
                                 holders, and multispecialty suppliers that have verified credentials and capabilities.
                             </p>
                             <div class="d-flex text-white align-items-center" style="gap: 15px;">
-                                <a href="#" class="quality-icon"><i class="fa fa-play"></i>watch video</a>
+                                <RouterLink to="/registerForm" class="quality-icon">Register</RouterLink>
                                 <a href="#" class="text-white">learn more</a>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ export default {
                                 holders, and multispecialty suppliers that have verified credentials and capabilities.
                             </p>
                             <div class="d-flex text-white align-items-center" style="gap: 15px;">
-                                <a href="#" class="quality-icon"><i class="fa fa-play"></i>watch video</a>
+                                <RouterLink to="/landlord" class="quality-icon">LandLord Portal</RouterLink>
                                 <a href="#" class="text-white">learn more</a>
                             </div>
                         </div>
