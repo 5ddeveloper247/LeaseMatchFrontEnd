@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "axios": "^1.7.2",
+    "toastr": "^2.1.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

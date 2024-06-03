@@ -1,109 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-
-const tabs = ref([
-    {
-        id: 'personal-tab-pane',
-        name: 'Personal Information',
-        contentTitle: 'Personal & Property Information:'
-    },
-    {
-        id: 'property-tab-pane',
-        name: 'Property Details',
-        contentTitle: 'Property Details:'
-    },
-    {
-        id: 'rental-tab-pane',
-        name: 'Rental Specifics',
-        contentTitle: 'Rental Specifics:'
-    },
-    {
-        id: 'tenant-tab-pane',
-        name: 'Tenant',
-        contentTitle: 'Tenant Preferences:'
-    },
-    {
-        id: 'additional-tab-pane',
-        name: 'Additional Information',
-        contentTitle: 'Additional Information:'
-    },
-    {
-        id: 'finish-tab-pane',
-        name: 'Finish',
-        contentTitle: 'Finish:'
-    },
-])
-
-//track active tabs
-const activeTab = ref(tabs.value[0].id);
-
-
-
-//tab selection function
-const selectTab = (tabId) => {
-    activeTab.value = tabId;
-}
-
-
-
-//next tab function
-const nextTab = () => {
-    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
-    if (currentIndex < tabs.value.length - 1) {
-        activeTab.value = tabs.value[currentIndex + 1].id
-    }
-}
-
-//prev tab function
-const previousTab = () => {
-    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
-    if (currentIndex < tabs.value.length - 1) {
-        activeTab.value = tabs.value[currentIndex - 1].id
-    }
-}
-
-
-
-$(document).ready(() => {
-    const selectedFiles = [];
-    $('#file-input').on('change', function (event) {
-        const files = event.target.files;
-        const $imageContainer = $('#image-container');
-        $imageContainer.empty(); // Clear previous images
-        // Add selected files to the selectedFiles array
-        for (let i = 0; i < files.length; i++) {
-            selectedFiles.push(files[i]);
-        }
-        // Update the display
-        displaySelectedFiles();
-    });
-    function displaySelectedFiles() {
-        const $imageContainer = $('#image-container');
-        $imageContainer.empty(); // Clear previous images
-        selectedFiles.forEach((file, index) => {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const $imageDiv = $('<div>').addClass('image-item');
-                const $image = $('<img>').attr('src', e.target.result);
-                $imageDiv.append($image);
-                const $fileName = $('<p>').text(file.name);
-                $imageDiv.append($fileName);
-                const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon');
-                $cancelButton.on('click', function () {
-                    selectedFiles.splice(index, 1);
-                    displaySelectedFiles();
-                });
-                $imageDiv.append($cancelButton);
-                $imageContainer.append($imageDiv);
-            }
-            reader.readAsDataURL(file);
-        });
-    }
-})
-</script>
-
-
-
 <template>
     <div class="container p-0 img-con text-center">
         <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
@@ -141,18 +35,18 @@ $(document).ready(() => {
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" name="uname" placeholder="UserName" />
+                                    <input type="text" v-model="formData.full_name" name="full_name" placeholder="UserName" maxlength="100"/>
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="email" name="email" placeholder="Email Id" />
+                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id" maxlength="100"/>
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="group col-md-6">
-                                    <input type="number" name="phone" placeholder="Enter your phone number" />
+                                    <input type="number" v-model="formData.phone_number" name="phone_number" placeholder="Enter your phone number" maxlength="14"/>
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="text" name="company" placeholder="Enter your company name" />
+                                    <input type="text" v-model="formData.company_name" name="company_name" placeholder="Enter your company name" maxlength="100"/>
                                 </div>
                             </div>
                         </div>
@@ -163,43 +57,42 @@ $(document).ready(() => {
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address:</label>
-                            <input type="text" name="address" />
+                            <input type="text" v-model="formData.street_address" name="street_address" />
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number:</label>
-                                    <input type="text" name="unit" />
+                                    <input type="text" v-model="formData.appartment_number" name="appartment_number" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Borough/Neighborhood</label>
-                                    <input type="text" name="borough" />
+                                    <input type="text" v-model="formData.neighbourhood" name="neighbourhood" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Property Type</label>
-                                    <select class="form-select pt-0" aria-label="Default select example">
-                                        <option selected>Please choose an option</option>
-                                        <option value="1">Apartment</option>
-                                        <option value="2">Condo</option>
-                                        <option value="3">House</option>
-                                        <option value="4">Studio</option>
+                                    <select class="form-select pt-0" v-model="formData.property_type" name="property_type" aria-label="Default select example">
+                                        <option value="">Please choose an option</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="Condo">Condo</option>
+                                        <option value="House">House</option>
+                                        <option value="Studio">Studio</option>
                                     </select>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Units (if multi-unit property)</label>
-                                    <input type="number" name="units" />
+                                    <input type="number" v-model="formData.number_of_units" name="number_of_units" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year Built</label>
-                                    <br><br><br class="d-block d-md-none">
-                                    <input type="number" name="yearBuilt" />
+                                    <input type="number" v-model="formData.year_built" name="year_built" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
                                         applicable)</label>
-                                    <input type="number" name="renovationYear" />
+                                    <input type="number" v-model="formData.major_renovation" name="major_renovation" />
                                 </div>
                             </div>
                         </div>
@@ -216,11 +109,11 @@ $(document).ready(() => {
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)</label>
-                                    <input type="number" name="size">
+                                    <input type="number" v-model="formData.size_square_feet" name="size_square_feet">
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Number of Bedrooms
-                                        Photo:</label> <input type="number" name="bed">
+                                    <label class="fieldlabels p-0">Number of Bedrooms Photo:</label> 
+                                        <input type="number" v-model="formData.number_of_bedrooms" name="number_of_bedrooms">
                                 </div>
                             </div>
 
@@ -228,14 +121,14 @@ $(document).ready(() => {
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels pt-2">Number of Bathrooms</label>
-                                    <input type="number" name="rooms" />
+                                    <input type="number" v-model="formData.number_of_bathrooms" name="number_of_bathrooms" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Type of Rental
-                                    </label> <select class="form-select" aria-label="Default select example">
-                                        <option selected>Please choose an option</option>
-                                        <option value="1">Furnished</option>
-                                        <option value="2">Unfurnished</option>
+                                    <label class="fieldlabels p-0">Type of Rental</label> 
+                                    <select class="form-select" v-model="formData.rental_type" name="rental_type" aria-label="Default select example">
+                                        <option value="">Please choose an option</option>
+                                        <option value="Furnished">Furnished</option>
+                                        <option value="Unfurnished">Unfurnished</option>
                                     </select>
                                 </div>
                             </div>
@@ -244,28 +137,28 @@ $(document).ready(() => {
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Monthly Rent (USD)</label>
                                     <br><br>
-                                    <input type="number" name="builtyear" />
+                                    <input type="number" v-model="formData.monthly_rent" name="monthly_rent" />
                                 </div>
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Security Deposit Requirement (USD)</label>
-                                    <input type="number" name="builtyear" />
+                                    <input type="number" v-model="formData.security_deposit" name="security_deposit" />
                                 </div>
 
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Minimum Lease Duration (Month)</label>
-                                    <input type="number" name="builtyear" />
+                                    <input type="number" v-model="formData.lease_duration" name="lease_duration" />
                                 </div>
                             </div>
                             <!-- 4 -->
                             <div class="row">
                                 <div class="group col-md-12">
                                     <label class="fieldlabels p-0">Renewal Options</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Please choose an option</option>
-                                        <option value="1">Monthly</option>
-                                        <option value="2">Quarterly</option>
-                                        <option value="3">Half Yearly</option>
-                                        <option value="4">Yearly</option>
+                                    <select class="form-select" v-model="formData.renwal_option" name="renwal_option" aria-label="Default select example">
+                                        <option value="">Please choose an option</option>
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="Quarterly">Quarterly</option>
+                                        <option value="Half Yearly">Half Yearly</option>
+                                        <option value="Yearly">Yearly</option>
                                     </select>
                                 </div>
                             </div>
@@ -273,12 +166,12 @@ $(document).ready(() => {
                             <!-- 5 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">List of Amenities</label> <input type="text"
-                                        name="builtyear" placeholder="e.g., In-unit Laundry, Dishwasher" />
+                                    <label class="fieldlabels p-0">List of Amenities</label> 
+                                    <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities" placeholder="e.g., In-unit Laundry, Dishwasher" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Security Deposit Requirement (USD)</label> <input
-                                        type="number" name="builtyear" placeholder="e.g., Balcony, Pet-friendly" />
+                                    <label class="fieldlabels p-0">Special Features</label> 
+                                    <input type="text" v-model="formData.special_feature" name="special_feature" placeholder="e.g., Balcony, Pet-friendly" />
                                 </div>
                             </div>
                         </div>
@@ -294,22 +187,22 @@ $(document).ready(() => {
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics</label>
-                                    <input type="text" name="ideal" placeholder="e.g., Non_smoker, No Pets">
+                                    <input type="text" v-model="formData.tenant_characteristics" name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range</label>
-                                    <input type="text" name="score">
+                                    <input type="text" v-model="formData.credit_score" name="credit_score">
                                 </div>
                             </div>
                             <!-- 2 -->
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Income Requirements</label>
-                                    <input type="text" name="income">
+                                    <input type="text" v-model="formData.income_requirements" name="income_requirements">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Rental History Checks</label>
-                                    <input type="text" name="history">
+                                    <input type="text" v-model="formData.rental_history" name="rental_history">
                                 </div>
                             </div>
                         </div>
@@ -331,7 +224,7 @@ $(document).ready(() => {
                             </div>
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes</label>
-                                <textarea></textarea>
+                                <textarea v-model="formData.special_note" name="special_note"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -342,7 +235,7 @@ $(document).ready(() => {
                                                 </label>
                                                 <p class="site-color p-0" id="upload-text">Upload document</p>
                                             </div>
-                                            <input type="file" id="file-input" name="files" multiple>
+                                            <input type="file" id="file-input" name="file" multiple>
                                             <div id="image-container"></div>
                                             <div class="image-info">
                                                 <p id="file-names"></p>
@@ -388,8 +281,8 @@ $(document).ready(() => {
                                 </div>
                             </div>
                         </div>
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
+                        <!-- <button type="button" @click="previousTab"
+                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
                         <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3">Finish</button>
                     </fieldset>
                 </div>
@@ -398,8 +291,279 @@ $(document).ready(() => {
     </section>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+import axiosInstance from '@/plugins/axios';
+
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
+const tabs = ref([
+    {
+        id: 'personal-tab-pane',
+        name: 'Personal Information',
+        contentTitle: 'Personal & Property Information:'
+    },
+    {
+        id: 'property-tab-pane',
+        name: 'Property Details',
+        contentTitle: 'Property Details:'
+    },
+    {
+        id: 'rental-tab-pane',
+        name: 'Rental Specifics',
+        contentTitle: 'Rental Specifics:'
+    },
+    {
+        id: 'tenant-tab-pane',
+        name: 'Tenant',
+        contentTitle: 'Tenant Preferences:'
+    },
+    {
+        id: 'additional-tab-pane',
+        name: 'Additional Information',
+        contentTitle: 'Additional Information:'
+    },
+    {
+        id: 'finish-tab-pane',
+        name: 'Finish',
+        contentTitle: 'Finish:'
+    },
+]);
+const selectedFiles = [];
+
+
+const formData = {   
+            step: '1',
+            full_name: '',
+            email: '',
+            phone_number: '',
+            company_name: '',
+
+            street_address: '',
+            appartment_number: '',
+            neighbourhood: '',
+            property_type: '',
+            number_of_units: '',
+            year_built: '',
+            major_renovation: '',
+
+            size_square_feet: '',
+            number_of_bedrooms: '',
+            number_of_bathrooms: '',
+            rental_type: '',
+            monthly_rent: '',
+            security_deposit: '',
+            lease_duration: '',
+            renwal_option: '',
+            list_of_amenities: '',
+            special_feature: '',
+
+            tenant_characteristics: '',
+            credit_score: '',
+            income_requirements: '',
+            rental_history: '',
+
+            special_note: ''
+        };
+var errors = {}; // Object to hold field-specific error messages
+var serverError = '';  // String to hold general server error messages
+
+//track active tabs
+const activeTab = ref(tabs.value[0].id);
+
+//tab selection function
+const selectTab = (tabId) => {
+    activeTab.value = tabId;
+}
+
+//next tab function
+const nextTab = async () => {
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
+    });
+
+    if(selectedFiles.length > 0) {
+        for (let i = 0; i < selectedFiles.length; i++) {
+            data.append('property_photos[]', selectedFiles[i]);
+        }
+    } else {
+        data.append('property_photos', '');
+    }
+    
+    try {
+
+        $('[name]').removeClass('is-invalid');
+        const response = await axiosInstance.post('/landlord/validate', data);
+        
+        if (response.data.success) {
+        
+            const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+            if (currentIndex < tabs.value.length - 1) {
+                formData.step++;
+
+                if(formData.step == '6'){
+                    storeLandlord();
+                }else{
+                    activeTab.value = tabs.value[currentIndex + 1].id
+                }
+            }
+            serverError = ''; // Clear any server error messages
+        } else {
+            toastr.error('API error:', response.data.error);
+            console.error('API error:', response.data.error);
+        }
+    } catch (error) {
+       
+        if (error.response && error.response.status === 422) {
+            // Handle validation errors
+            Object.entries(error.response.data.errors).forEach(([key, value]) => {
+                toastr.error(value[0]);
+                var inputField = $('[name="' + key + '"]');
+                inputField.addClass('is-invalid');
+            });
+        } else {
+            // Handle other errors
+            toastr.error('An unexpected error occurred. Please try again.');
+            serverError = 'An unexpected error occurred. Please try again.';
+        }
+    }
+}
+
+//prev tab function
+const previousTab = () => {
+    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+    if (currentIndex < tabs.value.length - 1) {
+        activeTab.value = tabs.value[currentIndex - 1].id
+        formData.step--;
+    }
+}
+
+const storeLandlord = async () => {
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
+    });
+
+    if(selectedFiles.length > 0) {
+        for (let i = 0; i < selectedFiles.length; i++) {
+            data.append('property_photos[]', selectedFiles[i]);
+        }
+    } else {
+        data.append('property_photos', '');
+    }
+    
+    try {
+
+        $('[name]').removeClass('is-invalid');
+        const response = await axiosInstance.post('/landlord/store', data);
+        
+        if (response.data.success) {
+        
+            formData.step = '1';
+            formData.full_name = '';
+            formData.email = '';
+            formData.phone_number = '';
+            formData.company_name = '';
+            formData.street_address = '';
+            formData.appartment_number = '';
+            formData.neighbourhood = '';
+            formData.property_type = '';
+            formData.number_of_units = '';
+            formData.year_built = '';
+            formData.major_renovation = '';
+            formData.size_square_feet = '';
+            formData.number_of_bedrooms = '';
+            formData.number_of_bathrooms = '';
+            formData.rental_type = '';
+            formData.monthly_rent = '';
+            formData.security_deposit = '';
+            formData.lease_duration = '';
+            formData.renwal_option = '';
+            formData.list_of_amenities = '';
+            formData.special_feature = '';
+            formData.tenant_characteristics = '';
+            formData.credit_score = '';
+            formData.income_requirements = '';
+            formData.rental_history = '';
+            formData.special_note = '';
+
+            const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+            if (currentIndex < tabs.value.length - 1) {
+                activeTab.value = tabs.value[currentIndex + 1].id
+            }
+            serverError = ''; // Clear any server error messages
+        } else {
+            toastr.error('API error:', response.data.error);
+            console.error('API error:', response.data.error);
+        }
+    } catch (error) {
+       
+        if (error.response && error.response.status === 422) {
+            // Handle validation errors
+            Object.entries(error.response.data.errors).forEach(([key, value]) => {
+                toastr.error(value[0]);
+                var inputField = $('[name="' + key + '"]');
+                inputField.addClass('is-invalid');
+            });
+        } else {
+            // Handle other errors
+            toastr.error('An unexpected error occurred. Please try again.');
+            serverError = 'An unexpected error occurred. Please try again.';
+        }
+    }
+}
+
+$(document).on('keyup', "[type=number], [type=email]", function (e) {
+    if ($(this).attr('maxlength')) {
+        if (this.value.length > this.maxLength) {
+            this.value = this.value.slice(0, this.maxLength);
+        }
+    }
+});
+$(document).ready(() => {
+    
+    $('#file-input').on('change', function (event) {
+        const files = event.target.files;
+        const $imageContainer = $('#image-container');
+        $imageContainer.empty(); // Clear previous images
+        // Add selected files to the selectedFiles array
+        for (let i = 0; i < files.length; i++) {
+            selectedFiles.push(files[i]);
+        }
+        // Update the display
+        displaySelectedFiles();
+    });
+    function displaySelectedFiles() {
+        const $imageContainer = $('#image-container');
+        $imageContainer.empty(); // Clear previous images
+        selectedFiles.forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const $imageDiv = $('<div>').addClass('image-item');
+                const $image = $('<img>').attr('src', e.target.result);
+                $imageDiv.append($image);
+                const $fileName = $('<p>').text(file.name);
+                $imageDiv.append($fileName);
+                const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon');
+                $cancelButton.on('click', function () {
+                    selectedFiles.splice(index, 1);
+                    displaySelectedFiles();
+                });
+                $imageDiv.append($cancelButton);
+                $imageContainer.append($imageDiv);
+            }
+            reader.readAsDataURL(file);
+        });
+    }
+})
+</script>
 
 <style scoped>
+.is-invalid{
+    border-color: #ff0000 !important;
+}
 .new-form-section {
     margin-bottom: 5rem;
     background-color: #012252;
