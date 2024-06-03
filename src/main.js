@@ -1,5 +1,4 @@
 import './assets/main.css'
-// import './assets/jquery.flipster.css'
 import './assets/register.css'
 
 
