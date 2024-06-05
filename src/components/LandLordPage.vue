@@ -4,15 +4,17 @@
         <div class="img-text px-1 px-md-5">
             <div class="img-heading px-1 px-md-5 py-3">
                 <h2 class="text-white">
-                JOIN OUR EXCLUSIVE LEASE MATCH NETWORK
-            </h2>
-            <p class="">
-                Welcome to Lease Match! Our quick intake form is your gateway to accessing a curated list of vetted
-                renters in New York City. By filling out this form, you’ll be added to our comprehensive database of
-                distinguished properties. Rest assured, a member of our team will review your submission and reach out
-                to you within 24 hours. We’re excited to partner with you in finding the perfect match for your rental
-                property.
-            </p>
+                    JOIN OUR EXCLUSIVE LEASE MATCH NETWORK
+                </h2>
+                <p class="">
+                    Welcome to Lease Match! Our quick intake form is your gateway to accessing a curated list of vetted
+                    renters in New York City. By filling out this form, you’ll be added to our comprehensive database of
+                    distinguished properties. Rest assured, a member of our team will review your submission and reach
+                    out
+                    to you within 24 hours. We’re excited to partner with you in finding the perfect match for your
+                    rental
+                    property.
+                </p>
             </div>
         </div>
     </div>
@@ -35,18 +37,22 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name" placeholder="UserName" maxlength="100"/>
+                                    <input type="text" v-model="formData.full_name" name="full_name"
+                                        placeholder="UserName" maxlength="100" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id" maxlength="100"/>
+                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
+                                        maxlength="100" />
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="group col-md-6">
-                                    <input type="number" v-model="formData.phone_number" name="phone_number" placeholder="Enter your phone number" maxlength="14"/>
+                                    <input type="number" v-model="formData.phone_number" name="phone_number"
+                                        placeholder="Enter your phone number" maxlength="14" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.company_name" name="company_name" placeholder="Enter your company name" maxlength="100"/>
+                                    <input type="text" v-model="formData.company_name" name="company_name"
+                                        placeholder="Enter your company name" maxlength="100" />
                                 </div>
                             </div>
                         </div>
@@ -71,7 +77,8 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Property Type</label>
-                                    <select class="form-select pt-0" v-model="formData.property_type" name="property_type" aria-label="Default select example">
+                                    <select class="form-select pt-0" v-model="formData.property_type"
+                                        name="property_type" aria-label="Default select example">
                                         <option value="">Please choose an option</option>
                                         <option value="Apartment">Apartment</option>
                                         <option value="Condo">Condo</option>
@@ -112,8 +119,9 @@
                                     <input type="number" v-model="formData.size_square_feet" name="size_square_feet">
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Number of Bedrooms Photo:</label> 
-                                        <input type="number" v-model="formData.number_of_bedrooms" name="number_of_bedrooms">
+                                    <label class="fieldlabels p-0">Number of Bedrooms Photo:</label>
+                                    <input type="number" v-model="formData.number_of_bedrooms"
+                                        name="number_of_bedrooms">
                                 </div>
                             </div>
 
@@ -121,11 +129,13 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels pt-2">Number of Bathrooms</label>
-                                    <input type="number" v-model="formData.number_of_bathrooms" name="number_of_bathrooms" />
+                                    <input type="number" v-model="formData.number_of_bathrooms"
+                                        name="number_of_bathrooms" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Type of Rental</label> 
-                                    <select class="form-select" v-model="formData.rental_type" name="rental_type" aria-label="Default select example">
+                                    <label class="fieldlabels p-0">Type of Rental</label>
+                                    <select class="form-select" v-model="formData.rental_type" name="rental_type"
+                                        aria-label="Default select example">
                                         <option value="">Please choose an option</option>
                                         <option value="Furnished">Furnished</option>
                                         <option value="Unfurnished">Unfurnished</option>
@@ -153,7 +163,8 @@
                             <div class="row">
                                 <div class="group col-md-12">
                                     <label class="fieldlabels p-0">Renewal Options</label>
-                                    <select class="form-select" v-model="formData.renwal_option" name="renwal_option" aria-label="Default select example">
+                                    <select class="form-select" v-model="formData.renwal_option" name="renwal_option"
+                                        aria-label="Default select example">
                                         <option value="">Please choose an option</option>
                                         <option value="Monthly">Monthly</option>
                                         <option value="Quarterly">Quarterly</option>
@@ -166,12 +177,14 @@
                             <!-- 5 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">List of Amenities</label> 
-                                    <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities" placeholder="e.g., In-unit Laundry, Dishwasher" />
+                                    <label class="fieldlabels p-0">List of Amenities</label>
+                                    <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities"
+                                        placeholder="e.g., In-unit Laundry, Dishwasher" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Special Features</label> 
-                                    <input type="text" v-model="formData.special_feature" name="special_feature" placeholder="e.g., Balcony, Pet-friendly" />
+                                    <label class="fieldlabels p-0">Special Features</label>
+                                    <input type="text" v-model="formData.special_feature" name="special_feature"
+                                        placeholder="e.g., Balcony, Pet-friendly" />
                                 </div>
                             </div>
                         </div>
@@ -187,7 +200,8 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics</label>
-                                    <input type="text" v-model="formData.tenant_characteristics" name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets">
+                                    <input type="text" v-model="formData.tenant_characteristics"
+                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range</label>
@@ -198,7 +212,8 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Income Requirements</label>
-                                    <input type="text" v-model="formData.income_requirements" name="income_requirements">
+                                    <input type="text" v-model="formData.income_requirements"
+                                        name="income_requirements">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Rental History Checks</label>
@@ -333,39 +348,39 @@ const tabs = ref([
 const selectedFiles = [];
 
 
-const formData = {   
-            step: '1',
-            full_name: '',
-            email: '',
-            phone_number: '',
-            company_name: '',
+const formData = {
+    step: '1',
+    full_name: '',
+    email: '',
+    phone_number: '',
+    company_name: '',
 
-            street_address: '',
-            appartment_number: '',
-            neighbourhood: '',
-            property_type: '',
-            number_of_units: '',
-            year_built: '',
-            major_renovation: '',
+    street_address: '',
+    appartment_number: '',
+    neighbourhood: '',
+    property_type: '',
+    number_of_units: '',
+    year_built: '',
+    major_renovation: '',
 
-            size_square_feet: '',
-            number_of_bedrooms: '',
-            number_of_bathrooms: '',
-            rental_type: '',
-            monthly_rent: '',
-            security_deposit: '',
-            lease_duration: '',
-            renwal_option: '',
-            list_of_amenities: '',
-            special_feature: '',
+    size_square_feet: '',
+    number_of_bedrooms: '',
+    number_of_bathrooms: '',
+    rental_type: '',
+    monthly_rent: '',
+    security_deposit: '',
+    lease_duration: '',
+    renwal_option: '',
+    list_of_amenities: '',
+    special_feature: '',
 
-            tenant_characteristics: '',
-            credit_score: '',
-            income_requirements: '',
-            rental_history: '',
+    tenant_characteristics: '',
+    credit_score: '',
+    income_requirements: '',
+    rental_history: '',
 
-            special_note: ''
-        };
+    special_note: ''
+};
 var errors = {}; // Object to hold field-specific error messages
 var serverError = '';  // String to hold general server error messages
 
@@ -384,28 +399,28 @@ const nextTab = async () => {
         data.append(key, value);
     });
 
-    if(selectedFiles.length > 0) {
+    if (selectedFiles.length > 0) {
         for (let i = 0; i < selectedFiles.length; i++) {
             data.append('property_photos[]', selectedFiles[i]);
         }
     } else {
         data.append('property_photos', '');
     }
-    
+
     try {
 
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/validate', data);
-        
+
         if (response.data.success) {
-        
+
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
             if (currentIndex < tabs.value.length - 1) {
                 formData.step++;
 
-                if(formData.step == '6'){
+                if (formData.step == '6') {
                     storeLandlord();
-                }else{
+                } else {
                     activeTab.value = tabs.value[currentIndex + 1].id
                 }
             }
@@ -415,7 +430,7 @@ const nextTab = async () => {
             console.error('API error:', response.data.error);
         }
     } catch (error) {
-       
+
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -446,19 +461,19 @@ const storeLandlord = async () => {
         data.append(key, value);
     });
 
-    if(selectedFiles.length > 0) {
+    if (selectedFiles.length > 0) {
         for (let i = 0; i < selectedFiles.length; i++) {
             data.append('property_photos[]', selectedFiles[i]);
         }
     } else {
         data.append('property_photos', '');
     }
-    
+
     try {
 
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/store', data);
-        
+
         if (response.data.success) {
         
             resetFormData();
@@ -534,7 +549,7 @@ $(document).on('keyup', "[type=number], [type=email]", function (e) {
     }
 });
 $(document).ready(() => {
-    
+
     $('#file-input').on('change', function (event) {
         const files = event.target.files;
         const $imageContainer = $('#image-container');
@@ -572,9 +587,10 @@ $(document).ready(() => {
 </script>
 
 <style scoped>
-.is-invalid{
+.is-invalid {
     border-color: #ff0000 !important;
 }
+
 .new-form-section {
     margin-bottom: 5rem;
     background-color: #012252;

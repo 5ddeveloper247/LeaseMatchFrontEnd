@@ -67,12 +67,12 @@
                         <form class="mt-4">
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="email" id="form1Example13" class="form-control form-control-md"
-                                    placeholder="Email address">
+                                    placeholder="Email address" />
                             </div>
                             <!-- Password input -->
                             <div data-mdb-input-init class="form-outline mb-4">
                                 <input type="password" id="form1Example23" class="form-control form-control-md"
-                                    placeholder="Password">
+                                    placeholder="Password" />
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <!-- Checkbox -->
@@ -81,11 +81,14 @@
                                         checked />
                                     <label class="form-check-label" for="form1Example3"> Remember me </label>
                                 </div>
-                                <a href="#!" class="forget-psw">Forgot password?</a>
+                                <button type="button" @click="goToOtp" class="forget-psw">Forgot
+                                    password?</button>
                             </div>
-                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
-                                class="btn btn-lg d-flex w-100 align-items-center justify-content-center login-btn">Sign
-                                in</button>
+                            <a href="http://127.0.0.1:8000/admin/dashboard" type="submit" data-mdb-button-init
+                                data-mdb-ripple-init
+                                class="btn btn-lg d-flex w-100 align-items-center justify-content-center login-btn">
+                                Sign in
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -96,33 +99,35 @@
 
 
 
-<script>
+<script setup>
 import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
-export default {
-    setup() {
-        onMounted(() => {
-            new Swiper('.swiper-container', {
-                slidesOffsetBefore: 250,
-                loop: true,
-                slidesPerView: 1,
-                spaceBetween: 10,
-                autoplay: {
-                    delay: 1500,
-                    disableOnInteraction: false,
-                },
-                direction: 'vertical',
-            });
-        });
-    }
+const router = useRouter();
+
+const goToOtp = () => {
+    router.push({ path: '/OtpSection' });
 }
+
+onMounted(() => {
+    new Swiper('.swiper-container', {
+        slidesOffsetBefore: 250,
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        direction: 'vertical',
+    });
+});
 </script>
 
 
 
 
 <style scoped>
-
 .form-con {
     display: flex;
 }
@@ -141,11 +146,13 @@ export default {
 }
 
 .border-column {
-    border-left: 1.5px solid #0e0d0d66; 
+    border-left: 1.5px solid #0e0d0d66;
     height: 45vh;
     margin: 8rem 0 0 7rem;
 }
 
-
-
+.forget-psw {
+    background-color: transparent;
+    border: none;
+}
 </style>

@@ -10,6 +10,8 @@ import ReturnPolicy from '@/components/ReturnPolicy.vue'
 import PrivacyPage from '@/components/PrivacyPage.vue'
 import TermsAndCondition from '@/components/TermsAndCondition.vue'
 import Login from '@/components/Login.vue'
+import ForgetPass from '@/components/ForgetPass.vue'
+import OtpSection from '@/components/OtpSection.vue'
 
 
 
@@ -84,6 +86,17 @@ const router = createRouter({
       component: Login
     },
 
+    {
+      path: '/forgetPassword',
+      name: 'forgetPassword',
+      component: ForgetPass
+    },
+
+    {
+      path: '/OtpSection',
+      name: 'OtpSection',
+      component: OtpSection
+    }
   ],
 
   scrollBehavior() {
