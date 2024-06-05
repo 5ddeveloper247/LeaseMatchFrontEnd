@@ -461,33 +461,7 @@ const storeLandlord = async () => {
         
         if (response.data.success) {
         
-            formData.step = '1';
-            formData.full_name = '';
-            formData.email = '';
-            formData.phone_number = '';
-            formData.company_name = '';
-            formData.street_address = '';
-            formData.appartment_number = '';
-            formData.neighbourhood = '';
-            formData.property_type = '';
-            formData.number_of_units = '';
-            formData.year_built = '';
-            formData.major_renovation = '';
-            formData.size_square_feet = '';
-            formData.number_of_bedrooms = '';
-            formData.number_of_bathrooms = '';
-            formData.rental_type = '';
-            formData.monthly_rent = '';
-            formData.security_deposit = '';
-            formData.lease_duration = '';
-            formData.renwal_option = '';
-            formData.list_of_amenities = '';
-            formData.special_feature = '';
-            formData.tenant_characteristics = '';
-            formData.credit_score = '';
-            formData.income_requirements = '';
-            formData.rental_history = '';
-            formData.special_note = '';
+            resetFormData();
 
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
             if (currentIndex < tabs.value.length - 1) {
@@ -513,6 +487,43 @@ const storeLandlord = async () => {
             serverError = 'An unexpected error occurred. Please try again.';
         }
     }
+}
+
+const resetFormData = async () => {
+    
+            formData.step = '1';
+            formData.full_name = '';
+            formData.email = '';
+            formData.phone_number = '';
+            formData.company_name = '';
+
+            formData.street_address = '';
+            formData.appartment_number = '';
+            formData.neighbourhood = '';
+            formData.property_type = '';
+            formData.number_of_units = '';
+            formData.year_built = '';
+            formData.major_renovation = '';
+
+            formData.size_square_feet = '';
+            formData.number_of_bedrooms = '';
+            formData.number_of_bathrooms = '';
+            formData.rental_type = '';
+            formData.monthly_rent = '';
+            formData.security_deposit = '';
+            formData.lease_duration = '';
+            formData.renwal_option = '';
+            formData.list_of_amenities = '';
+            formData.special_feature = '';
+
+            formData.tenant_characteristics = '';
+            formData.credit_score = '';
+            formData.income_requirements = '';
+            formData.rental_history = '';
+            formData.special_note = '';
+            
+            $('[name]').val('');
+       
 }
 
 $(document).on('keyup', "[type=number], [type=email]", function (e) {

@@ -1,9 +1,3 @@
-<script setup>
-
-</script>
-
-
-
 <template>
     <!-- section-1 -->
     <section class="contact_sec-1 position-relative py-5" style="background-color: #04d7e8;">
@@ -24,38 +18,32 @@
                         <p class="site-color">If you have any questions about membership or usage, please fill out the
                             form and our team
                             will get back to you within 24 hours.</p>
-                        <form id="contact_form" name="contact_form" method="post">
+                        <form id="contact_form" action="javascript:;" method="">
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label>Your Name</label> -->
-                                    <input type="text" required maxlength="50" class="form-control" id="first_name"
-                                        name="first_name" placeholder="Your Name">
+                                    <input type="text"  class="form-control" v-model="formData.name" name="name" placeholder="Your Name" maxlength="100">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Email address</label> -->
-                                    <input type="email" required maxlength="50" class="form-control" id="email_addr"
-                                        name="email" placeholder="Email Address">
+                                    <input type="email" class="form-control" v-model="formData.email" name="email" placeholder="Email Address" maxLength="100">
                                 </div>
                             </div>
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Enter Subject</label> -->
-                                    <input type="text" required maxlength="50" class="form-control" id="subject"
-                                        name="subject" placeholder="Enter Subject">
+                                    <input type="text" class="form-control" v-model="formData.subject" name="subject" placeholder="Enter Subject" maxLength="100">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="phone_input">Phone</label> -->
-                                    <input type="tel" required maxlength="50" class="form-control" id="phone_input"
-                                        name="Phone" placeholder="Phone">
+                                    <input type="number" class="form-control" v-model="formData.phone_number" name="phone_number" placeholder="Phone Number" maxlength="15">
                                 </div>
                             </div>
                             <div class="mb-5 contact-field">
                                 <!-- <label for="message">Message</label> -->
-                                <textarea class="form-control" id="message" name="message" rows="5"
-                                    placeholder="Message"></textarea>
+                                <textarea class="form-control" v-model="formData.message" name="message" rows="5" placeholder="Message"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-contact btn-lg theme_btn2 mb-2">Send
-                                Message<span></span><span></span><span></span><span></span><span></span></button>
+                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2" @click="storeContact">Send Message</button>
                         </form>
                     </div>
                     <div class="col-md-5 px-md-5">
@@ -186,7 +174,71 @@
 </template>
 
 
+<script setup>
+import { ref } from 'vue';
+import axiosInstance from '@/plugins/axios';
+
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
+var formData = {   
+            name: '',
+            email: '',
+            subject: '',
+            phone_number: '',
+            message: ''
+        };
+
+const storeContact = async () => {
+    
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
+    });
+    
+   
+    try {
+
+        $('[name]').removeClass('is-invalid');
+        const response = await axiosInstance.post('/contact/send', data);
+        
+        if (response.data.success) {
+            toastr.success(response.data.message);
+            
+            resetFormData();
+        } else {
+            toastr.error('API error:', response.data.error);
+        }
+    } catch (error) {
+       
+        if (error.response && error.response.status === 422) {
+            // Handle validation errors
+            Object.entries(error.response.data.errors).forEach(([key, value]) => {
+                toastr.error(value[0]);
+                var inputField = $('[name="' + key + '"]').addClass('is-invalid');
+            });
+        } else {
+            // Handle other errors
+            toastr.error('An unexpected error occurred. Please try again.');
+        }
+    }
+}
+
+const resetFormData = async () => {
+    
+    formData.name = '';
+    formData.email = '';
+    formData.subject = '';
+    formData.phone_number = '';
+    formData.message = '';
+    $('[name]').val('');
+}
+</script>
+
 <style scoped>
+.is-invalid{
+    border-color: #ff0000 !important;
+}
 .custom-shape-divider-top-1717160352 {
     position: absolute;
     top: 0;

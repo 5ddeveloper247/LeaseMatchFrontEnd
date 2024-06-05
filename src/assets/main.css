@@ -1210,11 +1210,11 @@ p {
     margin-bottom: 20px;
 }
 
-.card-body-content li:nth-last-child(-n+2) {
+/* .card-body-content li:nth-last-child(-n+2) {
     color: gray;
     pointer-events: none;
     opacity: 0.5;
-}
+} */
 
 .pricing-card-body p {
     font-size: 10px;
