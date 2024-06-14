@@ -67,8 +67,8 @@
                     <RouterLink class="nav-link" to="/contact">Contact</RouterLink>
                 </li>
                 <li class="nav-item ">
-                    <RouterLink to="/login" id="myBtn" class="nav-link"><i class="fa-regular fa-circle-user"
-                            style="font-size: 22px;"></i></RouterLink>
+                    <a href="http://lmb.gregorygadson.io/customer" id="myBtn" class="nav-link"><i class="fa-regular fa-circle-user"
+                            style="font-size: 22px;"></i></a>
                 </li>
             </ul>
 

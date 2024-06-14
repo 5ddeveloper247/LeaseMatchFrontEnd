@@ -20,22 +20,22 @@
                 <div class="row">
                   <h2 class="fs-title text-center mb-4">Personal Information</h2>
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Name</label>
+                    <label class="fieldlabels p-0">Name*</label>
                     <input type="text" v-model="formData.name" name="name" placeholder="Enter your name" class="form-control" />
                   </div>
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Date of Birth</label>
+                    <label class="fieldlabels p-0">Date of Birth*</label>
                     <input type="date" v-model="formData.date_of_birth" name="date_of_birth" placeholder="Date of Birth" class="form-control" />
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Email</label>
+                    <label class="fieldlabels p-0">Email*</label>
                     <input type="email" v-model="formData.email" name="email" placeholder="Enter your Email" class="form-control" />
                   </div>
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Phone</label>
+                    <label class="fieldlabels p-0">Phone*</label>
                     <input type="text" v-model="formData.phone_number" name="phone_number" placeholder="Enter your Phone No" class="form-control" />
                   </div>
                 </div>
@@ -45,7 +45,7 @@
             
             <!-- 2 field-->
             <fieldset id="step_2">
-              <h2 class="fs-title text-center mb-4">Residential Preference:</h2>
+              <h2 class="fs-title text-center mb-4">Residential Preference</h2>
               <div class="form-card">
                 <!-- 1 -->
                 <div class="row">
@@ -101,7 +101,7 @@
             
             <!-- 3 field-->
             <fieldset id="step_3">
-              <h2 class="fs-title text-center mb-4">Financial Infirmation:</h2>
+              <h2 class="fs-title text-center mb-4">Financial Information</h2>
               <div class="form-card">
                 
                 <!-- 1 -->
@@ -136,7 +136,7 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="col-md-4">
-                    <label class="fieldlabels p-0">Employer Name</label>
+                    <label class="fieldlabels p-0">Employer Name*</label>
                     <input type="text" v-model="formData.employer_name" name="employer_name" />
                     
                   </div>
@@ -165,7 +165,7 @@
             <!-- 4 field-->
             <fieldset id="step_4">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Rental Assistance and Certification:</h2>
+                <h2 class="fs-title text-center mb-4">Rental Assistance and Certification</h2>
                 
                 <!-- 2 -->
                 <div class="row">
@@ -179,7 +179,7 @@
                   </div>
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Voucher Type </label>
+                    <label class="fieldlabels p-0">Voucher Type* </label>
                     <select class="form-select" v-model="formData.voucher_type" name="voucher_type" aria-label="Default select example">
                         <option value="">- Select a Voucher Type -</option>
                         <option value="Section 8">Section 8</option>
@@ -194,12 +194,12 @@
                 <div class="row">
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Certification Details </label>
+                    <label class="fieldlabels p-0">Certification Details* </label>
                     <input type="text" v-model="formData.certification_detail" name="certification_detail" />
                   </div>
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Certification Expiry Date </label>
+                    <label class="fieldlabels p-0">Certification Expiry Date* </label>
                     <input type="date" v-model="formData.certification_expiry" name="certification_expiry" />
                   </div>
                 </div>
@@ -212,17 +212,17 @@
             <!-- 5 field-->
             <fieldset id="step_5">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Current/Previous Living Situation:</h2>
+                <h2 class="fs-title text-center mb-4">Current/Previous Living Situation</h2>
                  
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Current Address </label> 
+                    <label class="fieldlabels p-0">Current Address* </label> 
                     <input type="text" v-model="formData.current_address" name="current_address"/>
                   </div>
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reason for Moving </label> 
+                    <label class="fieldlabels p-0">Reason for Moving* </label> 
                     <input type="text" v-model="formData.moving_reason" name="moving_reason"/>
                   </div>
                 </div>
@@ -230,12 +230,12 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Previous Landlord Contact Information </label>
+                    <label class="fieldlabels p-0">Previous Landlord Contact Information* </label>
                     <input type="text" v-model="formData.prev_landlord_contact" name="prev_landlord_contact"/>
                   </div>
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Lease Violations (if any) </label>
+                    <label class="fieldlabels p-0">Lease Violations (if any)* </label>
                     <input type="text" v-model="formData.lease_violation" name="lease_violation"/>
                   </div>
                 </div>
@@ -248,7 +248,7 @@
             <!-- 6 field-->
             <fieldset id="step_6">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Household Information:</h2>
+                <h2 class="fs-title text-center mb-4">Household Information</h2>
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Total Household Size*</label>
@@ -264,7 +264,7 @@
                   
                 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Number of Children</label>
+                    <label class="fieldlabels p-0">Number of Children*</label>
                     <input type="number" v-model="formData.number_of_child" name="number_of_child" />
                   </div>
                 </div>
@@ -277,7 +277,7 @@
             <!-- 7 field-->
             <fieldset id="step_7">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Pet Information:</h2>
+                <h2 class="fs-title text-center mb-4">Pet Information</h2>
                 
                 <!-- 1 -->
                 <div class="row">
@@ -291,21 +291,21 @@
                   </div>
                   
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Pet Type(s) </label> 
+                    <label class="fieldlabels p-0">Pet Type(s)* </label> 
                     <input type="text" v-model="formData.pet_type" name="pet_type" />
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Number of Pets</label> 
+                    <label class="fieldlabels p-0">Number of Pets*</label> 
                     <input type="number" v-model="formData.number_of_pets" name="number_of_pets"/>
                   </div>
                 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Pet Size</label>
+                    <label class="fieldlabels p-0">Pet Size*</label>
                     <select class="form-select" v-model="formData.pet_size" name="pet_size" aria-label="Default select example">
-                      <option selected>- Select a Pet Size -</option>
+                      <option value="">- Select a Pet Size -</option>
                       <option value="Small">Small</option>
                       <option value="Medium">Medium</option>
                       <option value="Large">Large</option>
@@ -323,21 +323,21 @@
             <fieldset id="step_8">
               <div class="form-card">
                 <h2 class="fs-title text-center mb-4">
-                  Accessibility & Accommodation Requirements:
+                  Accessibility & Accommodation Requirements
                 </h2>
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Disability*</label>
                     <select class="form-select" v-model="formData.disability" name="disability" aria-label="Default select example">
-                      <option selected>- Select a Disability - -</option>
-                      <option value="1">Yes</option>
-                      <option value="2">No</option>
+                      <option value="">- Select a Disability -</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
                     </select>
                   </div>
                   <div class="group col-md-6">
                     
-                    <label class="fieldlabels p-0">Type of Disability</label> 
+                    <label class="fieldlabels p-0">Type of Disability*</label> 
                     <input type="text" v-model="formData.disability_type" name="disability_type"/>
                   </div>
                 </div>
@@ -345,7 +345,7 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="col-12">
-                    <label class="fieldlabels p-0">Special Accommodations Needed</label>
+                    <label class="fieldlabels p-0">Special Accommodations Needed*</label>
                     <input type="text" v-model="formData.special_accomodation" name="special_accomodation"/>
                   </div>
                 </div>
@@ -358,7 +358,7 @@
             <!-- 9 field-->
             <fieldset id="step_9">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Additional Preferences & Requirements:</h2>
+                <h2 class="fs-title text-center mb-4">Additional Preferences & Requirements</h2>
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-12">
@@ -369,13 +369,13 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Preferred Move-in Date</label>
+                    <label class="fieldlabels p-0">Preferred Move-in Date*</label>
                     <input type="date" v-model="formData.preffered_move_in_date" name="preffered_move_in_date"/>
                   </div>
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Lease Length Preference*</label>
                     <select class="form-select" v-model="formData.lease_length_preference" name="lease_length_preference" aria-label="Default select example">
-                        <option value="">- Select Lease Length Preference</option>
+                        <option value="">- Select Lease Length Preference -</option>
                         <option value="6">6 months</option>
                         <option value="12">12 months</option>
                         <option value="18">18 months</option>
@@ -391,7 +391,7 @@
             <!-- 10 field-->
             <fieldset id="step_10">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Legal & Compliance:</h2>
+                <h2 class="fs-title text-center mb-4">Legal & Compliance</h2>
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-12">
@@ -419,22 +419,22 @@
             <!-- 11-->
             <fieldset id="step_11">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">References:</h2>
+                <h2 class="fs-title text-center mb-4">References</h2>
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reference Name</label> 
+                    <label class="fieldlabels p-0">Reference Name*</label> 
                     <input type="text" v-model="formData.reference_name" name="reference_name"/>
                   </div>
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reference Relationship</label>
+                    <label class="fieldlabels p-0">Reference Relationship*</label>
                     <input type="text" v-model="formData.reference_relationship" name="reference_relationship"/>
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-12">
-                    <label class="fieldlabels p-0">Reference Contact Information</label>
+                    <label class="fieldlabels p-0">Reference Contact Information*</label>
                     <input type="text"  v-model="formData.contact_information" name="contact_information"/>
                   </div>
                 </div>
@@ -447,7 +447,7 @@
             <!-- 12 -->
             <fieldset id="step_12">
               <div class="form-card">
-                <h2 class="fs-title text-center mb-4">Additional Notes:</h2>
+                <h2 class="fs-title text-center mb-4">Additional Notes</h2>
                 
                 <div class="row">
                   <div class="group col-md-12">
@@ -473,7 +473,7 @@
                         <label for="file-input">
                           <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                         </label>
-                        <p class="site-color text-center p-0" id="upload-text">Upload document</p>
+                        <p class="site-color text-center p-0" id="upload-text">Upload document*</p>
                       </div>
                       <input type="file" id="file-input" name="files" multiple />
                       <div id="image-container"></div>

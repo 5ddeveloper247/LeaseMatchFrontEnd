@@ -62,21 +62,21 @@
 
                     <fieldset v-if="index === 1">
                         <div class="form-card">
-                            <label class="fieldlabels p-0">Street Address:</label>
+                            <label class="fieldlabels p-0">Street Address*</label>
                             <input type="text" v-model="formData.street_address" name="street_address" />
                             <div class="row ">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Apartment/Unit Number:</label>
+                                    <label class="fieldlabels p-0">Apartment/Unit Number*</label>
                                     <input type="text" v-model="formData.appartment_number" name="appartment_number" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Borough/Neighborhood</label>
+                                    <label class="fieldlabels p-0">Borough/Neighborhood*</label>
                                     <input type="text" v-model="formData.neighbourhood" name="neighbourhood" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Property Type</label>
+                                    <label class="fieldlabels p-0">Property Type*</label>
                                     <select class="form-select pt-0" v-model="formData.property_type"
                                         name="property_type" aria-label="Default select example">
                                         <option value="">Please choose an option</option>
@@ -87,18 +87,18 @@
                                     </select>
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Number of Units (if multi-unit property)</label>
+                                    <label class="fieldlabels p-0">Number of Units (if multi-unit property)*</label>
                                     <input type="number" v-model="formData.number_of_units" name="number_of_units" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Year Built</label>
+                                    <label class="fieldlabels p-0">Year Built*</label>
                                     <input type="number" v-model="formData.year_built" name="year_built" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
-                                        applicable)</label>
+                                        applicable)*</label>
                                     <input type="number" v-model="formData.major_renovation" name="major_renovation" />
                                 </div>
                             </div>
@@ -115,11 +115,11 @@
                             <!-- 1 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Size (square footage)</label>
+                                    <label class="fieldlabels p-0">Size (square footage)*</label>
                                     <input type="number" v-model="formData.size_square_feet" name="size_square_feet">
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Number of Bedrooms Photo:</label>
+                                    <label class="fieldlabels p-0">Number of Bedrooms*</label>
                                     <input type="number" v-model="formData.number_of_bedrooms"
                                         name="number_of_bedrooms">
                                 </div>
@@ -128,12 +128,12 @@
                             <!-- 2 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels pt-2">Number of Bathrooms</label>
+                                    <label class="fieldlabels pt-2">Number of Bathrooms*</label>
                                     <input type="number" v-model="formData.number_of_bathrooms"
                                         name="number_of_bathrooms" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Type of Rental</label>
+                                    <label class="fieldlabels p-0">Type of Rental*</label>
                                     <select class="form-select" v-model="formData.rental_type" name="rental_type"
                                         aria-label="Default select example">
                                         <option value="">Please choose an option</option>
@@ -145,24 +145,24 @@
                             <!-- 3 -->
                             <div class="row">
                                 <div class="group col-md-4">
-                                    <label class="fieldlabels p-0">Monthly Rent (USD)</label>
+                                    <label class="fieldlabels p-0">Monthly Rent (USD)*</label>
                                     <br><br>
                                     <input type="number" v-model="formData.monthly_rent" name="monthly_rent" />
                                 </div>
                                 <div class="group col-md-4">
-                                    <label class="fieldlabels p-0">Security Deposit Requirement (USD)</label>
+                                    <label class="fieldlabels p-0">Security Deposit Requirement (USD)*</label>
                                     <input type="number" v-model="formData.security_deposit" name="security_deposit" />
                                 </div>
 
                                 <div class="group col-md-4">
-                                    <label class="fieldlabels p-0">Minimum Lease Duration (Month)</label>
+                                    <label class="fieldlabels p-0">Minimum Lease Duration (Month)*</label>
                                     <input type="number" v-model="formData.lease_duration" name="lease_duration" />
                                 </div>
                             </div>
                             <!-- 4 -->
                             <div class="row">
                                 <div class="group col-md-12">
-                                    <label class="fieldlabels p-0">Renewal Options</label>
+                                    <label class="fieldlabels p-0">Renewal Options*</label>
                                     <select class="form-select" v-model="formData.renwal_option" name="renwal_option"
                                         aria-label="Default select example">
                                         <option value="">Please choose an option</option>
@@ -177,12 +177,12 @@
                             <!-- 5 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">List of Amenities</label>
+                                    <label class="fieldlabels p-0">List of Amenities*</label>
                                     <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities"
                                         placeholder="e.g., In-unit Laundry, Dishwasher" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Special Features</label>
+                                    <label class="fieldlabels p-0">Special Features*</label>
                                     <input type="text" v-model="formData.special_feature" name="special_feature"
                                         placeholder="e.g., Balcony, Pet-friendly" />
                                 </div>
@@ -199,24 +199,24 @@
                             <!-- 1 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Ideal Tenant Characteristics</label>
+                                    <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
                                     <input type="text" v-model="formData.tenant_characteristics"
                                         name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets">
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Credit Score Range</label>
+                                    <label class="fieldlabels p-0">Credit Score Range*</label>
                                     <input type="text" v-model="formData.credit_score" name="credit_score">
                                 </div>
                             </div>
                             <!-- 2 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Income Requirements</label>
+                                    <label class="fieldlabels p-0">Income Requirements*</label>
                                     <input type="text" v-model="formData.income_requirements"
                                         name="income_requirements">
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Rental History Checks</label>
+                                    <label class="fieldlabels p-0">Rental History Checks*</label>
                                     <input type="text" v-model="formData.rental_history" name="rental_history">
                                 </div>
                             </div>
@@ -231,14 +231,14 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title d-md-none">Additional Information:</h2>
+                                    <h2 class="fs-title d-md-none">Additional Information</h2>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps d-md-none">Step 5 - 6</h2>
                                 </div>
                             </div>
                             <div class="row">
-                                <label class="fieldlabels p-0">Special Instructions or Notes</label>
+                                <label class="fieldlabels p-0">Special Instructions or Notes*</label>
                                 <textarea v-model="formData.special_note" name="special_note"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
@@ -248,7 +248,7 @@
                                                 <label for="file-input">
                                                     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                                                 </label>
-                                                <p class="site-color p-0" id="upload-text">Upload document</p>
+                                                <p class="site-color p-0" id="upload-text">Upload document*</p>
                                             </div>
                                             <input type="file" id="file-input" name="file" multiple>
                                             <div id="image-container"></div>
