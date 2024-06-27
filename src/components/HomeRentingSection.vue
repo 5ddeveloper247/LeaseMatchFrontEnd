@@ -93,7 +93,7 @@ export default {
                         </div>
 
                     </div>
-                    <div class="col-md-5 main-div-2">
+                    <div class="col-md-5 main-div-2 pe-0 me-0 ps-4 ps-md-0 ms-1 ms-md-0">
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">

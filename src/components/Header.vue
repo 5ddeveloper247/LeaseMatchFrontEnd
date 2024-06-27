@@ -1,4 +1,27 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const navbarToggler = ref(null);
+const navbarCollapse = ref(null);
+
+const handleClickOutside = (event) => {
+    if(navbarToggler.value && navbarCollapse.value) {
+        const isClickInside = navbarToggler.value.contains(event.target) || navbarCollapse.value.contains(event.target);
+        const isNavbarExpanded = navbarToggler.value.getAttribute('aria-expanded') === 'true';
+
+        if(!isClickInside && isNavbarExpanded) {
+            navbarToggler.value.click()
+        }
+    }
+}
+
+onMounted (() => {
+    document.addEventListener('click', handleClickOutside);
+})
+
+onUnmounted (() => {
+    document.removeEventListener('click', handleClickOutside);
+})
 </script>
 
 <template>
@@ -45,11 +68,11 @@
         <RouterLink class="navbar-brand mx-3 p-0" to="/">
             <img src="../assets/images/logo-dark-150.png" alt="" width="150" height="50">
         </RouterLink>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button ref="navbarToggler"class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <div ref="navbarCollapse" class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav nav-txt me-md-5">
                 <li class="nav-item">
                     <RouterLink class="nav-link" aria-current="page" to="/">Home</RouterLink>

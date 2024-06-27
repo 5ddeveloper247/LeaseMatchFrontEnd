@@ -143,11 +143,17 @@ function toggleChatbot() {
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 d-flex align-items-md-center justify-content-md-center my-4">
-                            <div class="footer-tags d-flex" style="gap: 30px;">
-                                <RouterLink to="/waitlist">Waitlist Removal</RouterLink>|
-                                <RouterLink to="/policy">Refund Policy</RouterLink>|
-                                <RouterLink to="/privacy">Privacy Policy</RouterLink>|
-                                <RouterLink to="/terms">Terms & Conditions</RouterLink>
+                            <div class="footer-tags d-flex w-100" style="gap: 30px;">
+                                <div class="row g-3 w-100">
+                                    <div class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center gap-5">
+                                        <RouterLink to="/waitlist">| Waitlist Removal</RouterLink>
+                                        <RouterLink to="/policy">| Refund Policy</RouterLink>
+                                    </div>
+                                    <div class="col-12 col-md-6 d-flex align-items-center gap-5">
+                                        <RouterLink to="/privacy">| Privacy Policy</RouterLink>
+                                        <RouterLink to="/terms"> | Terms & Conditions</RouterLink>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-12">

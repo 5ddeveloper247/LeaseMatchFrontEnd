@@ -18,9 +18,9 @@
             </div>
         </div>
     </div>
-    <section class="new-form-section container p-5">
+    <section class="new-form-section container p-3 ps-4 ps-md-5 p-md-5">
         <div class="row">
-            <ul class="nav nav-tabs col-5 d-flex flex-column gap-3" id="myTab" role="tablist">
+            <ul class="nav nav-tabs mt-4 col-5 d-flex flex-column gap-3" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation" v-for="(tab, index) in tabs" :key="index">
                     <button class="nav-link" :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id)">
                         {{ tab.name }}
@@ -230,14 +230,6 @@
                     <fieldset v-if="index === 4">
                         <div class="form-card">
                             <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title d-md-none">Additional Information</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps d-md-none">Step 5 - 6</h2>
-                                </div>
-                            </div>
-                            <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
                                 <textarea v-model="formData.special_note" name="special_note"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
@@ -270,15 +262,6 @@
                     <fieldset v-if="index === 5">
                         <div class="form-card">
                             <!-- Finish tab content here -->
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2 class="fs-title d-md-none">Finish:</h2>
-                                </div>
-                                <div class="col-5">
-                                    <h2 class="steps d-md-none">Step 6 - 6</h2>
-                                </div>
-                            </div>
-                            <br><br>
                             <h2 class="text-white text-center">
                                 <strong>SUCCESS !</strong>
                             </h2>
@@ -601,7 +584,8 @@ fieldset {
 }
 
 .image-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(autoplay  );
     width: 100%;
     gap: 10px;
     align-items: flex-end;
@@ -619,7 +603,7 @@ fieldset {
     position: relative;
     padding-left: 10px;
     /* overflow: hidden; */
-    font-size: 16px !important;
+    font-size: clamp(12px, 3vw, 16px) !important;
     text-align: left;
 }
 
