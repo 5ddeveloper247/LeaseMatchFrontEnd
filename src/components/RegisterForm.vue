@@ -64,9 +64,10 @@
                     <label class="fieldlabels p-0">Preferred Property Type* </label>
                     <select class="form-select" v-model="formData.preferred_property_type" name="preferred_property_type" aria-label="Default select example">
                       <option value="">- Select a Preferred Property Type -</option>
-                      <option value="Appertament">Appertament</option>
-                      <option value="House">House</option>
+                      <option value="Appartment">Appartment</option>
                       <option value="Condo">Condo</option>
+                      <option value="House">House</option>
+                      <option value="Studio">Studio</option>
                       
                     </select>
                   </div>
