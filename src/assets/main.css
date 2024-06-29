@@ -18,6 +18,11 @@ body {
     border-radius: 10px;
 }
 
+.router-link-active {
+    color: var(--tex-color) !important;
+    font-weight: 700;
+}
+
 .site-color {
     color: var(--tex-color);
 }

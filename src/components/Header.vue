@@ -43,7 +43,7 @@ onUnmounted (() => {
                                 style="font-size: 12px;"></i></a>
                     </li>
                     <li class="list-style">
-                        <a href="#" class="social-media"><i class="fa-brands fa-twitter"
+                        <a href="#" class="social-media"><i class="fa-brands fa-x-twitter"
                                 style="font-size: 12px;"></i></a>
                     </li>
                     <li class="list-style">

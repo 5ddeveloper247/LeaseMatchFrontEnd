@@ -73,7 +73,7 @@ function toggleChatbot() {
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-x-twitter"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -93,10 +93,10 @@ function toggleChatbot() {
                                 <h4>Services</h4>
                             </div>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Blog</a></li>
+                                <li><RouterLink to="/about">About Us</RouterLink></li>
+                                <li><RouterLink to="/landlord">Landlord</RouterLink></li>
+                                <li><RouterLink to="/registerForm">Register</RouterLink></li>
+                                <li><RouterLink to="/contact">Contact</RouterLink></li>
                             </ul>
                         </div>
                     </div>
