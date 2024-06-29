@@ -48,7 +48,7 @@
                             <div class="row mt-5">
                                 <div class="group col-md-6">
                                     <input type="number" v-model="formData.phone_number" name="phone_number"
-                                        placeholder="Enter your phone number" maxlength="14" />
+                                        placeholder="Enter your phone number" maxlength="18" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="text" v-model="formData.company_name" name="company_name"
@@ -63,15 +63,15 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" v-model="formData.street_address" name="street_address" />
+                            <input type="text" v-model="formData.street_address" name="street_address"  maxlength="255"/>
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
-                                    <input type="text" v-model="formData.appartment_number" name="appartment_number" />
+                                    <input type="text" v-model="formData.appartment_number" name="appartment_number" maxlength="10"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Borough/Neighborhood*</label>
-                                    <input type="text" v-model="formData.neighbourhood" name="neighbourhood" />
+                                    <input type="text" v-model="formData.neighbourhood" name="neighbourhood" maxlength="100" />
                                 </div>
                             </div>
                             <div class="row">
@@ -88,18 +88,19 @@
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Units (if multi-unit property)*</label>
-                                    <input type="number" v-model="formData.number_of_units" name="number_of_units" />
+                                    <input type="number" v-model="formData.number_of_units" name="number_of_units" maxlength="3" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Year Built*</label>
-                                    <input type="number" v-model="formData.year_built" name="year_built" />
+                                    <label class="fieldlabels p-0">Year Built*<br></label>
+                                    
+                                    <input type="number" v-model="formData.year_built" name="year_built" maxlength="4"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
                                         applicable)*</label>
-                                    <input type="number" v-model="formData.major_renovation" name="major_renovation" />
+                                    <input type="number" v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
                                 </div>
                             </div>
                         </div>
@@ -116,12 +117,12 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)*</label>
-                                    <input type="number" v-model="formData.size_square_feet" name="size_square_feet">
+                                    <input type="number" v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Bedrooms*</label>
                                     <input type="number" v-model="formData.number_of_bedrooms"
-                                        name="number_of_bedrooms">
+                                        name="number_of_bedrooms" maxlength="3">
                                 </div>
                             </div>
 
@@ -130,7 +131,7 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels pt-2">Number of Bathrooms*</label>
                                     <input type="number" v-model="formData.number_of_bathrooms"
-                                        name="number_of_bathrooms" />
+                                        name="number_of_bathrooms" maxlength="3"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Type of Rental*</label>
@@ -147,16 +148,16 @@
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Monthly Rent (USD)*</label>
                                     <br><br>
-                                    <input type="number" v-model="formData.monthly_rent" name="monthly_rent" />
+                                    <input type="number" v-model="formData.monthly_rent" name="monthly_rent" maxlength="6"/>
                                 </div>
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Security Deposit Requirement (USD)*</label>
-                                    <input type="number" v-model="formData.security_deposit" name="security_deposit" />
+                                    <input type="number" v-model="formData.security_deposit" name="security_deposit" maxlength="6"/>
                                 </div>
 
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Minimum Lease Duration (Month)*</label>
-                                    <input type="number" v-model="formData.lease_duration" name="lease_duration" />
+                                    <input type="number" v-model="formData.lease_duration" name="lease_duration" maxlength="3"/>
                                 </div>
                             </div>
                             <!-- 4 -->
@@ -179,12 +180,12 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">List of Amenities*</label>
                                     <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities"
-                                        placeholder="e.g., In-unit Laundry, Dishwasher" />
+                                        placeholder="e.g., In-unit Laundry, Dishwasher" maxlength="255"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Special Features*</label>
                                     <input type="text" v-model="formData.special_feature" name="special_feature"
-                                        placeholder="e.g., Balcony, Pet-friendly" />
+                                        placeholder="e.g., Balcony, Pet-friendly" maxlength="255"/>
                                 </div>
                             </div>
                         </div>
@@ -201,11 +202,11 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
                                     <input type="text" v-model="formData.tenant_characteristics"
-                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets">
+                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets" maxlength="255">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range*</label>
-                                    <input type="text" v-model="formData.credit_score" name="credit_score">
+                                    <input type="text" v-model="formData.credit_score" name="credit_score" maxlength="100">
                                 </div>
                             </div>
                             <!-- 2 -->
@@ -213,11 +214,11 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Income Requirements*</label>
                                     <input type="text" v-model="formData.income_requirements"
-                                        name="income_requirements">
+                                        name="income_requirements" maxlength="100">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Rental History Checks*</label>
-                                    <input type="text" v-model="formData.rental_history" name="rental_history">
+                                    <input type="text" v-model="formData.rental_history" name="rental_history" maxlength="100">
                                 </div>
                             </div>
                         </div>
@@ -242,7 +243,7 @@
                                                 </label>
                                                 <p class="site-color p-0" id="upload-text">Upload document*</p>
                                             </div>
-                                            <input type="file" id="file-input" name="file" multiple>
+                                            <input type="file" id="file-input" name="file" accept="image/*" multiple="false">
                                             <div id="image-container"></div>
                                             <div class="image-info">
                                                 <p id="file-names"></p>
@@ -328,7 +329,7 @@ const tabs = ref([
         contentTitle: 'Finish:'
     },
 ]);
-const selectedFiles = [];
+var selectedFiles = [];
 
 
 const formData = {
@@ -524,22 +525,65 @@ const resetFormData = async () => {
        
 }
 
-$(document).on('keyup', "[type=number], [type=email]", function (e) {
-    if ($(this).attr('maxlength')) {
-        if (this.value.length > this.maxLength) {
-            this.value = this.value.slice(0, this.maxLength);
-        }
-    }
-});
+
 $(document).ready(() => {
+
+    $('input,select,textarea').on('keyup', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    $('input,select,textarea').on('change', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    // number not allowed
+    $('[name="full_name"]').on('keydown', function(e) {
+        var key = e.keyCode || e.which;
+        var char = String.fromCharCode(key);
+        var controlKeys = ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'];
+
+        // Allow control keys and non-numeric characters
+        if (controlKeys.includes(e.key) || !char.match(/[0-9]/)) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // onlly numbers allowed
+    $('input[type="number"],input[type="email"]').on('keydown', function(e) {
+        var maxLength = $(this).attr("maxlength");
+        
+        var controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
+        if (controlKeys.includes(e.key)) {
+            return;
+        }
+        // Prevent new input if the value length exceeds maxLength
+        if (this.value.length >= maxLength) {
+            e.preventDefault();
+        }
+    });
 
     $('#file-input').on('change', function (event) {
         const files = event.target.files;
-        const $imageContainer = $('#image-container');
-        $imageContainer.empty(); // Clear previous images
-        // Add selected files to the selectedFiles array
+        var allfileslength = files.length + selectedFiles.length;
+        
+        if(allfileslength > 7){
+          toastr.error('You can upload a maximum of 7 images.');
+          return;
+        }
+
+        $('#image-container').empty();
+
+        // Validate and add selected files to selectedFiles array
         for (let i = 0; i < files.length; i++) {
-            selectedFiles.push(files[i]);
+            const file = files[i];
+
+            // Check if the file is an image
+            if (!file.type.startsWith('image/')) {
+                toastr.error('Please select only image files.');
+                continue;
+            }
+
+            selectedFiles.push(file);
         }
         // Update the display
         displaySelectedFiles();

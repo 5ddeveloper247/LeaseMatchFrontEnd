@@ -1,4 +1,9 @@
 <template>
+  <div id="uiBlocker" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:9999;">
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+          <img src="../assets/images/loading-spinner.gif" alt="Loading..." style="height:150px; width:150px;"/>
+      </div>
+  </div>
   <!-- register -->
   <section class="register-sec pb-5">
     <div class="register-overlay"></div>
@@ -21,22 +26,22 @@
                   <h2 class="fs-title text-center mb-4">Personal Information</h2>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Name*</label>
-                    <input type="text" v-model="formData.name" name="name" placeholder="Enter your name" class="form-control" />
+                    <input type="text" v-model="formData.name" name="name" id="username" placeholder="Enter your name" class="form-control" maxlength="100"/>
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Date of Birth*</label>
-                    <input type="date" v-model="formData.date_of_birth" name="date_of_birth" placeholder="Date of Birth" class="form-control" />
+                    <input type="date" v-model="formData.date_of_birth" name="date_of_birth" placeholder="Date of Birth" class="" />
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Email*</label>
-                    <input type="email" v-model="formData.email" name="email" placeholder="Enter your Email" class="form-control" />
+                    <input type="email" v-model="formData.email" name="email" placeholder="Enter your Email" class="form-control" maxlength="100"/>
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Phone*</label>
-                    <input type="text" v-model="formData.phone_number" name="phone_number" placeholder="Enter your Phone No" class="form-control" />
+                    <input type="number" v-model="formData.phone_number" name="phone_number" placeholder="Enter your Phone No" class="form-control" maxlength="18"/>
                   </div>
                 </div>
               </div>
@@ -138,7 +143,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <label class="fieldlabels p-0">Employer Name*</label>
-                    <input type="text" v-model="formData.employer_name" name="employer_name" />
+                    <input type="text" v-model="formData.employer_name" name="employer_name" class="form-control" placeholder="Employer Name" maxlength="100"/>
                     
                   </div>
                   <div class="col-md-4">
@@ -153,7 +158,7 @@
                   
                   <div class="group col-md-4">
                     <label class="fieldlabels p-0">Maximum rental budget (USD)*</label>
-                    <input type="number" v-model="formData.rental_budget" name="rental_budget"/>
+                    <input type="number" v-model="formData.rental_budget" name="rental_budget" class="form-control" placeholder="Maximum rental budget (USD)" maxlength="6"/>
                   </div>
                 </div>
                 
@@ -173,7 +178,7 @@
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Has Rental Voucher* </label>
                     <select class="form-select" v-model="formData.rental_voucher" name="rental_voucher" aria-label="Default select example">
-                      <option selected>- Select a Has Rental Voucher -</option>
+                      <option value="">- Select a Has Rental Voucher -</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
                     </select>
@@ -196,12 +201,12 @@
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Certification Details* </label>
-                    <input type="text" v-model="formData.certification_detail" name="certification_detail" />
+                    <input type="text" v-model="formData.certification_detail" name="certification_detail" class="form-control" placeholder="Certification Details" maxlength="100"/>
                   </div>
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Certification Expiry Date* </label>
-                    <input type="date" v-model="formData.certification_expiry" name="certification_expiry" />
+                    <input type="date" v-model="formData.certification_expiry" name="certification_expiry" class="" />
                   </div>
                 </div>
                 
@@ -219,12 +224,12 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Current Address* </label> 
-                    <input type="text" v-model="formData.current_address" name="current_address"/>
+                    <input type="text" v-model="formData.current_address" name="current_address" class="form-control" placeholder="Current Address" maxlength="255"/>
                   </div>
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Reason for Moving* </label> 
-                    <input type="text" v-model="formData.moving_reason" name="moving_reason"/>
+                    <input type="text" v-model="formData.moving_reason" name="moving_reason" class="form-control" placeholder="Enter Reason" maxlength="255"/>
                   </div>
                 </div>
                 
@@ -232,12 +237,12 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Previous Landlord Contact Information* </label>
-                    <input type="text" v-model="formData.prev_landlord_contact" name="prev_landlord_contact"/>
+                    <input type="text" v-model="formData.prev_landlord_contact" name="prev_landlord_contact" class="form-control" placeholder="Previous Landlord Contact Information" maxlength="100"/>
                   </div>
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Lease Violations (if any)* </label>
-                    <input type="text" v-model="formData.lease_violation" name="lease_violation"/>
+                    <input type="text" v-model="formData.lease_violation" name="lease_violation" class="form-control" placeholder="Lease Violations (if any)" maxlength="255"/>
                   </div>
                 </div>
                 
@@ -253,12 +258,12 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Total Household Size*</label>
-                    <input type="number" v-model="formData.household_size" name="household_size"/>
+                    <input type="number" v-model="formData.household_size" name="household_size" class="form-control" placeholder="Total Household Size" maxlength="6"/>
                   </div>
 
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Number of Adults*</label> 
-                    <input type="number" v-model="formData.number_of_adults" name="number_of_adults"/>
+                    <input type="number" v-model="formData.number_of_adults" name="number_of_adults" class="form-control" placeholder="Number of Adults" maxlength="6"/>
                   </div>
                 </div>
                 <div class="row">
@@ -266,7 +271,7 @@
                 
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Number of Children*</label>
-                    <input type="number" v-model="formData.number_of_child" name="number_of_child" />
+                    <input type="number" v-model="formData.number_of_child" name="number_of_child" class="form-control" placeholder="Number of Children" maxlength="6"/>
                   </div>
                 </div>
                 
@@ -293,14 +298,14 @@
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Pet Type(s)* </label> 
-                    <input type="text" v-model="formData.pet_type" name="pet_type" />
+                    <input type="text" v-model="formData.pet_type" name="pet_type" class="form-control" placeholder="Pet Type(s)" maxlength="100"/>
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Number of Pets*</label> 
-                    <input type="number" v-model="formData.number_of_pets" name="number_of_pets"/>
+                    <input type="number" v-model="formData.number_of_pets" name="number_of_pets" class="form-control" placeholder="Number of Pets" maxlength="3"/>
                   </div>
                 
                   <div class="group col-md-6">
@@ -339,7 +344,7 @@
                   <div class="group col-md-6">
                     
                     <label class="fieldlabels p-0">Type of Disability*</label> 
-                    <input type="text" v-model="formData.disability_type" name="disability_type"/>
+                    <input type="text" v-model="formData.disability_type" name="disability_type" class="form-control" placeholder="Type of Disability" maxlength="100"/>
                   </div>
                 </div>
                 
@@ -347,7 +352,7 @@
                 <div class="row">
                   <div class="col-12">
                     <label class="fieldlabels p-0">Special Accommodations Needed*</label>
-                    <input type="text" v-model="formData.special_accomodation" name="special_accomodation"/>
+                    <input type="text" v-model="formData.special_accomodation" name="special_accomodation" class="form-control" placeholder="Special Accommodations Needed" maxlength="255"/>
                   </div>
                 </div>
                 
@@ -364,7 +369,7 @@
                 <div class="row">
                   <div class="group col-md-12">
                     <label class="fieldlabels p-0">Maximum Rent Willing to Pay*</label>
-                    <input type="number" v-model="formData.max_rent_to_pay" name="max_rent_to_pay"/>
+                    <input type="number" v-model="formData.max_rent_to_pay" name="max_rent_to_pay" class="form-control" placeholder="Maximum Rent Willing to Pay" maxlength="6"/>
                   </div>
                 </div>
                 <!-- 2 -->
@@ -425,18 +430,18 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Reference Name*</label> 
-                    <input type="text" v-model="formData.reference_name" name="reference_name"/>
+                    <input type="text" v-model="formData.reference_name" name="reference_name" class="form-control" placeholder="Reference Name" maxlength="100"/>
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Reference Relationship*</label>
-                    <input type="text" v-model="formData.reference_relationship" name="reference_relationship"/>
+                    <input type="text" v-model="formData.reference_relationship" name="reference_relationship" class="form-control" placeholder="Reference Relationship" maxlength="100"/>
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-12">
                     <label class="fieldlabels p-0">Reference Contact Information*</label>
-                    <input type="text"  v-model="formData.contact_information" name="contact_information"/>
+                    <input type="text"  v-model="formData.contact_information" name="contact_information" class="form-control" placeholder="Reference Contact Information" maxlength="255"/>
                   </div>
                 </div>
                 
@@ -453,7 +458,7 @@
                 <div class="row">
                   <div class="group col-md-12">
                     <label class="fieldlabels p-0">General Notes*</label>
-                    <textarea type="text" v-model="formData.general_note" name="general_note"></textarea>
+                    <textarea type="text" v-model="formData.general_note" name="general_note" class="form-control" placeholder="Enter Note" maxlength="255"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -476,7 +481,7 @@
                         </label>
                         <p class="site-color text-center p-0" id="upload-text">Upload document*</p>
                       </div>
-                      <input type="file" id="file-input" name="files" multiple />
+                      <input type="file" id="file-input" name="files" accept="image/*" multiple="false" />
                       <div id="image-container"></div>
                       <div class="image-info">
                         <p id="file-names"></p>
@@ -497,23 +502,23 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Username *</label> 
-                    <input type="text" v-model="formData.user_name" name="user_name"/>
+                    <input type="text" v-model="formData.user_name" name="user_name" id="user_name" class="form-control" placeholder="Username" maxlength="100"/>
                   </div>
                   
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Email address *</label>
-                    <input type="email" v-model="formData.user_email" name="user_email"/>
+                    <input type="email" v-model="formData.user_email" name="user_email" class="form-control" placeholder="Email address" maxlength="100"/>
                   </div>
                 </div>
             
                 <div class="row">
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Password *</label> 
-                    <input type="password" v-model="formData.password" name="password"/>
+                    <input type="password" v-model="formData.password" name="password" class="form-control" placeholder="Enter Password" maxlength="20"/>
                   </div>
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Confirm Password *</label>
-                    <input type="password" v-model="formData.password_confirmation" name="password_confirmation"/>
+                    <input type="password" v-model="formData.password_confirmation" name="password_confirmation" class="form-control" placeholder="Enter Confirm Password" maxlength="20"/>
                   </div>
                 </div>
                 <div class="row">
@@ -570,7 +575,7 @@ var currentStep = 1;
 var current_fs, next_fs, previous_fs;
 var opacity;
 var current = 1;
-const selectedFiles = [];
+var selectedFiles = [];
 
 
 
@@ -657,11 +662,14 @@ const nextTab = async () => {
     
     try {
 
+        $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/registration/validate', data);
         
-        if (response.data.success) {
         
+        if (response.data.success) {
+
+            $('#uiBlocker').hide();
             if(formData.step == '13'){
                     storeRegister();
             }else{
@@ -670,11 +678,13 @@ const nextTab = async () => {
             }
             serverError = ''; // Clear any server error messages
         } else {
+            $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
             console.error('API error:', response.data.error);
         }
     } catch (error) {
-       
+
+        $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -705,22 +715,27 @@ const storeRegister = async () => {
     
     try {
 
+        $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/registration/store', data);
         
-        if (response.data.success) {
         
+        if (response.data.success) {
+
+            $('#uiBlocker').hide();
             formData.step++;
             next();
             resetFormData();
             serverError = ''; // Clear any server error messages
 
         } else {
+            $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
             console.error('API error:', response.data.error);
         }
     } catch (error) {
        
+        $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -870,39 +885,107 @@ $(document).ready(() => {
 })
 
 $(document).ready(() => {
+  
+    $('input,select,textarea').on('keyup', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    $('input,select,textarea').on('change', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    // number not allowed
+    $('#username, #user_name,[name="reference_name"]').on('keydown', function(e) {
+        var key = e.keyCode || e.which;
+        var char = String.fromCharCode(key);
+        var controlKeys = ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'];
+
+        // Allow control keys and non-numeric characters
+        if (controlKeys.includes(e.key) || !char.match(/[0-9]/)) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // onlly numbers allowed
+    $('input[type="number"],input[type="email"]').on('keydown', function(e) {
+        var maxLength = $(this).attr("maxlength");
+        
+        var controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
+        if (controlKeys.includes(e.key)) {
+            return;
+        }
+        // Prevent new input if the value length exceeds maxLength
+        if (this.value.length >= maxLength) {
+            e.preventDefault();
+        }
+    });
     // const selectedFiles = []
-    $('#file-input').on('change', function (event) {
-        const files = event.target.files
-        const $imageContainer = $('#image-container')
-        $imageContainer.empty() // Clear previous images
-        // Add selected files to the selectedFiles array
+    // Event listener for file input change
+    $('#file-input').on('change', function(event) {
+        console.log(selectedFiles.length);
+        const files = event.target.files;
+
+        var allfileslength = files.length + selectedFiles.length;
+        
+        if(allfileslength > 7){
+          toastr.error('You can upload a maximum of 7 images.');
+          return;
+        }
+        // Clear previous images in the container
+        $('#image-container').empty();
+
+        // Validate and add selected files to selectedFiles array
         for (let i = 0; i < files.length; i++) {
-        selectedFiles.push(files[i])
+            const file = files[i];
+
+            // Check if the file is an image
+            if (!file.type.startsWith('image/')) {
+                toastr.error('Please select only image files.');
+                continue;
+            }
+        
+            selectedFiles.push(file);
         }
-        // Update the display
-        displaySelectedFiles()
-    })
+
+        // Display selected files
+        displaySelectedFiles();
+    });
+
+    
+    // $('#file-input').on('change', function (event) {
+    //     const files = event.target.files
+    //     const $imageContainer = $('#image-container')
+    //     $imageContainer.empty() // Clear previous images
+    //     // Add selected files to the selectedFiles array
+    //     for (let i = 0; i < files.length; i++) {
+    //     selectedFiles.push(files[i])
+    //     }
+    //     // Update the display
+    //     displaySelectedFiles()
+    // })
     function displaySelectedFiles() {
-        const $imageContainer = $('#image-container')
-        $imageContainer.empty() // Clear previous images
-        selectedFiles.forEach((file, index) => {
-            const reader = new FileReader()
-            reader.onload = function (e) {
-                const $imageDiv = $('<div>').addClass('image-item')
-                const $image = $('<img>').attr('src', e.target.result)
-                $imageDiv.append($image)
-                const $fileName = $('<p>').text(file.name)
-                $imageDiv.append($fileName)
-                const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon')
-                $cancelButton.on('click', function () {
-                selectedFiles.splice(index, 1)
-                displaySelectedFiles()
-            })
-            $imageDiv.append($cancelButton)
-            $imageContainer.append($imageDiv)
+        const $imageContainer = $('#image-container');
+        if(selectedFiles.length < 8){
+          $imageContainer.empty() // Clear previous images
+          selectedFiles.forEach((file, index) => {
+              const reader = new FileReader()
+              reader.onload = function (e) {
+                  const $imageDiv = $('<div>').addClass('image-item')
+                  const $image = $('<img>').attr('src', e.target.result)
+                  $imageDiv.append($image)
+                  const $fileName = $('<p>').text(file.name)
+                  $imageDiv.append($fileName)
+                  const $cancelButton = $('<span>').html('&times;').addClass('cancel-icon')
+                  $cancelButton.on('click', function () {
+                  selectedFiles.splice(index, 1)
+                  displaySelectedFiles()
+              })
+              $imageDiv.append($cancelButton)
+              $imageContainer.append($imageDiv)
+          }
+          reader.readAsDataURL(file)
+          })
         }
-        reader.readAsDataURL(file)
-        })
     }
 })
 
