@@ -1,4 +1,9 @@
 <template>
+    <div id="uiBlocker" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:9999;">
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+            <img src="../assets/images/loading-spinner.gif" alt="Loading..." style="height:150px; width:150px;"/>
+        </div>
+    </div>
     <div class="container p-0 img-con text-center">
         <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
         <div class="img-text px-1 px-md-5">
@@ -22,7 +27,7 @@
         <div class="row">
             <ul class="nav nav-tabs mt-4 col-5 d-flex flex-column gap-3" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation" v-for="(tab, index) in tabs" :key="index">
-                    <button class="nav-link" :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id)">
+                    <button class="nav-link" :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
                         {{ tab.name }}
                         <span class="highlight" v-if="activeTab === tab.id"></span>
                     </button>
@@ -37,11 +42,11 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name"
+                                    <input type="text" v-model="formData.full_name" name="full_name" 
                                         placeholder="UserName" maxlength="100" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
+                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id" 
                                         maxlength="100" />
                                 </div>
                             </div>
@@ -51,7 +56,7 @@
                                         placeholder="Enter your phone number" maxlength="18" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.company_name" name="company_name"
+                                    <input type="text" v-model="formData.company_name" name="company_name" 
                                         placeholder="Enter your company name" maxlength="100" />
                                 </div>
                             </div>
@@ -63,7 +68,7 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" v-model="formData.street_address" name="street_address"  maxlength="255"/>
+                            <input type="text" v-model="formData.street_address" name="street_address" maxlength="255"/>
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
@@ -94,7 +99,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year Built*<br></label>
-                                    
+                                    <br><br>
                                     <input type="number" v-model="formData.year_built" name="year_built" maxlength="4"/>
                                 </div>
                                 <div class="group col-md-6">
@@ -372,8 +377,9 @@ var serverError = '';  // String to hold general server error messages
 const activeTab = ref(tabs.value[0].id);
 
 //tab selection function
-const selectTab = (tabId) => {
-    activeTab.value = tabId;
+const selectTab = (tabId, index) => {
+    // activeTab.value = tabId;
+    // formData.step = index+1;
 }
 
 //next tab function
@@ -393,11 +399,13 @@ const nextTab = async () => {
 
     try {
 
+        $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/validate', data);
 
         if (response.data.success) {
 
+            $('#uiBlocker').hide();
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
             if (currentIndex < tabs.value.length - 1) {
                 formData.step++;
@@ -410,11 +418,13 @@ const nextTab = async () => {
             }
             serverError = ''; // Clear any server error messages
         } else {
+            $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
             console.error('API error:', response.data.error);
         }
     } catch (error) {
 
+        $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -454,12 +464,14 @@ const storeLandlord = async () => {
     }
 
     try {
-
+        
+        $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/store', data);
 
         if (response.data.success) {
-        
+            
+            $('#uiBlocker').hide();
             resetFormData();
 
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
@@ -468,11 +480,13 @@ const storeLandlord = async () => {
             }
             serverError = ''; // Clear any server error messages
         } else {
+            $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
             console.error('API error:', response.data.error);
         }
     } catch (error) {
-       
+        
+        $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -614,9 +628,7 @@ $(document).ready(() => {
 </script>
 
 <style scoped>
-.is-invalid {
-    border-color: #ff0000 !important;
-}
+
 
 .new-form-section {
     margin-bottom: 5rem;
@@ -761,6 +773,11 @@ button {
     border-radius: 4px;
     color: #000;
     font-weight: 500;
+}
+
+.is-invalid {
+    border-color: #ff0000 !important;
+    border-bottom: 1px solid #ff0000 !important;
 }
 
 /* button:hover {
