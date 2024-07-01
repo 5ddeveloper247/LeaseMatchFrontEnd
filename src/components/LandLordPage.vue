@@ -43,21 +43,21 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <input type="text" v-model="formData.full_name" name="full_name" 
-                                        placeholder="UserName" maxlength="100" />
+                                        class="input-field" placeholder="UserName" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id" 
-                                        maxlength="100" />
+                                        class="input-field" maxlength="100" />
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="group col-md-6">
                                     <input type="number" v-model="formData.phone_number" name="phone_number"
-                                        placeholder="Enter your phone number" maxlength="18" />
+                                        class="input-field" placeholder="Enter your phone number" maxlength="18" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="text" v-model="formData.company_name" name="company_name" 
-                                        placeholder="Enter your company name" maxlength="100" />
+                                        class="input-field" placeholder="Enter your company name" maxlength="100" />
                                 </div>
                             </div>
                         </div>
@@ -68,15 +68,15 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" v-model="formData.street_address" name="street_address" maxlength="255"/>
+                            <input type="text" class="input-field" v-model="formData.street_address" name="street_address" maxlength="255"/>
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
-                                    <input type="text" v-model="formData.appartment_number" name="appartment_number" maxlength="10"/>
+                                    <input type="text" class="input-field" v-model="formData.appartment_number" name="appartment_number" maxlength="10"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Borough/Neighborhood*</label>
-                                    <input type="text" v-model="formData.neighbourhood" name="neighbourhood" maxlength="100" />
+                                    <input type="text" class="input-field" v-model="formData.neighbourhood" name="neighbourhood" maxlength="100" />
                                 </div>
                             </div>
                             <div class="row">
@@ -93,19 +93,19 @@
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Units (if multi-unit property)*</label>
-                                    <input type="number" v-model="formData.number_of_units" name="number_of_units" maxlength="3" />
+                                    <input type="number" class="input-field" v-model="formData.number_of_units" name="number_of_units" maxlength="3" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year Built*<br></label>
                                     <br><br>
-                                    <input type="number" v-model="formData.year_built" name="year_built" maxlength="4"/>
+                                    <input type="number" class="input-field" v-model="formData.year_built" name="year_built" maxlength="4"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
                                         applicable)*</label>
-                                    <input type="number" v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
+                                    <input type="number" class="input-field" v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
                                 </div>
                             </div>
                         </div>
@@ -122,11 +122,11 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)*</label>
-                                    <input type="number" v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
+                                    <input type="number" class="input-field" v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Bedrooms*</label>
-                                    <input type="number" v-model="formData.number_of_bedrooms"
+                                    <input type="number" class="input-field" v-model="formData.number_of_bedrooms"
                                         name="number_of_bedrooms" maxlength="3">
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels pt-2">Number of Bathrooms*</label>
-                                    <input type="number" v-model="formData.number_of_bathrooms"
+                                    <input type="number" class="input-field" v-model="formData.number_of_bathrooms"
                                         name="number_of_bathrooms" maxlength="3"/>
                                 </div>
                                 <div class="group col-md-6">
@@ -153,16 +153,16 @@
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Monthly Rent (USD)*</label>
                                     <br><br>
-                                    <input type="number" v-model="formData.monthly_rent" name="monthly_rent" maxlength="6"/>
+                                    <input type="number" class="input-field" v-model="formData.monthly_rent" name="monthly_rent" maxlength="6"/>
                                 </div>
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Security Deposit Requirement (USD)*</label>
-                                    <input type="number" v-model="formData.security_deposit" name="security_deposit" maxlength="6"/>
+                                    <input type="number" class="input-field" v-model="formData.security_deposit" name="security_deposit" maxlength="6"/>
                                 </div>
 
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Minimum Lease Duration (Month)*</label>
-                                    <input type="number" v-model="formData.lease_duration" name="lease_duration" maxlength="3"/>
+                                    <input type="number" class="input-field" v-model="formData.lease_duration" name="lease_duration" maxlength="3"/>
                                 </div>
                             </div>
                             <!-- 4 -->
@@ -184,12 +184,12 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">List of Amenities*</label>
-                                    <input type="text" v-model="formData.list_of_amenities" name="list_of_amenities"
+                                    <input type="text" class="input-field" v-model="formData.list_of_amenities" name="list_of_amenities"
                                         placeholder="e.g., In-unit Laundry, Dishwasher" maxlength="255"/>
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Special Features*</label>
-                                    <input type="text" v-model="formData.special_feature" name="special_feature"
+                                    <input type="text" class="input-field" v-model="formData.special_feature" name="special_feature"
                                         placeholder="e.g., Balcony, Pet-friendly" maxlength="255"/>
                                 </div>
                             </div>
@@ -206,24 +206,24 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
-                                    <input type="text" v-model="formData.tenant_characteristics"
+                                    <input type="text" class="input-field" v-model="formData.tenant_characteristics"
                                         name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets" maxlength="255">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range*</label>
-                                    <input type="text" v-model="formData.credit_score" name="credit_score" maxlength="100">
+                                    <input type="text" class="input-field" v-model="formData.credit_score" name="credit_score" maxlength="100">
                                 </div>
                             </div>
                             <!-- 2 -->
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Income Requirements*</label>
-                                    <input type="text" v-model="formData.income_requirements"
+                                    <input type="text" class="input-field" v-model="formData.income_requirements"
                                         name="income_requirements" maxlength="100">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Rental History Checks*</label>
-                                    <input type="text" v-model="formData.rental_history" name="rental_history" maxlength="100">
+                                    <input type="text" class="input-field" v-model="formData.rental_history" name="rental_history" maxlength="100">
                                 </div>
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea v-model="formData.special_note" name="special_note"></textarea>
+                                <textarea class="input-field" v-model="formData.special_note" name="special_note" style="color:white;"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -629,7 +629,25 @@ $(document).ready(() => {
 
 <style scoped>
 
-
+.image-upload{
+    width:100%;
+}
+#image-container{
+    overflow-x:auto;
+    width:100%;
+    margin-left:0px;
+}
+#image-container::-webkit-scrollbar {
+    height: 4px;
+    width: 100%;
+    background-color:gray;
+    border-radius:10px;
+}
+#image-container::-webkit-scrollbar-thumb {
+    height: 4px;
+    background-color:gold;
+    border-radius:10px;
+}
 .new-form-section {
     margin-bottom: 5rem;
     background-color: #012252;
@@ -778,6 +796,15 @@ button {
 .is-invalid {
     border-color: #ff0000 !important;
     border-bottom: 1px solid #ff0000 !important;
+}
+
+.input-field.is-invalid, .was-validated .input-field:invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
 /* button:hover {

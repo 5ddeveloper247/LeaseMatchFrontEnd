@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="phone_input">Phone</label> -->
-                                    <input type="number" class="form-control" v-model="formData.phone_number" name="phone_number" placeholder="Phone Number" maxlength="15">
+                                    <input type="number" class="form-control" v-model="formData.phone_number" name="phone_number" placeholder="Phone Number" maxlength="18">
                                 </div>
                             </div>
                             <div class="mb-5 contact-field">
@@ -233,6 +233,46 @@ const resetFormData = async () => {
     formData.message = '';
     $('[name]').val('');
 }
+
+$(document).ready(() => {
+
+    $('input,select,textarea').on('keyup', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    $('input,select,textarea').on('change', function(e) {
+      $(this).removeClass('is-invalid');
+    });
+    
+    // number not allowed
+    $('[name="name"]').on('keydown', function(e) {
+        var key = e.keyCode || e.which;
+        var char = String.fromCharCode(key);
+        var controlKeys = ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'];
+
+        // Allow control keys and non-numeric characters
+        if (controlKeys.includes(e.key) || !char.match(/[0-9]/)) {
+            return true;
+        } else {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // max numbers allowed
+    $('input[type="number"],input[type="email"]').on('keydown', function(e) {
+        var maxLength = $(this).attr("maxlength");
+        
+        var controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
+        if (controlKeys.includes(e.key)) {
+            return;
+        }
+        // Prevent new input if the value length exceeds maxLength
+        if (this.value.length >= maxLength) {
+            e.preventDefault();
+        }
+    });
+
+    
+})
 </script>
 
 <style scoped>

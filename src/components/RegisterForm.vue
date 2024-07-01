@@ -28,7 +28,7 @@
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Name*</label>
                     <input type="text" v-model="formData.name" name="name" id="username" placeholder="Enter your name"
-                      class="form-control" maxlength="100" />
+                      class="form-control" maxlength="50" />
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Date of Birth*</label>
@@ -543,7 +543,7 @@
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Username *</label>
                     <input type="text" v-model="formData.user_name" name="user_name" id="user_name" class="form-control"
-                      placeholder="Username" maxlength="100" />
+                      placeholder="Username" maxlength="50" />
                   </div>
 
                   <div class="group col-md-6">
@@ -556,13 +556,19 @@
                 <div class="row">
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Password *</label>
-                    <input type="password" v-model="formData.password" name="password" class="form-control"
-                      placeholder="Enter Password" maxlength="20" />
+                    <div class="form_blk pass_blk">
+                        <input type="password" v-model="formData.password" name="password"
+                            class="form-control" placeholder="Enter Password" maxlength="20">
+                        <i class="icon-eye view_pass" id="eye"></i>
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Confirm Password *</label>
-                    <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
-                      class="form-control" placeholder="Enter Confirm Password" maxlength="20" />
+                    <div class="form_blk pass_blk">
+                        <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
+                            class="form-control" placeholder="Enter Confirm Password" maxlength="20">
+                        <i class="icon-eye view_pass" id="eye"></i>
+                    </div>
                   </div>
                 </div>
                 <div class="row">
@@ -960,6 +966,13 @@ $(document).ready(() => {
       e.preventDefault();
     }
   });
+
+  $('.view_pass').on('click', function() {
+    var passwordField = $(this).siblings('.form-control');
+    var type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+    passwordField.attr('type', type);
+    $(this).toggleClass('icon-eye-slash').toggleClass('icon-eye');
+});
   // const selectedFiles = []
   // Event listener for file input change
   $('#file-input').on('change', function (event) {
@@ -1033,6 +1046,39 @@ $(document).ready(() => {
 </script>
 
 <style>
+.form_blk.pass_blk>i.icon-eye {
+    background-image: url('../assets/images/icon-eye.svg');
+}
+.form_blk.pass_blk>i.icon-eye-slash {
+    background-image: url('../assets/images/icon-eye-slash.svg');
+}
+.form_blk.pass_blk {
+    position: relative;
+}
+.form_blk.pass_blk>i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.4rem;
+    width: 1.6rem;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-filter: brightness(0.5) invert(0.4);
+    filter: brightness(0.5) invert(0.4);
+}
+
 .is-invalid {
   border-color: #ff0000 !important;
 }
