@@ -76,7 +76,7 @@
                     <select class="form-select" v-model="formData.preferred_property_type"
                       name="preferred_property_type" aria-label="Default select example">
                       <option value="">- Select a Preferred Property Type -</option>
-                      <option value="Appartment">Appartment</option>
+                      <option value="Apartment">Apartment</option>
                       <option value="Condo">Condo</option>
                       <option value="House">House</option>
                       <option value="Studio">Studio</option>
@@ -144,7 +144,7 @@
                       aria-label="Default select example">
                       <option value="">- Select an Employment Status -</option>
                       <option value="Employed">Employed</option>
-                      <option value="Unemployed">Unemployed</option>
+                      <option value="Self Employed">Self Employed</option>
                       <option value="Retired">Retired</option>
                       <option value="Student">Student</option>
                     </select>
@@ -191,7 +191,7 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Has Rental Voucher* </label>
-                    <select class="form-select" v-model="formData.rental_voucher" name="rental_voucher"
+                    <select class="form-select" v-model="formData.rental_voucher" name="rental_voucher" id="rental_voucher"
                       aria-label="Default select example">
                       <option value="">- Select a Has Rental Voucher -</option>
                       <option value="Yes">Yes</option>
@@ -200,7 +200,7 @@
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Voucher Type* </label>
+                    <label class="fieldlabels p-0">Voucher Type<span class="mand-staric1">*</span> </label>
                     <select class="form-select" v-model="formData.voucher_type" name="voucher_type"
                       aria-label="Default select example">
                       <option value="">- Select a Voucher Type -</option>
@@ -216,13 +216,13 @@
                 <div class="row">
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Certification Details* </label>
+                    <label class="fieldlabels p-0">Certification Details<span class="mand-staric1">*</span> </label>
                     <input type="text" v-model="formData.certification_detail" name="certification_detail"
                       class="form-control" placeholder="Certification Details" maxlength="100" />
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Certification Expiry Date* </label>
+                    <label class="fieldlabels p-0">Certification Expiry Date<span class="mand-staric1">*</span> </label>
                     <input type="date" v-model="formData.certification_expiry" name="certification_expiry" class="" />
                   </div>
                 </div>
@@ -313,7 +313,7 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Has Pets*</label>
-                    <select class="form-select" v-model="formData.has_pets" name="has_pets"
+                    <select class="form-select" v-model="formData.has_pets" name="has_pets" id="has_pets"
                       aria-label="Default select example">
                       <option value="">- Select a Has Pets -</option>
                       <option value="Yes">Yes</option>
@@ -322,21 +322,21 @@
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Pet Type(s)* </label>
-                    <input type="text" v-model="formData.pet_type" name="pet_type" class="form-control"
+                    <label class="fieldlabels p-0">Pet Type(s) <span class="mand-staric">*</span> </label>
+                    <input type="text" v-model="formData.pet_type" name="pet_type" class="form-control" id="pet_type"
                       placeholder="Pet Type(s)" maxlength="100" />
                   </div>
                 </div>
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Number of Pets*</label>
+                    <label class="fieldlabels p-0">Number of Pets<span class="mand-staric">*</span></label>
                     <input type="number" v-model="formData.number_of_pets" name="number_of_pets" class="form-control"
                       placeholder="Number of Pets" maxlength="3" />
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Pet Size*</label>
+                    <label class="fieldlabels p-0">Pet Size<span class="mand-staric">*</span></label>
                     <select class="form-select" v-model="formData.pet_size" name="pet_size"
                       aria-label="Default select example">
                       <option value="">- Select a Pet Size -</option>
@@ -363,7 +363,7 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Disability*</label>
-                    <select class="form-select" v-model="formData.disability" name="disability"
+                    <select class="form-select" v-model="formData.disability" name="disability" id="disability"
                       aria-label="Default select example">
                       <option value="">- Select a Disability -</option>
                       <option value="Yes">Yes</option>
@@ -372,7 +372,7 @@
                   </div>
                   <div class="group col-md-6">
 
-                    <label class="fieldlabels p-0">Type of Disability*</label>
+                    <label class="fieldlabels p-0">Type of Disability<span class="mand-staric2">*</span></label>
                     <input type="text" v-model="formData.disability_type" name="disability_type" class="form-control"
                       placeholder="Type of Disability" maxlength="100" />
                   </div>
@@ -381,7 +381,7 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="col-12">
-                    <label class="fieldlabels p-0">Special Accommodations Needed*</label>
+                    <label class="fieldlabels p-0">Special Accommodations Needed<span class="mand-staric2">*</span></label>
                     <input type="text" v-model="formData.special_accomodation" name="special_accomodation"
                       class="form-control" placeholder="Special Accommodations Needed" maxlength="255" />
                   </div>
@@ -967,6 +967,36 @@ $(document).ready(() => {
     }
   });
 
+  // if has pets is yes then mandatory staric show otherwise not
+  $('#has_pets').on('change', function (e) {
+    var pet_type = $(this).val();
+    if(pet_type == 'Yes'){
+      $(".mand-staric").show();
+    }else{
+      $(".mand-staric").hide();
+    }
+  });
+  // if rental voucher is yes then mandatory staric show otherwise not
+  $('#rental_voucher').on('change', function (e) {
+    var value = $(this).val();
+    if(value == 'Yes'){
+      $(".mand-staric1").show();
+    }else{
+      $(".mand-staric1").hide();
+    }
+  });
+  // if disability is yes then mandatory staric show otherwise not
+  $('#disability').on('change', function (e) {
+    var value = $(this).val();
+    if(value == 'Yes'){
+      $(".mand-staric2").show();
+    }else{
+      $(".mand-staric2").hide();
+    }
+  });
+  
+  
+
   $('.view_pass').on('click', function() {
     var passwordField = $(this).siblings('.form-control');
     var type = passwordField.attr('type') === 'password' ? 'text' : 'password';
@@ -1046,6 +1076,17 @@ $(document).ready(() => {
 </script>
 
 <style>
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 .form_blk.pass_blk>i.icon-eye {
     background-image: url('../assets/images/icon-eye.svg');
 }

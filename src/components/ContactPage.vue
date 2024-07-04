@@ -22,7 +22,7 @@
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label>Your Name</label> -->
-                                    <input type="text"  class="form-control" v-model="formData.name" name="name" placeholder="Your Name" maxlength="100">
+                                    <input type="text"  class="form-control" v-model="formData.name" name="name" placeholder="Your Name" maxlength="50">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Email address</label> -->
@@ -276,6 +276,17 @@ $(document).ready(() => {
 </script>
 
 <style scoped>
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 .is-invalid{
     border-color: #ff0000 !important;
 }

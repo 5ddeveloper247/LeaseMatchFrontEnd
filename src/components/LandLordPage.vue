@@ -43,7 +43,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <input type="text" v-model="formData.full_name" name="full_name" 
-                                        class="input-field" placeholder="UserName" maxlength="50" />
+                                        class="input-field" placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id" 
@@ -68,7 +68,7 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" class="input-field" v-model="formData.street_address" name="street_address" maxlength="255"/>
+                            <input type="text" class="input-field" v-model="formData.street_address" name="street_address" maxlength="100"/>
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
-                                        applicable)*</label>
+                                        applicable)</label>
                                     <input type="number" class="input-field" v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
                                 </div>
                             </div>
@@ -246,10 +246,10 @@
                                                 <label for="file-input">
                                                     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                                                 </label>
-                                                <p class="site-color p-0" id="upload-text">Upload document*</p>
+                                                <p class="site-color p-0 white" id="upload-text">Upload *</p>
                                             </div>
                                             <input type="file" id="file-input" name="file" accept="image/*" multiple="false">
-                                            <div id="image-container"></div>
+                                            <div id="image-container" class="white"></div>
                                             <div class="image-info">
                                                 <p id="file-names"></p>
                                             </div>
@@ -378,8 +378,8 @@ const activeTab = ref(tabs.value[0].id);
 
 //tab selection function
 const selectTab = (tabId, index) => {
-    // activeTab.value = tabId;
-    // formData.step = index+1;
+    activeTab.value = tabId;
+    formData.step = index+1;
 }
 
 //next tab function
@@ -628,7 +628,21 @@ $(document).ready(() => {
 </script>
 
 <style scoped>
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.white{
+    color: #fff;
+}
 .image-upload{
     width:100%;
 }

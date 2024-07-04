@@ -1036,7 +1036,7 @@ body {
 
 .subscribe h1,
 p {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .btn-subscribe {
