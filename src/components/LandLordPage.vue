@@ -378,8 +378,8 @@ const activeTab = ref(tabs.value[0].id);
 
 //tab selection function
 const selectTab = (tabId, index) => {
-    activeTab.value = tabId;
-    formData.step = index+1;
+    // activeTab.value = tabId;
+    // formData.step = index+1;
 }
 
 //next tab function
