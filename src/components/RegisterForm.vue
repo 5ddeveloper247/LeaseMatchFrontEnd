@@ -515,11 +515,11 @@
                 <div class="row">
                   <div class="group col-md-12">
                     <div class="image-upload">
-                      <div class="upload-container">
+                      <div class="upload-container pe-4">
                         <label for="file-input">
                           <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                         </label>
-                        <p class="site-color text-center p-0" id="upload-text">Upload document*</p>
+                        <p class="site-color text-dark text-center p-0" id="upload-text">Upload document*</p>
                       </div>
                       <input type="file" id="file-input" name="files" accept="image/*" multiple="false" />
                       <div id="image-container"></div>
@@ -1450,7 +1450,7 @@ input[type="number"] {
 }
 
 .image-item p {
-  color: var(--tex-color);
+  color: var(--tex-color) !important;
   background: transparent;
   white-space: nowrap;
   overflow: hidden;

@@ -22,32 +22,32 @@
         <div class="container">
             <div class="row">
                 <div class="col footer-items">
-                    <p class="site-color">
+                    <p class="text-dark">
                         1. Visit the “Contact Us” page: Navigate to the LeaseMatch.NYC website and locate the “Contact
                         Us” page. This page should provide a form or contact details for submitting inquiries or
                         requests.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         2. Provide your name and log number: In the contact form or message, please clearly state your
                         full name and the log number associated with your waitlist application. This information will
                         help us locate your application and process your request efficiently.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         3. Request waitlist removal: Clearly express your desire to be removed from the waitlist. You
                         may include any additional information or reasons for your request, although it is not
                         mandatory.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         4. Submit your request: Once you have filled out the necessary details and included your
                         waitlist removal request, submit the form or send the message to LeaseMatch.NYC’s customer
                         support team.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         5. Confirmation and response: LeaseMatch.NYC’s customer support team will review your request
                         and respond to you in a timely manner. They will confirm the removal of your name from the
                         waitlist and provide any additional information or clarification if needed.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         Please note that once your name is removed from the waitlist, you will no longer be considered
                         for housing matches through our platform. If you change your mind in the future and wish to
                         rejoin the waitlist, you will need to submit a new application. If you have any questions or

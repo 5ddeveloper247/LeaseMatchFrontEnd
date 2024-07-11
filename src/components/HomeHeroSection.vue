@@ -55,7 +55,7 @@
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
-                                <p>We have lots of properties in various locations.</p>
+                                <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
                         <!-- 2 -->
@@ -66,7 +66,7 @@
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
-                                <p>We have lots of properties in various locations.</p>
+                                <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
                         <!-- 3 -->
@@ -77,7 +77,7 @@
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
-                                <p>We have lots of properties in various locations.</p>
+                                <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
                         <!-- 4 -->
@@ -88,7 +88,7 @@
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
-                                <p>We have lots of properties in various locations.</p>
+                                <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
                     </div>

@@ -53,7 +53,7 @@ export default {
                             </div>
                             <div>
                                 <h5 class="process-heading active" data-step="1">Start Your Application</h5>
-                                <p class="lead process-text active" data-step="1">
+                                <p class="text-dark lead process-text active" data-step="1">
                                     Begin your journey to the perfect New York City home by signing up and completing
                                     our detailed application. This is the first step in letting us know exactly what
                                     you're looking for.
@@ -69,7 +69,7 @@ export default {
                             </div>
                             <div>
                                 <h5 class="process-heading" data-step="2">Choose Your Plan</h5>
-                                <p class="lead process-text" data-step="2">
+                                <p class="text-dark lead process-text" data-step="2">
                                     After filling out the application, select the plan that suits you best. With options
                                     tailored to different needs, you'll find one that aligns with your housing search.
                                 </p>
@@ -84,7 +84,7 @@ export default {
                             </div>
                             <div>
                                 <h5 class="process-heading" data-step="3">Let Our AI Work for You</h5>
-                                <p class="lead process-text" data-step="3">
+                                <p class="text-dark lead process-text" data-step="3">
                                     Once you've chosen your plan, relax and let our advanced AI take over. Our system
                                     specializes in tenant matching, connecting you with the finest landlords and their
                                     available units, based on your specific needs and preferences.
@@ -138,7 +138,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 mt-1 mb-md-5 mb-1">
+                <div class="col-md-6 col-lg-6 mt-3 mt-md-1 mb-md-5 mb-1">
                     <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2">
                         <div class="card-body quality-content2 text-white h-100">
                             <h5 class="mb-3">Ensure production quality with</h5>

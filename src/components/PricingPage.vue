@@ -22,8 +22,8 @@
     <!-- package section -->
     <section class="package_sec-1 bg-package my-5 pb-5">
         <div class="container">
-            <div class="row align-items-center justify-content-center fadeInLeft">
-                <div class="col-md-3 col-sm-5 col-12" v-for="(value, index) in pricing">
+            <div class="row gy-5 align-items-center justify-content-center fadeInLeft">
+                <div class="col-12 col-sm-6 col-lg-4" v-for="(value, index) in pricing">
                     <div class="card pricing-card">
                         <div class="card-header pricing-card-header">
                             <h5 class="site-color"> {{ value.title }}</h5>
@@ -151,5 +151,9 @@ getAllPageData();
     color: gray;
     pointer-events: none;
     opacity: 0.5;
+}
+
+.btn-package:hover {
+    color: #ffffffa0
 }
 </style>

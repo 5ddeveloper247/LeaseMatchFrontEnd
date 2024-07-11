@@ -24,47 +24,47 @@
             <div class="row">
                 <div class="col footer-items">
                     <h2 class="site-color"> Lease Match – Data Handling and Usage Consent</h2>
-                    <p>
+                    <p class="text-dark">
                         By submitting your information to Lease Match, you acknowledge and agree to the following terms
                         regarding the use, storage, and dissemination of your data:
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight">Data Storage and Perpetuity:</span> You hereby grant Lease Match the
                         exclusive right to retain and
                         store the personal and property information you provide, in perpetuity.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight">Data Sharing and Dissemination:</span> You consent to Lease Match
                         sharing this information with any
                         third parties at our discretion. This may include, but is not limited to, potential renters,
                         landlords, service providers, or business partners.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight">Data Monetization and Profit:</span> You agree that Lease Match has
                         the right to sell,
                         lease, or
                         otherwise profit from your data without any obligation or compensation to you.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight">Compliance with Laws:</span> While Lease Match reserves these rights,
                         all data handling
                         and
                         dissemination will be conducted in compliance with applicable federal, state, and local laws and
                         regulations.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight">Revocation of Consent:</span> You understand that you have the right
                         to revoke this
                         consent at any
                         time, with the understanding that such revocation will not affect any processing that has
                         already occurred.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         <span class="font-weight"> Contact and Inquiries:</span> For any questions or to withdraw your
                         consent, please
                         contact us.
                     </p>
-                    <p>
+                    <p class="text-dark">
                         By agreeing to these terms, you affirm that you have read and understood the extent of the
                         consent you are providing regarding your data.
                     </p>

@@ -20,7 +20,7 @@
     <!-- section 1 -->
     <section class="about_sec-1">
         <div class="container my-5">
-            <div class="row box-aboutt justify-content-between">
+            <div class="row g-0 box-aboutt justify-content-between">
                 <div class="col-lg-6">
                     <div class="about-image pb-4 pb-lg-0">
                         <img src="../assets/images/Average-time-to-match.jpg" class="h-100 w-100">
@@ -94,12 +94,12 @@
             <div class="row">
                 <div class="col-12 box-tabs">
                     <div class="row row-30 row-flex">
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 col-lg-4 mb-4">
                             <div class="box-about">
                                 <div class="icon box-about-icon mb-3"><i class="fa-solid fa-location-dot"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Innovative Tech</h4>
-                                <p class="site-color">LeaseMatch.NYC harnesses the power of AI to revolutionize how
+                                <p class="site-color text-dark">LeaseMatch.NYC harnesses the power of AI to revolutionize how
                                     renters find homes. Our
                                     technology is designed to swiftly analyze applications and match them with the most
                                     suitable available units.</p>
@@ -107,12 +107,12 @@
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 col-lg-4 mb-4">
                             <div class="box-about about-content">
                                 <div class="icon box-about-icon mb-3"><i class="fa fa-search" aria-hidden="true"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Inclusive</h4>
-                                <p class="site-color">Recognizing the diverse needs of New York City's population,
+                                <p class="site-color text-dark">Recognizing the diverse needs of New York City's population,
                                     LeaseMatch.NYC was
                                     created to be an inclusive platform. It caters to a wide range of housing
                                     requirements, from those currently housed to individuals experiencing homelessness
@@ -121,12 +121,12 @@
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 col-lg-4 mb-4">
                             <div class="box-about ">
                                 <div class="icon box-about-icon mb-3"><i class="fa-solid fa-folder-open"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Efficient Matching</h4>
-                                <p class="site-color">LeaseMatch.NYC streamlines the rental process for both landlords
+                                <p class="site-color text-dark">LeaseMatch.NYC streamlines the rental process for both landlords
                                     and renters. By
                                     removing the usual difficulties in listing and finding tenants, we connect landlords
                                     directly with a ready pool of potential renters, ensuring a smoother and more
@@ -176,7 +176,7 @@
     <!-- section 4 -->
     <section class="about_sec-3 bg-agents my-5">
         <div class="container">
-            <div class="row">
+            <div class="row gy-4">
                 <h1 class="site-color divide-heading1 pb-md-5 pb-3">Our Agents</h1>
                 <div class="col-lg-3 col-sm-6">
                     <div class="card agents-card">
@@ -185,7 +185,7 @@
                                 alt="Card image cap">
                             <div class="card-body agent-card-body text-center">
                                 <h5 class="card-title">Janet Richmond</h5>
-                                <p class="card-text">Residential Real Estate Broker</p>
+                                <p class="card-text text-dark">Residential Real Estate Broker</p>
                             </div>
                         </a>
                     </div>
@@ -198,7 +198,7 @@
                                 alt="Card image cap">
                             <div class="card-body agent-card-body text-center">
                                 <h5 class="card-title">Janet Richmond</h5>
-                                <p class="card-text">Residential Real Estate Broker</p>
+                                <p class="card-text text-dark">Residential Real Estate Broker</p>
                             </div>
                         </a>
                     </div>
@@ -211,7 +211,7 @@
                                 alt="Card image cap">
                             <div class="card-body agent-card-body text-center">
                                 <h5 class="card-title">Janet Richmond</h5>
-                                <p class="card-text">Residential Real Estate Broker</p>
+                                <p class="card-text text-dark">Residential Real Estate Broker</p>
                             </div>
                         </a>
                     </div>
@@ -224,7 +224,7 @@
                                 alt="Card image cap">
                             <div class="card-body agent-card-body text-center">
                                 <h5 class="card-title">Janet Richmond</h5>
-                                <p class="card-text">Residential Real Estate Broker</p>
+                                <p class="card-text text-dark">Residential Real Estate Broker</p>
                             </div>
                         </a>
                     </div>

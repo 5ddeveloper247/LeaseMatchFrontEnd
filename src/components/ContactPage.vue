@@ -43,7 +43,7 @@
                                 <!-- <label for="message">Message</label> -->
                                 <textarea class="form-control" v-model="formData.message" name="message" rows="5" placeholder="Message"></textarea>
                             </div>
-                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2" @click="storeContact">Send Message</button>
+                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2 " @click="storeContact">Send Message</button>
                         </form>
                     </div>
                     <div class="col-md-5 px-md-5">
@@ -114,7 +114,7 @@
                         <label>Frequently Asked Question</label>
                         <h1 class="font-weight">Get The Answers You <span class="" style="color: #04d7e8;">Need</span>
                         </h1>
-                        <p class="site-color"> A pellentesque sit amet porttitor eget. Fringilla phasellus faucibus
+                        <p class="text-dark"> A pellentesque sit amet porttitor eget. Fringilla phasellus faucibus
                             scelerisque eleifend.
                             Sit amet volutpat consequat mauris. Mattis pellentesque id nibh.</p>
                     </div>
@@ -312,5 +312,9 @@ input[type="number"] {
 
 .contact_sec-1 {
     margin-top: 7rem;
+}
+
+.theme_btn2:hover {
+    color: #ffffffba !important;
 }
 </style>

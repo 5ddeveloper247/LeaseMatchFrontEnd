@@ -58,7 +58,7 @@ function toggleChatbot() {
     </section>
     <footer class="deneb_footer bg-footer">
         <div class="widget_wrapper">
-            <div class="container mb-md-5">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="widget widegt_about">
@@ -93,10 +93,10 @@ function toggleChatbot() {
                                 <h4>Services</h4>
                             </div>
                             <ul>
-                                <li><RouterLink to="/about">About Us</RouterLink></li>
-                                <li><RouterLink to="/landlord">Landlord</RouterLink></li>
-                                <li><RouterLink to="/registerForm">Register</RouterLink></li>
-                                <li><RouterLink to="/contact">Contact</RouterLink></li>
+                                <li class="px-0"><RouterLink to="/about">About Us</RouterLink></li>
+                                <li class="px-0"><RouterLink to="/landlord">Landlord</RouterLink></li>
+                                <li class="px-0"><RouterLink to="/registerForm">Register</RouterLink></li>
+                                <li class="px-0"><RouterLink to="/contact">Contact</RouterLink></li>
                             </ul>
                         </div>
                     </div>
@@ -121,8 +121,10 @@ function toggleChatbot() {
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div class="info">
-                                        <p><a href="mailto:info@deneb.com">info@deneb.com</a></p>
-                                        <p><a href="mailto:services@deneb.com">services@deneb.com</a></p>
+                                        <p class="d-flex gap-3">
+                                            <a href="mailto:info@deneb.com">info@deneb.com</a> 
+                                            <a href="mailto:services@deneb.com">services@deneb.com</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="single_info d-flex">
@@ -139,17 +141,16 @@ function toggleChatbot() {
                 </div>
             </div>
             <div class="copyright_area">
-
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12 d-flex align-items-md-center justify-content-md-center my-4">
+                        <div class="col-lg-12 d-flex align-items-md-center justify-content-md-center mb-4">
                             <div class="footer-tags d-flex w-100" style="gap: 30px;">
-                                <div class="row g-3 w-100">
-                                    <div class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center gap-5">
+                                <div class="row gy-3 w-100">
+                                    <div class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center justify-content-start gap-4">
                                         <RouterLink to="/waitlist">| Waitlist Removal</RouterLink>
                                         <RouterLink to="/policy">| Refund Policy</RouterLink>
                                     </div>
-                                    <div class="col-12 col-md-6 d-flex align-items-center gap-5">
+                                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end gap-5">
                                         <RouterLink to="/privacy">| Privacy Policy</RouterLink>
                                         <RouterLink to="/terms"> | Terms & Conditions</RouterLink>
                                     </div>

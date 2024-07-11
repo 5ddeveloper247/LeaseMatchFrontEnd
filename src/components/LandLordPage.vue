@@ -242,7 +242,7 @@
                                 <div class="row">
                                     <div class="group col-md-12">
                                         <div class="image-upload">
-                                            <div class="upload-container">
+                                            <div class="upload-container pe-4">
                                                 <label for="file-input">
                                                     <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                                                 </label>
@@ -250,7 +250,7 @@
                                             </div>
                                             <input type="file" id="file-input" name="file" accept="image/*" multiple="false">
                                             <div id="image-container" class="white"></div>
-                                            <div class="image-info">
+                                            <div class="image-info" style="color: #fff !important">
                                                 <p id="file-names"></p>
                                             </div>
                                         </div>
@@ -608,7 +608,7 @@ $(document).ready(() => {
         selectedFiles.forEach((file, index) => {
             const reader = new FileReader();
             reader.onload = function (e) {
-                const $imageDiv = $('<div>').addClass('image-item');
+                const $imageDiv = $('<div>').addClass('image-item-land');
                 const $image = $('<img>').attr('src', e.target.result);
                 $imageDiv.append($image);
                 const $fileName = $('<p>').text(file.name);
@@ -678,13 +678,6 @@ fieldset {
     gap: 10px;
     align-items: flex-end;
     height: fit-content;
-}
-
-.image-item {
-    flex: 0 0 auto;
-    width: 100%;
-    position: relative;
-    z-index: 9;
 }
 
 .nav-link {

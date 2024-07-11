@@ -22,47 +22,47 @@
             <div class="row">
                 <div class="col footer-items">
                     <h2 class="site-color"> Understanding Our Terms:</h2>
-                    <p>
+                    <p class="text-dark">
                         Please thoroughly read our terms and conditions. They are essential in defining your rights and
                         responsibilities on our platform.
                     </p>
                     <h2 class="site-color"> Data Collection and Use:</h2>
-                    <p>
+                    <p class="text-dark">
                         We collect personal and household data, including income details, to tailor our services to your
                         needs. Please make sure you’re comfortable with how we use this information.
                     </p>
                     <h2 class="site-color">Cookies for a Better Experience:</h2>
-                    <p>
+                    <p class="text-dark">
                         Our website uses cookies to enhance your experience. If you’re concerned about cookies, you can
                         adjust your browser settings, but this might affect your experience on our site.
                     </p>
                     <h2 class="site-color">Embedded Content:</h2>
-                    <p>
+                    <p class="text-dark">
                         We may include content from other websites. Be aware that these sites may collect data about
                         you, under their own policies.
                     </p>
                     <h2 class="site-color">Data Sharing:</h2>
-                    <p>
+                    <p class="text-dark">
                         We might share your data in specific scenarios, like password resets, landlord matchmaking, to
                         ensure account security. We maintain high standards of data protection during these processes.
                     </p>
                     <h2 class="site-color">Data Retention:</h2>
-                    <p>
+                    <p class="text-dark">
                         Your data is retained as long as necessary to provide our services. We make sure to protect your
                         data from unauthorized access or use.
                     </p>
                     <h2 class="site-color">Your Data Rights:</h2>
-                    <p>
+                    <p class="text-dark">
                         You have the right to access and request the deletion of your personal data. Please follow our
                         procedures for submitting such requests. (Send detailed message trough Contact Us portal)
                     </p>
                     <h2 class="site-color">Data Dissemination:</h2>
-                    <p>
+                    <p class="text-dark">
                         By registering and paying the fee, you acknowledge our right to use and disseminate the
                         information you provide. We ensure to protect your data in our possession.
                     </p>
                     <h2 class="site-color">Agreement to Terms:</h2>
-                    <p>
+                    <p class="text-dark">
                         By using LeaseMatch.NYC, you agree to these terms and conditions. Ensure that you comply with
                         them while using our platform, respecting the rights of other users and fulfilling your
                         obligations as a registered user.
