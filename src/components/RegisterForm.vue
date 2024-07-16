@@ -555,18 +555,19 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <label class="fieldlabels p-0">Password *</label>
+                    <label class="fieldlabels p-0">Password * <small>(Must be one capital, small, number and special character)</small></label>
                     <div class="form_blk pass_blk">
                         <input type="password" v-model="formData.password" name="password"
-                            class="form-control" placeholder="Enter Password" maxlength="20">
+                            class="pass_input m-0" placeholder="Enter Password" maxlength="20">
                         <i class="icon-eye view_pass" id="eye"></i>
                     </div>
+                    
                   </div>
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Confirm Password *</label>
                     <div class="form_blk pass_blk">
                         <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
-                            class="form-control" placeholder="Enter Confirm Password" maxlength="20">
+                            class="pass_input m-0" placeholder="Enter Confirm Password" maxlength="20">
                         <i class="icon-eye view_pass" id="eye"></i>
                     </div>
                   </div>
@@ -623,6 +624,7 @@ var current_fs, next_fs, previous_fs;
 var opacity;
 var current = 1;
 var selectedFiles = [];
+
 
 
 
@@ -911,6 +913,9 @@ const resetFormData = async () => {
   formData.user_email = '';
   formData.password = '';
   formData.password_confirmation = '';
+
+  selectedFiles = [];
+  
   $('[name]').val('');
 }
 
@@ -998,15 +1003,15 @@ $(document).ready(() => {
   
 
   $('.view_pass').on('click', function() {
-    var passwordField = $(this).siblings('.form-control');
+    var passwordField = $(this).siblings('.pass_input');
     var type = passwordField.attr('type') === 'password' ? 'text' : 'password';
     passwordField.attr('type', type);
     $(this).toggleClass('icon-eye-slash').toggleClass('icon-eye');
-});
+  });
   // const selectedFiles = []
   // Event listener for file input change
   $('#file-input').on('change', function (event) {
-    console.log(selectedFiles.length);
+    
     const files = event.target.files;
 
     var allfileslength = files.length + selectedFiles.length;
@@ -1071,6 +1076,10 @@ $(document).ready(() => {
       })
     }
   }
+
+  
+  
+
 })
 
 </script>
@@ -1199,12 +1208,15 @@ input[type="number"] {
   display: none;
 }
 
-​ #msform input,
+
+​ 
+
+#msform input,
 #msform textarea,
 .form-select {
   padding: 8px 15px 8px 15px;
   border: 1px solid var(--tex-color);
-  border-radius: 0px;
+  border-radius: 10px;
   margin-bottom: 25px;
   margin-top: 2px;
   width: 100%;
@@ -1215,7 +1227,9 @@ input[type="number"] {
   font-size: 16px;
   letter-spacing: 1px;
 }
-
+fieldset input,fieldset select,fieldset textarea{
+  border-radius:8px !important;
+}
 ​ .form-select,
 .form-select option {
   cursor: pointer;

@@ -535,6 +535,8 @@ const resetFormData = async () => {
             formData.rental_history = '';
             formData.special_note = '';
             
+            selectedFiles = [];
+
             $('[name]').val('');
        
 }

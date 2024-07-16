@@ -170,7 +170,7 @@ function toggleChatbot() {
     </footer>
 
     <!-- Chatbot Toggler Button -->
-    <button class="chatbot-toggler" @click="toggleChatbot">
+    <button class="chatbot-toggler d-none" @click="toggleChatbot">
         <span class="material-symbols-rounded chat-icon" :class="{ 'rotate-out': isChatbotVisible }">
             Chat
         </span>

@@ -22,7 +22,7 @@
     <!-- package section -->
     <section class="package_sec-1 bg-package my-5 pb-5">
         <div class="container">
-            <div class="row gy-5 align-items-center justify-content-center fadeInLeft">
+            <div class="row gy-5 align-items-center justify-content-center fadeInLeft" id="pricing_container" style="display:none;">
                 <div class="col-12 col-sm-6 col-lg-4" v-for="(value, index) in pricing">
                     <div class="card pricing-card">
                         <div class="card-header pricing-card-header">
@@ -43,7 +43,7 @@
                             </ul>
                         </div>
                         <div class="card-footer pricing-card-footer text-center">
-                            <a href="javascript:;" class="btn btn-package theme_btn2">Get
+                            <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Get
                                 Started</a>
                         </div>
                     </div>
@@ -123,6 +123,9 @@ try {
         
         if (response.data.success) {
             pricing.value = response.data.data.pricings;
+            setTimeout(function(){
+                $("#pricing_container").slideDown(1500);
+            }, 500);
         } else {
             toastr.error('API error:', response.data.error);
         }
