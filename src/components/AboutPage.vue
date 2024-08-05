@@ -174,7 +174,7 @@
     </section>
 
     <!-- section 4 -->
-    <section class="about_sec-3 bg-agents my-5">
+    <!-- <section class="about_sec-3 bg-agents my-5">
         <div class="container">
             <div class="row gy-4">
                 <h1 class="site-color divide-heading1 pb-md-5 pb-3">Our Agents</h1>
@@ -190,7 +190,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- 2 -->
+               
                 <div class="col-lg-3 col-sm-6">
                     <div class="card agents-card">
                         <a href="#" class="block-agent">
@@ -203,7 +203,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- 3 -->
+             
                 <div class="col-lg-3 col-sm-6">
                     <div class="card agents-card">
                         <a href="#" class="block-agent">
@@ -216,7 +216,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- 4 -->
+             
                 <div class="col-lg-3 col-sm-6">
                     <div class="card agents-card">
                         <a href="#" class="block-agent">
@@ -232,7 +232,7 @@
             </div>
         </div>
 
-    </section>
+    </section> -->
 
     <!-- subscription -->
     <section class="bg-subscription mb-5">

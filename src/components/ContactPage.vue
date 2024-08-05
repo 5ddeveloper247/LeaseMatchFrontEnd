@@ -89,7 +89,7 @@
         </div>
     </section>
     <!-- faqs -->
-    <section class="contact_sec-2 my-5 bg-faqs py-5">
+    <!-- <section class="contact_sec-2 my-5 bg-faqs py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- map -->
     <section class="mb-5">
         <div class="container-fluid">

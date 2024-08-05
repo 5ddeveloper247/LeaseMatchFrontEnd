@@ -26,7 +26,7 @@
                     <div class="video-container" @mousemove="updateButtonPosition" @mouseenter="showButton"
                         @mouseleave="hideButton">
                         <div class="shade-overlay"></div>
-                        <video id="myVideo" class="h-100 w-100" style="object-fit: cover" autoplay muted>
+                        <video id="myVideo" class="h-100 w-100" style="object-fit: cover" autoplay>
                             <source
                                 src="https://www.leasematch.nyc/wp-content/uploads/2023/12/LeaseMatch.NYC-Your-Dream-Home-1.mp4">
                         </video>
@@ -45,8 +45,8 @@
     <!-- section-2 -->
     <section class="sec-2">
         <div class="container my-5">
-            <div class="row box-aboutt justify-content-between">
-                <div class="col-lg-6 box-tabs p-lg-0">
+            <div class="row box-aboutt justify-content-center">
+                <!-- <div class="col-lg-6 box-tabs p-lg-0">
                     <div class="row row-30 row-flex">
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
@@ -58,7 +58,6 @@
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
-                        <!-- 2 -->
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
@@ -69,7 +68,6 @@
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
-                        <!-- 3 -->
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
@@ -80,7 +78,6 @@
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
-                        <!-- 4 -->
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
@@ -92,9 +89,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- part2 -->
-                <div class="col-lg-5 box-tabss-main">
+                <div class="col-lg-7 box-tabss-main">
                     <div class="box-tabss-main-inner">
                         <h2>About Our Company</h2>
                         <div class="divider-small"></div>
