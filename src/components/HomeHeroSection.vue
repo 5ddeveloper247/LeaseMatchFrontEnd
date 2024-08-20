@@ -53,9 +53,9 @@
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-location-dot" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-house" style="font-size:36px;"></i>
                                 </div>
-                                <h4 class="box-about-title">Various Locations</h4>
+                                <h4 class="box-about-title">Vetted Renters</h4>
                                 <div class="box-about-divider"></div>
                                 <div class="elementor-element elementor-element-0700d4b e-con-full e-flex e-con e-child"
                                     data-id="0700d4b" data-element_type="container"
@@ -76,7 +76,8 @@
 
 
                                                     <h3 class="etheme-icon-box-title">
-                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>4K+</span>
+                                                        <span><i class=" me-1 fa-regular fa-circle-check"
+                                                                style="color: #04d7e8; font-size: 25px;"></i>4K+</span>
                                                     </h3>
 
                                                     <p class="etheme-icon-box-description">
@@ -86,16 +87,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="text-dark">We have lots of properties in various locations.</p>
+                                <!-- <p class="text-dark">We have lots of properties in various locations.</p> -->
                             </div>
                         </div>
                         <!-- Box 2 -->
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-folder-open" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-person" style="font-size:36px;"></i>
                                 </div>
-                                <h4 class="box-about-title">Various Locations</h4>
+                                <h4 class="box-about-title">Vetted Landlords</h4>
                                 <div class="box-about-divider"></div>
                                 <div class="elementor-element elementor-element-e1bde9a e-con-full e-flex e-con e-child"
                                     data-id="e1bde9a" data-element_type="container"
@@ -114,7 +115,8 @@
 
 
                                                     <h3 class="etheme-icon-box-title">
-                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>1K+</span>
+                                                        <span><i class=" me-1 fa-regular fa-circle-check"
+                                                                style="color: #04d7e8; font-size: 25px;"></i>1K+</span>
                                                     </h3>
 
                                                     <p class="etheme-icon-box-description">
@@ -125,16 +127,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="text-dark">We have lots of properties in various locations.</p>
+                                <!-- <p class="text-dark">We have lots of properties in various locations.</p> -->
                             </div>
                         </div>
-                        <!-- Box 3 --> 
+                        <!-- Box 3 -->
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-location-dot" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-gauge" style="font-size:36px;"></i>
+                                    
                                 </div>
-                                <h4 class="box-about-title">Various Locations</h4>
+                                <h4 class="box-about-title">Average time to match</h4>
                                 <div class="box-about-divider"></div>
                                 <div class="elementor-element elementor-element-a103f18 e-con-full e-flex e-con e-child"
                                     data-id="a103f18" data-element_type="container"
@@ -155,7 +158,9 @@
 
 
                                                     <h3 class="etheme-icon-box-title">
-                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>60 Days</span>
+                                                        <span><i class=" me-1 fa-regular fa-circle-check"
+                                                                style="color: #04d7e8; font-size: 25px;"></i>60
+                                                            Days</span>
                                                     </h3>
 
                                                     <p class="etheme-icon-box-description">
@@ -165,17 +170,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="text-dark">We have lots of properties in various locations.</p>
+                                <!-- <p class="text-dark">We have lots of properties in various locations.</p> -->
                             </div>
                         </div>
                         <!-- Box 4 -->
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-folder-open" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-check-double" style="font-size:36px;"></i>
+                                    
                                 </div>
-                                <h4 class="box-about-title">Various Locations</h4>
-                                <div class="box-about-divider"></div>
+                                <h4 class="box-about-title">Success Rate</h4>
+                                <div class="box-about-divider  mt-5 "></div>
                                 <div class="elementor-element elementor-element-540732f e-con-full e-flex e-con e-child"
                                     data-id="540732f" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -192,8 +198,9 @@
                                                 </div>
 
                                                 <div class="etheme-icon-box-content">
-                                                    <h3 class="etheme-icon-box-title">
-                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>92%</span>
+                                                    <h3 class="etheme-icon-box-title mt-2">
+                                                        <span><i class=" me-1 fa-regular fa-circle-check"
+                                                                style="color: #04d7e8; font-size: 25px;"></i>92%</span>
                                                     </h3>
                                                     <p class="etheme-icon-box-description">
                                                         Success Rate </p>
@@ -202,7 +209,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="text-dark">We have lots of properties in various locations.</p>
+                                <!-- <p class="text-dark">We have lots of properties in various locations.</p> -->
                             </div>
                         </div>
                     </div>
