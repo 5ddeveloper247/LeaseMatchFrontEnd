@@ -116,44 +116,44 @@ export default {
 
     <!-- section 4 -->
     <section class="sec-4 image-banner mb-5">
-        <div class="container">
-            <div class="quality-content-h text-white star-bg pt-5 process-contentt px-lg-5 px-2">
-                <h1 class="text-capitalize display-lg-4 font-weight-normal pt-md-5 text-white">Get Started with Lease
-                    Match <br>as a Rentor or Landlord</h1>
-            </div>
-            <div class="row mx-lg-5 mt-md-5 mb-md-5 py-3 justify-content-center">
-
-                <div class="col-md-6 col-lg-6 mt-1 mb-md-5 mb-1 ">
-                    <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2">
-                        <div class="card-body quality-content1 text-white h-100">
-                            <h5 class="mb-3 ">Ensure production quality with</h5>
-                            <h1 class="mb-3">i am <span class="quality-transform2 font-weight">R</span>entor</h1>
-                            <p class="mb-3 ">connect with a variety of suppliers, including custom manufactures, brand
-                                holders, and multispecialty suppliers that have verified credentials and capabilities.
-                            </p>
-                            <div class="d-flex text-white align-items-center" style="gap: 15px;">
-                                <RouterLink to="/registerForm" class="quality-icon">Register</RouterLink>
-                                <a href="#" class="text-white">learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 mt-3 mt-md-1 mb-md-5 mb-1">
-                    <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2">
-                        <div class="card-body quality-content2 text-white h-100">
-                            <h5 class="mb-3">Ensure production quality with</h5>
-                            <h1 class="mb-3 ">I am <span class="quality-transform1 font-weight">L</span>andLord</h1>
-                            <p class="mb-3">connect with a variety of suppliers, including custom manufactures, brand
-                                holders, and multispecialty suppliers that have verified credentials and capabilities.
-                            </p>
-                            <div class="d-flex text-white align-items-center" style="gap: 15px;">
-                                <RouterLink to="/landlord" class="quality-icon">LandLord Portal</RouterLink>
-                                <a href="#" class="text-white">learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="quality-content-h text-white star-bg pt-5 process-contentt px-lg-5 px-2">
+            <h1 class="text-capitalize display-lg-4 font-weight-normal pt-md-5 text-white">
+                Get Started with Lease Match <br>as a Renter or Landlord
+            </h1>
         </div>
-    </section>
+        <div class="row mx-lg-5 mt-md-5 mb-md-5 py-3 justify-content-center">
+
+            <div class="col-md-6 col-lg-6 mt-1 mb-md-5 mb-1 d-flex">
+                <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
+                    <div class="card-body quality-content1 text-white h-100 d-flex flex-column">
+                        <h5 class="mb-3">Ensure production quality with</h5>
+                        <h1 class="mb-3">I am <span class="quality-transform2 font-weight">R</span>enter</h1>
+                        <p class="mb-3">Discover your ideal New York apartment effortlessly. Our cutting-edge AI analyzes your preferences to match you with vetted, available listings—simplifying your search with a single click.</p>
+                        <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
+                            <RouterLink to="/registerForm" class="quality-icon">Register</RouterLink>
+                            <a href="#" class="text-white">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6 mt-3 mt-md-1 mb-md-5 mb-1 d-flex">
+                <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
+                    <div class="card-body quality-content2 text-white h-100 d-flex flex-column">
+                        <h5 class="mb-3">Ensure production quality with</h5>
+                        <h1 class="mb-3">I am <span class="quality-transform1 font-weight">L</span>andLord</h1>
+                        <p class="mb-3">Submit the landlord form, and let our AI match you with New York’s only accurate and vetted list of viable renters, doing the work for you.</p>
+                        <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
+                            <RouterLink to="/landlord" class="quality-icon">LandLord Portal</RouterLink>
+                            <a href="#" class="text-white">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 </template>

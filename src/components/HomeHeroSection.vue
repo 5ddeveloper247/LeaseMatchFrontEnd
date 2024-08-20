@@ -45,59 +45,176 @@
     <!-- section-2 -->
     <section class="sec-2">
         <div class="container my-5">
-            <div class="row box-aboutt justify-content-center">
-                <!-- <div class="col-lg-6 box-tabs p-lg-0">
+            <div class="row box-aboutt justify-content-between">
+                <!-- Left Column with Boxes -->
+                <div class="col-lg-6 box-tabs p-lg-0">
                     <div class="row row-30 row-flex">
+                        <!-- Box 1 -->
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-location-dot" style="font-size: 36px;"></i>
+                                    <i class="fa-solid fa-location-dot" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
+                                <div class="elementor-element elementor-element-0700d4b e-con-full e-flex e-con e-child"
+                                    data-id="0700d4b" data-element_type="container"
+                                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                                    <div class="elementor-element elementor-element-b58186b elementor-align-left elementor-widget elementor-widget-etheme_icon_box"
+                                        data-id="b58186b" data-element_type="widget"
+                                        data-widget_type="etheme_icon_box.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="etheme-icon-box etheme-icon-box-icon-position-left">
+
+
+                                                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+
+                                                    <i aria-hidden="true" class="et-icon et-checked"></i>
+                                                </div>
+
+                                                <div class="etheme-icon-box-content">
+
+
+                                                    <h3 class="etheme-icon-box-title">
+                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>4K+</span>
+                                                    </h3>
+
+                                                    <p class="etheme-icon-box-description">
+                                                        Vetted Renters </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
+                        <!-- Box 2 -->
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-folder-open" style="font-size: 36px;"></i>
+                                    <i class="fa-solid fa-folder-open" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
+                                <div class="elementor-element elementor-element-e1bde9a e-con-full e-flex e-con e-child"
+                                    data-id="e1bde9a" data-element_type="container"
+                                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                                    <div class="elementor-element elementor-element-bc51060 elementor-align-left elementor-widget elementor-widget-etheme_icon_box"
+                                        data-id="bc51060" data-element_type="widget"
+                                        data-widget_type="etheme_icon_box.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="etheme-icon-box etheme-icon-box-icon-position-left">
+                                                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+
+                                                    <i aria-hidden="true" class="et-icon et-checked"></i>
+                                                </div>
+
+                                                <div class="etheme-icon-box-content">
+
+
+                                                    <h3 class="etheme-icon-box-title">
+                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>1K+</span>
+                                                    </h3>
+
+                                                    <p class="etheme-icon-box-description">
+                                                        Vetted Landlords
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
+                        <!-- Box 3 --> 
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-location-dot" style="font-size: 36px;"></i>
+                                    <i class="fa-solid fa-location-dot" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
+                                <div class="elementor-element elementor-element-a103f18 e-con-full e-flex e-con e-child"
+                                    data-id="a103f18" data-element_type="container"
+                                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                                    <div class="elementor-element elementor-element-b6a2684 elementor-align-left elementor-widget elementor-widget-etheme_icon_box"
+                                        data-id="b6a2684" data-element_type="widget"
+                                        data-widget_type="etheme_icon_box.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="etheme-icon-box etheme-icon-box-icon-position-left">
+
+
+                                                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+
+                                                    <i aria-hidden="true" class="et-icon et-checked"></i>
+                                                </div>
+
+                                                <div class="etheme-icon-box-content">
+
+
+                                                    <h3 class="etheme-icon-box-title">
+                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>60 Days</span>
+                                                    </h3>
+
+                                                    <p class="etheme-icon-box-description">
+                                                        Average time to match </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
+                        <!-- Box 4 -->
                         <div class="col-md-6 mb-4 mb-lg-0">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-folder-open" style="font-size: 36px;"></i>
+                                    <i class="fa-solid fa-folder-open" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Various Locations</h4>
                                 <div class="box-about-divider"></div>
+                                <div class="elementor-element elementor-element-540732f e-con-full e-flex e-con e-child"
+                                    data-id="540732f" data-element_type="container"
+                                    data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                                    <div class="elementor-element elementor-element-abf869f elementor-align-left elementor-widget elementor-widget-etheme_icon_box"
+                                        data-id="abf869f" data-element_type="widget"
+                                        data-widget_type="etheme_icon_box.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="etheme-icon-box etheme-icon-box-icon-position-left">
+
+
+                                                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+
+                                                    <i aria-hidden="true" class="et-icon et-checked"></i>
+                                                </div>
+
+                                                <div class="etheme-icon-box-content">
+                                                    <h3 class="etheme-icon-box-title">
+                                                        <span><i class=" me-1 fa-regular fa-circle-check" style="color: #04d7e8; font-size: 25px;"></i>92%</span>
+                                                    </h3>
+                                                    <p class="etheme-icon-box-description">
+                                                        Success Rate </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-dark">We have lots of properties in various locations.</p>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- part2 -->
-                <div class="col-lg-7 box-tabss-main">
+                </div>
+                <!-- Right Column with Tabs -->
+                <div class="col-lg-5 box-tabss-main">
                     <div class="box-tabss-main-inner">
                         <h2>About Our Company</h2>
                         <div class="divider-small"></div>
                         <br>
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs main-tab-about" role="tablist">
+                        <!-- Tabs -->
+                        <!-- <ul class="nav nav-tabs main-tab-about" role="tablist">
                             <li class="nav-item tab-about-item">
                                 <a class="nav-link tab-about font-weight active" aria-current="page"
                                     data-bs-toggle="tab" href="#home">Service</a>
@@ -108,39 +225,38 @@
                             <li class="nav-item tab-about-item">
                                 <a class="nav-link tab-about" data-bs-toggle="tab" href="#menu2">Mission</a>
                             </li>
-                        </ul>
-
-                        <!-- Tab panes -->
+                        </ul> -->
+                        <!-- Tab Content -->
                         <div class="tab-content">
-                            <div id="home" class="container tab-pane active text-white main-tab-content p-0"><br>
-                                <p>Real Estate is a full-service, luxury real estate brokerage company representing
-                                    clients worldwide. </p>
-                                <p>Since its inception, we have redefined the business of real estate, modernizing and
-                                    advancing the industry by fostering a culture of partnership involving our clients.
+                            <div id="home" class="container tab-pane active text-white main-tab-content p-0">
+                                <br>
+                                <p>At LeaseMatch, we leverage cutting-edge proprietary AI technology to seamlessly
+                                    connect landlords with vetted, ready-to-move-in tenants, ensuring a perfect match
+                                    every time.
+                                    Our commitment to excellence is reflected in our deep understanding of New York
+                                    City's ever-evolving housing guidelines. We pride ourselves on staying up-to-date
+                                    with all regulations, ensuring a smooth and compliant process for both landlords and
+                                    tenants.
+                                    LeaseMatch specializes in all types of housing, but we take particular pride in our
+                                    expertise in placing Section 8 tenants, CityFHEPS voucher holders, as well as SOTA
+                                    and HASA clients. Our extensive knowledge and robust connections within the NYC
+                                    housing market empower us to secure the ideal apartment for you
+
                                 </p>
                             </div>
-                            <div id="menu1" class="container tab-pane fade text-white p-0"><br>
-                                <p>We have been working since 1999 to be sure you are getting the best real estate
-                                    service possible. </p>
-                                <p>Real Estate aims to unite real estate brokers to provide their clients and partners
-                                    with the top-notch level of brokerage services throughout the USA.</p>
-                            </div>
-                            <div id="menu2" class="container tab-pane fade text-white p-0"><br>
-                                <p>Our mission is to be the most successful real estate firm in the local states and
-                                    beyond. </p>
-                                <p>Real Estate incorporates proven, professional state of-the-art techniques
-                                    specializing in the marketing, listing and selling of new and resale luxury homes.
-                                </p>
-                            </div>
+
+
                         </div>
-                        <RouterLink class="button main-content-btn theme_btn1" to="/contact">Get in Touch
-                            <span></span><span></span><span></span><span></span>
-                        </RouterLink>
+                        <!-- Call to Action Button -->
+                        <a href="/contact" class="button main-content-btn theme_btn1">
+                            Get in Touch <span></span><span></span><span></span><span></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 </template>
 
 

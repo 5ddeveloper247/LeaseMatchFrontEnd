@@ -93,10 +93,18 @@ function toggleChatbot() {
                                 <h4>Services</h4>
                             </div>
                             <ul>
-                                <li class="px-0"><RouterLink to="/about">About Us</RouterLink></li>
-                                <li class="px-0"><RouterLink to="/landlord">Landlord</RouterLink></li>
-                                <li class="px-0"><RouterLink to="/registerForm">Register</RouterLink></li>
-                                <li class="px-0"><RouterLink to="/contact">Contact</RouterLink></li>
+                                <li class="px-0">
+                                    <RouterLink to="/about">About Us</RouterLink>
+                                </li>
+                                <li class="px-0">
+                                    <RouterLink to="/landlord">Landlord</RouterLink>
+                                </li>
+                                <li class="px-0">
+                                    <RouterLink to="/registerForm">Register</RouterLink>
+                                </li>
+                                <li class="px-0">
+                                    <RouterLink to="/contact">Contact</RouterLink>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -111,9 +119,12 @@ function toggleChatbot() {
                                         <i class="fas fa-phone-alt"></i>
                                     </div>
                                     <div class="info d-flex">
-                                        <p><a href="tel:+919246147999">1800-121-3637</a>
-                                            <a href="tel:+919246147999">+91 924-614-7999</a>
+                                        <p><a href="tel:(347) 754-5807">(347) 754-5807</a>
+
                                         </p>
+                                        <!-- <p><a href="tel:+919246147999">1800-121-3637</a>
+                                            <a href="tel:+919246147999">+91 924-614-7999</a>
+                                        </p> -->
                                     </div>
                                 </div>
                                 <div class="single_info d-flex">
@@ -122,7 +133,7 @@ function toggleChatbot() {
                                     </div>
                                     <div class="info">
                                         <p class="d-flex gap-3">
-                                            <a href="mailto:info@deneb.com">info@deneb.com</a> 
+                                            <a href="mailto:info@deneb.com">info@deneb.com</a>
                                             <a href="mailto:services@deneb.com">services@deneb.com</a>
                                         </p>
                                     </div>
@@ -132,7 +143,7 @@ function toggleChatbot() {
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div class="info">
-                                        <p>125, Park street aven, Brocklyn,<span>Newyork.</span></p>
+                                        <p>1178 Broadway 3rd Floor #3989, New York,<span> NY 10001</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -146,11 +157,13 @@ function toggleChatbot() {
                         <div class="col-lg-12 d-flex align-items-md-center justify-content-md-center mb-4">
                             <div class="footer-tags d-flex w-100" style="gap: 30px;">
                                 <div class="row gy-3 w-100">
-                                    <div class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center justify-content-start gap-4">
+                                    <div
+                                        class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center justify-content-start gap-4">
                                         <RouterLink to="/waitlist">| Waitlist Removal</RouterLink>
                                         <RouterLink to="/policy">| Refund Policy</RouterLink>
                                     </div>
-                                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end gap-5">
+                                    <div
+                                        class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end gap-5">
                                         <RouterLink to="/privacy">| Privacy Policy</RouterLink>
                                         <RouterLink to="/terms"> | Terms & Conditions</RouterLink>
                                     </div>

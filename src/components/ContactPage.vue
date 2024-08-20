@@ -57,9 +57,13 @@
                                         <i class="fas fa-phone-alt"></i>
                                     </div>
                                     <div class="contact_info-detail d-flex">
-                                        <p><a href="tel:+919246147999">1800-121-3637</a></p>
-                                        <p><a href="tel:+919246147999">+91 924-614-7999</a></p>
+                                        <!-- <p><a href="tel:+919246147999">1800-121-3637</a></p>
+                                        <p><a href="tel:+919246147999">+91 924-614-7999</a></p> -->
+                                        <p><a href="tel:(347) 754-5807">(347) 754-5807</a></p>
                                     </div>
+                                  
+
+
                                 </div>
                                 <div class="contact_info d-flex">
                                     <div class="icon">
@@ -75,7 +79,7 @@
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div class="contact_info-detail">
-                                        <p>125, Park street aven, Brocklyn,<span>Newyork.</span></p>
+                                        <p>1178 Broadway 3rd Floor #3989, <span>New York, NY 10001.</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -165,9 +169,11 @@
         <div class="container-fluid">
             <div class="map m-1">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5753.884181787861!2d-81.95946927069843!3d28.0388028608652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd38ca4722ecc9%3A0x10d88b4491e12478!2s501%20Florida%20Ave%20S%2C%20Lakeland%2C%20FL%2033801%2C%20USA!5e0!3m2!1sen!2s!4v1705573853815!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.756018040521!2d-73.99114862513332!3d40.745393835572294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a608a76275%3A0x87eb7025ae519021!2s1178%20Broadway%203rd%20Floor%20%233989%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2s!4v1724061675164!5m2!1sen!2s"
                     width="100%" style="border: 0; height:83vh" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  
+                  
             </div>
         </div>
     </section>

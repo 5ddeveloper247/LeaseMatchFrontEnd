@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 1.71429;
     font-weight: 400;
@@ -1873,6 +1873,7 @@ p {
     .comment-top-right {
         font-size: 70px;
     }
+
     .copyright_area::after {
         position: absolute;
         content: "";
@@ -2420,20 +2421,20 @@ header h2 {
     text-align: center !important;
     vertical-align: top !important;
     /* Align images at the top */
-  }
-  
-  .image-item-land p {
+}
+
+.image-item-land p {
     color: #fff;
     background: transparent;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  .image-item-land img {
+}
+
+.image-item-land img {
     width: 70px;
     height: 70px;
     border-radius: 50px;
     margin-bottom: 5px;
     /* Added margin below images */
-  }
+}

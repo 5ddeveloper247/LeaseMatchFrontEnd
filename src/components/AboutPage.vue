@@ -33,29 +33,29 @@
                         <div class="divider-small"></div>
                         <br>
                         <!-- Nav tabs -->
-                        <ul class="nav nav-tabs main-tab-about" role="tablist">
-                            <li class="nav-item tab-about-item">
-                                <a class="nav-link tab-about font-weight active" aria-current="tab" data-bs-toggle="tab"
-                                    href="#home">Home</a>
-                            </li>
-                            <li class="nav-item tab-about-item">
-                                <a class="nav-link tab-about font-weight" data-bs-toggle="tab" href="#menu1">Menu 1</a>
-                            </li>
-                            <li class="nav-item tab-about-item">
-                                <a class="nav-link tab-about font-weight" data-bs-toggle="tab" href="#menu2">Menu 2</a>
-                            </li>
-                        </ul>
-
-
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div id="home" class="container tab-pane text-white main-tab-content p-0 active"><br>
 
-                                <p>Welcome to LeaseMatch.NYC, the innovative solution for finding your perfect home in
-                                    New York City. Our foundation is built on over 75 years of combined real estate
-                                    expertise, offering deep insights into both residential and commercial markets. This
-                                    wealth of experience drives our platform, designed to tackle the unique challenges
-                                    of NYC housing searches. </p>
+                                <p>Our AI-powered platform transforms the rental experience in New York City,
+                                    specializing in both market-rate and subsidized housing. With deep expertise in NYS
+                                    housing guidelines and city voucher programs like Section 8, CityFHEPS, HASA, and
+                                    SOTA, we're bridging the gap between diverse housing needs and available units. Our
+                                    proprietary AI model analyzes countless factors to deliver the most compatible
+                                    matches for renters and landlords alike.
+                                    Renters enjoy 24/7 application submissions and real-time updates on suitable
+                                    properties, drastically cutting search times. Our AI continuously refines its
+                                    matching criteria, ensuring renters see only the most relevant options. Landlords
+                                    benefit from our focus on real-time availability, ensuring efficient matches with
+                                    compatible tenants, especially in the complex world of subsidized housing.
+                                    LeaseMatch.NYC seamlessly integrates technology with NYC's unique rental market,
+                                    creating a steady flow of opportunities across all sectors. We're not just matching
+                                    properties and tenants; we're optimizing the entire rental process, making it
+                                    smoother and more accessible for everyone involved. Our AI's ability to learn and
+                                    adapt means that with each successful match, the entire system becomes more
+                                    efficient and effective for all users.
+
+                                </p>
 
 
                             </div>
@@ -99,20 +99,22 @@
                                 <div class="icon box-about-icon mb-3"><i class="fa-solid fa-location-dot"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Innovative Tech</h4>
-                                <p class="site-color text-dark">LeaseMatch.NYC harnesses the power of AI to revolutionize how
+                                <p class="site-color text-dark">LeaseMatch.NYC harnesses the power of AI to
+                                    revolutionize how
                                     renters find homes. Our
                                     technology is designed to swiftly analyze applications and match them with the most
                                     suitable available units.</p>
 
                             </div>
                         </div>
-                        <!-- 2 -->
+
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="box-about about-content">
                                 <div class="icon box-about-icon mb-3"><i class="fa fa-search" aria-hidden="true"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Inclusive</h4>
-                                <p class="site-color text-dark">Recognizing the diverse needs of New York City's population,
+                                <p class="site-color text-dark">Recognizing the diverse needs of New York City's
+                                    population,
                                     LeaseMatch.NYC was
                                     created to be an inclusive platform. It caters to a wide range of housing
                                     requirements, from those currently housed to individuals experiencing homelessness
@@ -120,19 +122,21 @@
 
                             </div>
                         </div>
-                        <!-- 3 -->
+
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="box-about ">
                                 <div class="icon box-about-icon mb-3"><i class="fa-solid fa-folder-open"
                                         style="font-size: 36px;"></i></div>
                                 <h4 class="box-about-title">Efficient Matching</h4>
-                                <p class="site-color text-dark">LeaseMatch.NYC streamlines the rental process for both landlords
+                                <p class="site-color text-dark">LeaseMatch.NYC streamlines the rental process for both
+                                    landlords
                                     and renters. By
                                     removing the usual difficulties in listing and finding tenants, we connect landlords
                                     directly with a ready pool of potential renters, ensuring a smoother and more
                                     reliable match between available units and tenant needs.</p>
 
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -146,23 +150,24 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-question">
-                        <span class="text-uppercase mb-3 site-color">careers</span>
+                        <!-- <span class="text-uppercase mb-3 site-color">careers</span> -->
                         <h1 class="text-capitalize mb-3 site-color divide-heading1 pb-md-5 pb-3">Why we are the Best…
                         </h1>
-                        <p class="text-capitalize text-white mb-3">Welcome to LeaseMatch.NYC, where our innovative AI
-                            model
-                            offers a seamless 24/7 service for both renters and landlords in New York City. Renters
-                            enjoy the ease of submitting applications anytime, assured that our AI continuously updates
-                            them with available units, significantly reducing wait times for their perfect home.
-                            Landlords benefit from our system’s focus on indicating unit availability rather than mere
-                            advertising, ensuring efficient matches with compatible renters. This synergy of technology
-                            and user needs creates a consistent flow of opportunities, streamlining the rental process
-                            in NYC. Our platform is designed to optimize property-tenant matching, delivering an
-                            effective and smooth experience for all.</p>
+                        <p class="text-capitalize text-white mb-3">At LeaseMatch, we leverage cutting-edge proprietary
+                            AI technology to seamlessly connect landlords with vetted, ready-to-move-in tenants,
+                            ensuring a perfect match every time.
+                            Our commitment to excellence is reflected in our deep understanding of New York City's
+                            ever-evolving housing guidelines. We pride ourselves on staying up-to-date with all
+                            regulations, ensuring a smooth and compliant process for both landlords and tenants.
+                            LeaseMatch specializes in all types of housing, but we take particular pride in our
+                            expertise in placing Section 8 tenants, CityFHEPS voucher holders, as well as SOTA and HASA
+                            clients. Our extensive knowledge and robust connections within the NYC housing market
+                            empower us to secure the ideal apartment for you.
+                        </p>
 
                     </div>
-                    <a href="#"><button class="about_question-btn theme_btn2">Open
-                            Roles<span></span><span></span><span></span><span></span></button> </a>
+                    <!-- <a href="#"><button class="about_question-btn theme_btn2">Open
+                            Roles<span></span><span></span><span></span><span></span></button> </a> -->
                 </div>
                 <div class="col-md-6">
                     <div class="question_image">

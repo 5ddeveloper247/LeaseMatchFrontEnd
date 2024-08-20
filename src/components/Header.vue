@@ -5,21 +5,21 @@ const navbarToggler = ref(null);
 const navbarCollapse = ref(null);
 
 const handleClickOutside = (event) => {
-    if(navbarToggler.value && navbarCollapse.value) {
+    if (navbarToggler.value && navbarCollapse.value) {
         const isClickInside = navbarToggler.value.contains(event.target) || navbarCollapse.value.contains(event.target);
         const isNavbarExpanded = navbarToggler.value.getAttribute('aria-expanded') === 'true';
 
-        if(!isClickInside && isNavbarExpanded) {
+        if (!isClickInside && isNavbarExpanded) {
             navbarToggler.value.click()
         }
     }
 }
 
-onMounted (() => {
+onMounted(() => {
     document.addEventListener('click', handleClickOutside);
 })
 
-onUnmounted (() => {
+onUnmounted(() => {
     document.removeEventListener('click', handleClickOutside);
 })
 </script>
@@ -30,8 +30,8 @@ onUnmounted (() => {
         <div class="d-flex bg-header text-center pt-2 pb-3 px-md-5 px-2 justify-content-between align-items-center">
             <ul class="d-flex justify-content-between align-items-center m-0 p-0" style="gap: 20px;">
                 <li class="text-white list-style">
-                    <i class="fa fa-phone" aria-hidden="true" style="font-size: 10px;"></i><span class="ms-2">+92
-                        0933002010</span>
+                    <i class="fa fa-phone" aria-hidden="true" style="font-size: 10px;"></i><span class="ms-2">
+                        (347) 754-5807</span>
                 </li>
                 <li class="text-white list-style"><i class="fa fa-envelope" aria-hidden="true"
                         style="font-size: 10px;"></i><span class="ms-2">leashMatch@gmail.com</span></li>
@@ -68,8 +68,9 @@ onUnmounted (() => {
         <RouterLink class="navbar-brand mx-3 p-0" to="/">
             <img src="../assets/images/logo-dark-150.png" alt="" width="150" height="50">
         </RouterLink>
-        <button ref="navbarToggler"class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button ref="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div ref="navbarCollapse" class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -90,8 +91,8 @@ onUnmounted (() => {
                     <RouterLink class="nav-link" to="/contact">Contact</RouterLink>
                 </li>
                 <li class="nav-item ">
-                    <a href="http://lmb.gregorygadson.io/customer" id="myBtn" class="nav-link"><i class="fa-regular fa-circle-user"
-                            style="font-size: 22px;"></i></a>
+                    <a href="http://lmb.gregorygadson.io/customer" id="myBtn" class="nav-link"><i
+                            class="fa-regular fa-circle-user" style="font-size: 22px;"></i></a>
                 </li>
             </ul>
 
