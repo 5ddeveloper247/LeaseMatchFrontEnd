@@ -56,7 +56,7 @@
                                     <i class="fa-solid fa-house" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Vetted Renters</h4>
-                                <div class="box-about-divider"></div>
+                                <div class="box-about-divider mt-4"></div>
                                 <div class="elementor-element elementor-element-0700d4b e-con-full e-flex e-con e-child"
                                     data-id="0700d4b" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -97,7 +97,7 @@
                                     <i class="fa-solid fa-person" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Vetted Landlords</h4>
-                                <div class="box-about-divider"></div>
+                                <div class="box-about-divider mt-4"></div>
                                 <div class="elementor-element elementor-element-e1bde9a e-con-full e-flex e-con e-child"
                                     data-id="e1bde9a" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -138,7 +138,7 @@
                                     
                                 </div>
                                 <h4 class="box-about-title">Average time to match</h4>
-                                <div class="box-about-divider"></div>
+                                <div class="box-about-divider mt-4"></div>
                                 <div class="elementor-element elementor-element-a103f18 e-con-full e-flex e-con e-child"
                                     data-id="a103f18" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -181,7 +181,7 @@
                                     
                                 </div>
                                 <h4 class="box-about-title">Success Rate</h4>
-                                <div class="box-about-divider  mt-5 "></div>
+                                <div class="box-about-divider  mt-4 "></div>
                                 <div class="elementor-element elementor-element-540732f e-con-full e-flex e-con e-child"
                                     data-id="540732f" data-element_type="container"
                                     data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -198,7 +198,7 @@
                                                 </div>
 
                                                 <div class="etheme-icon-box-content">
-                                                    <h3 class="etheme-icon-box-title mt-2">
+                                                    <h3 class="etheme-icon-box-title">
                                                         <span><i class=" me-1 fa-regular fa-circle-check"
                                                                 style="color: #04d7e8; font-size: 25px;"></i>92%</span>
                                                     </h3>
