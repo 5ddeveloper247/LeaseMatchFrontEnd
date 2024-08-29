@@ -4,17 +4,14 @@
 
 
 <template>
-
     <section class="about-banner my-5">
-
         <div class="container-fluid gif-banner p-0">
             <div class="banner-overlay"></div>
-            <img src="../assets/images/banner2.png" class="h-100 w-100">
+            <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
                 <h1>ABOUT US</h1>
             </div>
-
         </div>
     </section>
     <!-- section 1 -->
@@ -23,7 +20,7 @@
             <div class="row g-0 box-aboutt justify-content-between">
                 <div class="col-lg-6">
                     <div class="about-image pb-4 pb-lg-0">
-                        <img src="../assets/images/Average-time-to-match.jpg" class="h-100 w-100">
+                        <img src="../assets/images/about_banner.jpg" class="h-100 w-100">
                     </div>
                 </div>
                 <!-- part2 -->
@@ -36,7 +33,7 @@
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div id="home" class="container tab-pane text-white main-tab-content p-0 active mt-3">
-                            <!-- <br> -->
+                                <!-- <br> -->
 
                                 <p>Our AI-powered platform transforms the rental experience in New York City,
                                     specializing in both market-rate and subsidized housing. With deep expertise in NYS
