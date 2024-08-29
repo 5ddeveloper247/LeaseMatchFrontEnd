@@ -7,7 +7,7 @@
     <section class="about-banner my-5">
         <div class="container-fluid gif-banner p-0">
             <div class="banner-overlay"></div>
-            <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100">
+            <img src="../assets/images/about_banner.jpg" class="h-100 w-100">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
                 <h1>ABOUT US</h1>
@@ -20,7 +20,7 @@
             <div class="row g-0 box-aboutt justify-content-between">
                 <div class="col-lg-6">
                     <div class="about-image pb-4 pb-lg-0">
-                        <img src="../assets/images/about_banner.jpg" class="h-100 w-100">
+                        <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100">
                     </div>
                 </div>
                 <!-- part2 -->
