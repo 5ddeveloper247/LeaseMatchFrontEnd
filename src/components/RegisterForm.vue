@@ -45,7 +45,7 @@
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Phone*</label>
-                    <input type="number" v-model="formData.phone_number" name="phone_number"
+                    <input type="text" numField="true" v-model="formData.phone_number" name="phone_number"
                       placeholder="Enter your Phone No" class="form-control" maxlength="18" />
                   </div>
                 </div>
@@ -153,7 +153,7 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="col-md-4">
-                    <label class="fieldlabels p-0">Employer Name*</label>
+                    <label class="fieldlabels p-0">Employer Name</label>
                     <input type="text" v-model="formData.employer_name" name="employer_name" class="form-control"
                       placeholder="Employer Name" maxlength="100" />
 
@@ -171,8 +171,8 @@
 
                   <div class="group col-md-4">
                     <label class="fieldlabels p-0">Maximum rental budget (USD)*</label>
-                    <input type="number" v-model="formData.rental_budget" name="rental_budget" class="form-control"
-                      placeholder="Maximum rental budget (USD)" maxlength="6" />
+                    <input type="text" v-model="formData.rental_budget" numField="true" name="rental_budget"
+                      class="form-control" placeholder="Maximum rental budget (USD)" maxlength="6" />
                   </div>
                 </div>
 
@@ -191,8 +191,8 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Has Rental Voucher* </label>
-                    <select class="form-select" v-model="formData.rental_voucher" name="rental_voucher" id="rental_voucher"
-                      aria-label="Default select example">
+                    <select class="form-select" v-model="formData.rental_voucher" name="rental_voucher"
+                      id="rental_voucher" aria-label="Default select example">
                       <option value="">- Select a Has Rental Voucher -</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
@@ -246,7 +246,7 @@
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reason for Moving* </label>
+                    <label class="fieldlabels p-0">Reason for Moving</label>
                     <input type="text" v-model="formData.moving_reason" name="moving_reason" class="form-control"
                       placeholder="Enter Reason" maxlength="255" />
                   </div>
@@ -255,13 +255,13 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Previous Landlord Contact Information* </label>
+                    <label class="fieldlabels p-0">Previous Landlord Contact Information</label>
                     <input type="text" v-model="formData.prev_landlord_contact" name="prev_landlord_contact"
                       class="form-control" placeholder="Previous Landlord Contact Information" maxlength="100" />
                   </div>
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Lease Violations (if any)* </label>
+                    <label class="fieldlabels p-0">Lease Violations (if any)</label>
                     <input type="text" v-model="formData.lease_violation" name="lease_violation" class="form-control"
                       placeholder="Lease Violations (if any)" maxlength="255" />
                   </div>
@@ -279,26 +279,30 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Total Household Size*</label>
-                    <input type="number" v-model="formData.household_size" name="household_size" class="form-control"
-                      placeholder="Total Household Size" maxlength="6" />
+                    <input type="text" v-model="formData.household_size" numField="true" name="household_size"
+                      class="form-control" placeholder="Total Household Size" maxlength="6" />
                   </div>
 
-                  <div class="col-md-6">
-                    <label class="fieldlabels p-0">Number of Adults*</label>
-                    <input type="number" v-model="formData.number_of_adults" name="number_of_adults"
+                  <div class="group col-md-6">
+                    <label class="fieldlabels p-0">Number of Adults* <small style="font-size:0.6rem;">(Household member
+                        under the age of
+                        18)</small></label>
+                    <input type="text" numField="true" v-model="formData.number_of_adults" name="number_of_adults"
                       class="form-control" placeholder="Number of Adults" maxlength="6" />
                   </div>
                 </div>
+
                 <div class="row">
-
-
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Number of Children*</label>
-                    <input type="number" v-model="formData.number_of_child" name="number_of_child" class="form-control"
-                      placeholder="Number of Children" maxlength="6" />
+                    <label class="fieldlabels p-0">
+                      Number of Children*
+                      <small style="font-size: 0.8rem;">(Household member under the age of 18)</small>
+                    </label>
+
+                    <input type="text" numField="true" v-model="formData.number_of_child" name="number_of_child"
+                      class="form-control" placeholder="Number of Children" maxlength="6" />
                   </div>
                 </div>
-
               </div>
               <button type="button" class="action-button" @click="nextTab">Next</button>
               <button type="button" class="action-button-previous" @click="previous">Previous</button>
@@ -331,8 +335,8 @@
                 <div class="row">
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Number of Pets<span class="mand-staric">*</span></label>
-                    <input type="number" v-model="formData.number_of_pets" name="number_of_pets" class="form-control"
-                      placeholder="Number of Pets" maxlength="3" />
+                    <input type="text" numField="true" v-model="formData.number_of_pets" name="number_of_pets"
+                      class="form-control" placeholder="Number of Pets" maxlength="3" />
                   </div>
 
                   <div class="group col-md-6">
@@ -381,7 +385,8 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="col-12">
-                    <label class="fieldlabels p-0">Special Accommodations Needed<span class="mand-staric2">*</span></label>
+                    <label class="fieldlabels p-0">Special Accommodations Needed<span
+                        class="mand-staric2">*</span></label>
                     <input type="text" v-model="formData.special_accomodation" name="special_accomodation"
                       class="form-control" placeholder="Special Accommodations Needed" maxlength="255" />
                   </div>
@@ -400,8 +405,8 @@
                 <div class="row">
                   <div class="group col-md-12">
                     <label class="fieldlabels p-0">Maximum Rent Willing to Pay*</label>
-                    <input type="number" v-model="formData.max_rent_to_pay" name="max_rent_to_pay" class="form-control"
-                      placeholder="Maximum Rent Willing to Pay" maxlength="6" />
+                    <input type="text" numField="true" v-model="formData.max_rent_to_pay" name="max_rent_to_pay"
+                      class="form-control" placeholder="Maximum Rent Willing to Pay" maxlength="6" />
                   </div>
                 </div>
                 <!-- 2 -->
@@ -464,12 +469,12 @@
                 <!-- 1 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reference Name*</label>
+                    <label class="fieldlabels p-0">Reference Name</label>
                     <input type="text" v-model="formData.reference_name" name="reference_name" class="form-control"
                       placeholder="Reference Name" maxlength="100" />
                   </div>
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Reference Relationship*</label>
+                    <label class="fieldlabels p-0">Reference Relationship</label>
                     <input type="text" v-model="formData.reference_relationship" name="reference_relationship"
                       class="form-control" placeholder="Reference Relationship" maxlength="100" />
                   </div>
@@ -477,7 +482,7 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-12">
-                    <label class="fieldlabels p-0">Reference Contact Information*</label>
+                    <label class="fieldlabels p-0">Reference Contact Information <small>(cell/email)</small></label>
                     <input type="text" v-model="formData.contact_information" name="contact_information"
                       class="form-control" placeholder="Reference Contact Information" maxlength="255" />
                   </div>
@@ -495,7 +500,7 @@
 
                 <div class="row">
                   <div class="group col-md-12">
-                    <label class="fieldlabels p-0">General Notes*</label>
+                    <label class="fieldlabels p-0">General Notes</label>
                     <textarea type="text" v-model="formData.general_note" name="general_note" class="form-control"
                       placeholder="Enter Note" maxlength="255"></textarea>
                   </div>
@@ -555,20 +560,25 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <label class="fieldlabels p-0">Password * <small>(Must be one capital, small, number and special character)</small></label>
-                    <div class="form_blk pass_blk">
-                        <input type="password" v-model="formData.password" name="password"
-                            class="pass_input m-0" placeholder="Enter Password" maxlength="20">
-                        <i class="icon-eye view_pass" id="eye"></i>
+                    <label class="fieldlabels p-0">Password * <small style="font-size: 0.5rem;">(Must be one capital, small, number and special
+                        character)</small></label>
+                    <div class="form_blk pass_blk" style="display: flex; align-items: center;">
+                      <input type="password" v-model="formData.password" name="password" class="pass_input m-0"
+                        placeholder="Enter Password" maxlength="20" style="flex: 1;">
+                      <i class="icon-eye view_pass" id="eye"
+                        style="font-size: 12px; width: 15px; height: 15px; margin-top:13px; margin-left: 10px; cursor: pointer;"></i>
                     </div>
-                    
+
+
+
                   </div>
                   <div class="col-md-6">
                     <label class="fieldlabels p-0">Confirm Password *</label>
                     <div class="form_blk pass_blk">
-                        <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
-                            class="pass_input m-0" placeholder="Enter Confirm Password" maxlength="20">
-                        <i class="icon-eye view_pass" id="eye"></i>
+                      <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
+                        class="pass_input m-0" placeholder="Enter Confirm Password" maxlength="20">
+                        <i class="icon-eye view_pass" id="eye"
+                        style="font-size: 12px; width: 15px; height: 15px; margin-top:13px; margin-left: 10px; cursor: pointer;"></i>
                     </div>
                   </div>
                 </div>
@@ -915,7 +925,7 @@ const resetFormData = async () => {
   formData.password_confirmation = '';
 
   selectedFiles = [];
-  
+
   $('[name]').val('');
 }
 
@@ -937,7 +947,13 @@ $(document).ready(() => {
 })
 
 $(document).ready(() => {
-
+  $('input').on('input', function (event) {
+    if ($(this).attr('numField') == 'true') {
+      let val = $(this).val();
+      // Replace any character that is not a digit (0-9)
+      $(this).val(val.replace(/[^0-9]/g, ''));
+    }
+  });
   $('input,select,textarea').on('keyup', function (e) {
     $(this).removeClass('is-invalid');
   });
@@ -975,34 +991,34 @@ $(document).ready(() => {
   // if has pets is yes then mandatory staric show otherwise not
   $('#has_pets').on('change', function (e) {
     var pet_type = $(this).val();
-    if(pet_type == 'Yes'){
+    if (pet_type == 'Yes') {
       $(".mand-staric").show();
-    }else{
+    } else {
       $(".mand-staric").hide();
     }
   });
   // if rental voucher is yes then mandatory staric show otherwise not
   $('#rental_voucher').on('change', function (e) {
     var value = $(this).val();
-    if(value == 'Yes'){
+    if (value == 'Yes') {
       $(".mand-staric1").show();
-    }else{
+    } else {
       $(".mand-staric1").hide();
     }
   });
   // if disability is yes then mandatory staric show otherwise not
   $('#disability').on('change', function (e) {
     var value = $(this).val();
-    if(value == 'Yes'){
+    if (value == 'Yes') {
       $(".mand-staric2").show();
-    }else{
+    } else {
       $(".mand-staric2").hide();
     }
   });
-  
-  
 
-  $('.view_pass').on('click', function() {
+
+
+  $('.view_pass').on('click', function () {
     var passwordField = $(this).siblings('.pass_input');
     var type = passwordField.attr('type') === 'password' ? 'text' : 'password';
     passwordField.attr('type', type);
@@ -1011,7 +1027,7 @@ $(document).ready(() => {
   // const selectedFiles = []
   // Event listener for file input change
   $('#file-input').on('change', function (event) {
-    
+
     const files = event.target.files;
 
     var allfileslength = files.length + selectedFiles.length;
@@ -1077,8 +1093,8 @@ $(document).ready(() => {
     }
   }
 
-  
-  
+
+
 
 })
 
@@ -1088,45 +1104,49 @@ $(document).ready(() => {
 /* Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
+
 .form_blk.pass_blk>i.icon-eye {
-    background-image: url('../assets/images/icon-eye.svg');
+  background-image: url('../assets/images/icon-eye.svg');
 }
+
 .form_blk.pass_blk>i.icon-eye-slash {
-    background-image: url('../assets/images/icon-eye-slash.svg');
+  background-image: url('../assets/images/icon-eye-slash.svg');
 }
+
 .form_blk.pass_blk {
-    position: relative;
+  position: relative;
 }
+
 .form_blk.pass_blk>i {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 1.4rem;
-    width: 1.6rem;
-    height: 100%;
-    cursor: pointer;
-    opacity: 0.7;
-    -webkit-filter: brightness(0.5) invert(0.4);
-    filter: brightness(0.5) invert(0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.4rem;
+  width: 1.6rem;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-filter: brightness(0.5) invert(0.4);
+  filter: brightness(0.5) invert(0.4);
 }
 
 .is-invalid {
@@ -1209,9 +1229,7 @@ input[type="number"] {
 }
 
 
-​ 
-
-#msform input,
+​ #msform input,
 #msform textarea,
 .form-select {
   padding: 8px 15px 8px 15px;
@@ -1227,9 +1245,13 @@ input[type="number"] {
   font-size: 16px;
   letter-spacing: 1px;
 }
-fieldset input,fieldset select,fieldset textarea{
-  border-radius:8px !important;
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+  border-radius: 8px !important;
 }
+
 ​ .form-select,
 .form-select option {
   cursor: pointer;

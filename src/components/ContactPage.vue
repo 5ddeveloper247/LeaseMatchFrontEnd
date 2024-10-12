@@ -22,28 +22,34 @@
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label>Your Name</label> -->
-                                    <input type="text"  class="form-control" v-model="formData.name" name="name" placeholder="Your Name" maxlength="50">
+                                    <input type="text" class="form-control" v-model="formData.name" name="name"
+                                        placeholder="Your Name" maxlength="50">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Email address</label> -->
-                                    <input type="email" class="form-control" v-model="formData.email" name="email" placeholder="Email Address" maxLength="100">
+                                    <input type="email" class="form-control" v-model="formData.email" name="email"
+                                        placeholder="Email Address" maxLength="50">
                                 </div>
                             </div>
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Enter Subject</label> -->
-                                    <input type="text" class="form-control" v-model="formData.subject" name="subject" placeholder="Enter Subject" maxLength="100">
+                                    <input type="text" class="form-control" v-model="formData.subject" name="subject"
+                                        placeholder="Enter Subject" maxLength="100">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="phone_input">Phone</label> -->
-                                    <input type="number" class="form-control" v-model="formData.phone_number" name="phone_number" placeholder="Phone Number" maxlength="18">
+                                    <input type="number" class="form-control" v-model="formData.phone_number"
+                                        name="phone_number" placeholder="Phone Number" maxlength="15">
                                 </div>
                             </div>
                             <div class="mb-5 contact-field">
                                 <!-- <label for="message">Message</label> -->
-                                <textarea class="form-control" v-model="formData.message" name="message" rows="5" placeholder="Message"></textarea>
+                                <textarea class="form-control" v-model="formData.message" name="message" rows="5"
+                                    placeholder="Message"></textarea>
                             </div>
-                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2 " @click="storeContact">Send Message</button>
+                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2 "
+                                @click="storeContact">Send Message</button>
                         </form>
                     </div>
                     <div class="col-md-5 px-md-5">
@@ -59,9 +65,10 @@
                                     <div class="contact_info-detail d-flex">
                                         <!-- <p><a href="tel:+919246147999">1800-121-3637</a></p>
                                         <p><a href="tel:+919246147999">+91 924-614-7999</a></p> -->
-                                        <p><a href="tel:(347) 754-5807">(347) 754-5807</a></p>
+                                        <a href="tel:(347) 754-5807">
+                                            <p>(347) 754-5807</p>
+                                        </a>
                                     </div>
-                                  
 
 
                                 </div>
@@ -70,7 +77,10 @@
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div class="contact_info-detail">
-                                        <p><a href="mailto:info@deneb.com">info@deneb.com</a></p>
+
+                                        <a href="mailto:info@deneb.com">
+                                            <p>info@deneb.com</p>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -172,8 +182,8 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.756018040521!2d-73.99114862513332!3d40.745393835572294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a608a76275%3A0x87eb7025ae519021!2s1178%20Broadway%203rd%20Floor%20%233989%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2s!4v1724061675164!5m2!1sen!2s"
                     width="100%" style="border: 0; height:83vh" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  
-                  
+
+
             </div>
         </div>
     </section>
@@ -186,37 +196,36 @@ import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
-
-var formData = {   
-            name: '',
-            email: '',
-            subject: '',
-            phone_number: '',
-            message: ''
-        };
+var formData = {
+    name: '',
+    email: '',
+    subject: '',
+    phone_number: '',
+    message: ''
+};
 
 const storeContact = async () => {
-    
+
     const data = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
         data.append(key, value);
     });
-    
-   
+
+
     try {
 
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/contact/send', data);
-        
+
         if (response.data.success) {
             toastr.success(response.data.message);
-            
+
             resetFormData();
         } else {
             toastr.error('API error:', response.data.error);
         }
     } catch (error) {
-       
+
         if (error.response && error.response.status === 422) {
             // Handle validation errors
             Object.entries(error.response.data.errors).forEach(([key, value]) => {
@@ -231,7 +240,7 @@ const storeContact = async () => {
 }
 
 const resetFormData = async () => {
-    
+
     formData.name = '';
     formData.email = '';
     formData.subject = '';
@@ -242,15 +251,15 @@ const resetFormData = async () => {
 
 $(document).ready(() => {
 
-    $('input,select,textarea').on('keyup', function(e) {
-      $(this).removeClass('is-invalid');
+    $('input,select,textarea').on('keyup', function (e) {
+        $(this).removeClass('is-invalid');
     });
-    $('input,select,textarea').on('change', function(e) {
-      $(this).removeClass('is-invalid');
+    $('input,select,textarea').on('change', function (e) {
+        $(this).removeClass('is-invalid');
     });
-    
+
     // number not allowed
-    $('[name="name"]').on('keydown', function(e) {
+    $('[name="name"]').on('keydown', function (e) {
         var key = e.keyCode || e.which;
         var char = String.fromCharCode(key);
         var controlKeys = ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'];
@@ -264,9 +273,9 @@ $(document).ready(() => {
         }
     });
     // max numbers allowed
-    $('input[type="number"],input[type="email"]').on('keydown', function(e) {
+    $('input[type="number"],input[type="email"]').on('keydown', function (e) {
         var maxLength = $(this).attr("maxlength");
-        
+
         var controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
         if (controlKeys.includes(e.key)) {
             return;
@@ -277,7 +286,7 @@ $(document).ready(() => {
         }
     });
 
-    
+
 })
 </script>
 
@@ -293,9 +302,11 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
-.is-invalid{
+
+.is-invalid {
     border-color: #ff0000 !important;
 }
+
 .custom-shape-divider-top-1717160352 {
     position: absolute;
     top: 0;

@@ -1,7 +1,8 @@
 <template>
-    <div id="uiBlocker" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:9999;">
+    <div id="uiBlocker"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:9999;">
         <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
-            <img src="../assets/images/loading-spinner.gif" alt="Loading..." style="height:150px; width:150px;"/>
+            <img src="../assets/images/loading-spinner.gif" alt="Loading..." style="height:150px; width:150px;" />
         </div>
     </div>
     <div class="container p-0 img-con text-center">
@@ -27,7 +28,8 @@
         <div class="row">
             <ul class="nav nav-tabs mt-4 col-5 d-flex flex-column gap-3" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation" v-for="(tab, index) in tabs" :key="index">
-                    <button class="nav-link" :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
+                    <button class="nav-link" :class="{ active: activeTab === tab.id }"
+                        @click="selectTab(tab.id, index)">
                         {{ tab.name }}
                         <span class="highlight" v-if="activeTab === tab.id"></span>
                     </button>
@@ -42,21 +44,22 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name" 
-                                        class="input-field" placeholder="Full Name" maxlength="50" />
+                                    <input type="text" v-model="formData.full_name" name="full_name" class="input-field"
+                                        placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id" 
+                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
                                         class="input-field" maxlength="100" />
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="group col-md-6">
-                                    <input type="number" v-model="formData.phone_number" name="phone_number"
-                                        class="input-field" placeholder="Enter your phone number" maxlength="18" />
+                                    <input type="text" numField="true" v-model="formData.phone_number"
+                                        name="phone_number" class="input-field" placeholder="Enter your phone number"
+                                        maxlength="18" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.company_name" name="company_name" 
+                                    <input type="text" v-model="formData.company_name" name="company_name"
                                         class="input-field" placeholder="Enter your company name" maxlength="100" />
                                 </div>
                             </div>
@@ -68,15 +71,18 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" class="input-field" v-model="formData.street_address" name="street_address" maxlength="100"/>
+                            <input type="text" class="input-field" v-model="formData.street_address"
+                                name="street_address" maxlength="100" />
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
-                                    <input type="text" class="input-field" v-model="formData.appartment_number" name="appartment_number" maxlength="10"/>
+                                    <input type="text" class="input-field" v-model="formData.appartment_number"
+                                        name="appartment_number" maxlength="10" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Borough/Neighborhood*</label>
-                                    <input type="text" class="input-field" v-model="formData.neighbourhood" name="neighbourhood" maxlength="100" />
+                                    <input type="text" class="input-field" v-model="formData.neighbourhood"
+                                        name="neighbourhood" maxlength="100" />
                                 </div>
                             </div>
                             <div class="row">
@@ -92,20 +98,25 @@
                                     </select>
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Number of Units (if multi-unit property)*</label>
-                                    <input type="number" class="input-field" v-model="formData.number_of_units" name="number_of_units" maxlength="3" />
+                                    <label class="fieldlabels p-0">Number of Units* <small
+                                            style="font-size: 0.5rem;">(if multi-unit property)</small></label>
+                                    <input type="number" numField="true" class="input-field"
+                                        v-model="formData.number_of_units" name="number_of_units" maxlength="3" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Year Built*<br></label>
-                                    <br><br>
-                                    <input type="number" class="input-field" v-model="formData.year_built" name="year_built" maxlength="4"/>
+                                    <label class="fieldlabels p-0">Year Built*</label>
+                                    <input type="text" class="input-field" v-model="formData.year_built"
+                                        name="year_built" maxlength="4" placeholder="yy" pattern="\d{4}"
+                                        title="Please enter a 2-digit year" />
                                 </div>
+
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Year of Last Major Renovation <br> (if
-                                        applicable)</label>
-                                    <input type="number" class="input-field" v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
+                                    <label class="fieldlabels p-0">Year of Last Major Renovation <small
+                                            style="font-size: 0.5rem;">(if applicable)</small></label>
+                                    <input type="text" class="input-field" numField="true"
+                                        v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
                                 </div>
                             </div>
                         </div>
@@ -122,12 +133,13 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)*</label>
-                                    <input type="number" class="input-field" v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Number of Bedrooms*</label>
-                                    <input type="number" class="input-field" v-model="formData.number_of_bedrooms"
-                                        name="number_of_bedrooms" maxlength="3">
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.number_of_bedrooms" name="number_of_bedrooms" maxlength="3">
                                 </div>
                             </div>
 
@@ -135,8 +147,9 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels pt-2">Number of Bathrooms*</label>
-                                    <input type="number" class="input-field" v-model="formData.number_of_bathrooms"
-                                        name="number_of_bathrooms" maxlength="3"/>
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.number_of_bathrooms" name="number_of_bathrooms"
+                                        maxlength="3" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Type of Rental*</label>
@@ -153,16 +166,19 @@
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Monthly Rent (USD)*</label>
                                     <br><br>
-                                    <input type="number" class="input-field" v-model="formData.monthly_rent" name="monthly_rent" maxlength="6"/>
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.monthly_rent" name="monthly_rent" maxlength="6" />
                                 </div>
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Security Deposit Requirement (USD)*</label>
-                                    <input type="number" class="input-field" v-model="formData.security_deposit" name="security_deposit" maxlength="6"/>
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.security_deposit" name="security_deposit" maxlength="6" />
                                 </div>
 
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Minimum Lease Duration (Month)*</label>
-                                    <input type="number" class="input-field" v-model="formData.lease_duration" name="lease_duration" maxlength="3"/>
+                                    <input type="text" numField="true" class="input-field"
+                                        v-model="formData.lease_duration" name="lease_duration" maxlength="3" />
                                 </div>
                             </div>
                             <!-- 4 -->
@@ -184,13 +200,15 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">List of Amenities*</label>
-                                    <input type="text" class="input-field" v-model="formData.list_of_amenities" name="list_of_amenities"
-                                        placeholder="e.g., In-unit Laundry, Dishwasher" maxlength="255"/>
+                                    <input type="text" class="input-field" v-model="formData.list_of_amenities"
+                                        name="list_of_amenities" placeholder="e.g., In-unit Laundry, Dishwasher"
+                                        maxlength="255" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Special Features*</label>
-                                    <input type="text" class="input-field" v-model="formData.special_feature" name="special_feature"
-                                        placeholder="e.g., Balcony, Pet-friendly" maxlength="255"/>
+                                    <input type="text" class="input-field" v-model="formData.special_feature"
+                                        name="special_feature" placeholder="e.g., Balcony, Pet-friendly"
+                                        maxlength="255" />
                                 </div>
                             </div>
                         </div>
@@ -207,11 +225,13 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
                                     <input type="text" class="input-field" v-model="formData.tenant_characteristics"
-                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets" maxlength="255">
+                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets"
+                                        maxlength="255">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range*</label>
-                                    <input type="text" class="input-field" v-model="formData.credit_score" name="credit_score" maxlength="100">
+                                    <input type="text" class="input-field" v-model="formData.credit_score"
+                                        name="credit_score" maxlength="100">
                                 </div>
                             </div>
                             <!-- 2 -->
@@ -223,7 +243,8 @@
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Rental History Checks*</label>
-                                    <input type="text" class="input-field" v-model="formData.rental_history" name="rental_history" maxlength="100">
+                                    <input type="text" class="input-field" v-model="formData.rental_history"
+                                        name="rental_history" maxlength="100">
                                 </div>
                             </div>
                         </div>
@@ -237,7 +258,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea class="input-field" v-model="formData.special_note" name="special_note" style="color:white;"></textarea>
+                                <textarea class="input-field" maxlength="255" v-model="formData.special_note"
+                                    name="special_note" style="color:white;"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -248,7 +270,8 @@
                                                 </label>
                                                 <p class="site-color p-0 white" id="upload-text">Upload *</p>
                                             </div>
-                                            <input type="file" id="file-input" name="file" accept="image/*" multiple="false">
+                                            <input type="file" id="file-input" name="file" accept="image/*"
+                                                multiple="false">
                                             <div id="image-container" class="white"></div>
                                             <div class="image-info" style="color: #fff !important">
                                                 <p id="file-names"></p>
@@ -287,7 +310,9 @@
                         </div>
                         <!-- <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
-                        <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3">Finish</button>
+                        <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3">
+                            <RouterLink to="/" style="text-decoration: none;">Go Back</RouterLink>
+                        </button>
                     </fieldset>
                 </div>
             </div>
@@ -301,7 +326,6 @@ import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
-
 const tabs = ref([
     {
         id: 'personal-tab-pane',
@@ -464,13 +488,13 @@ const storeLandlord = async () => {
     }
 
     try {
-        
+
         $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/store', data);
 
         if (response.data.success) {
-            
+
             $('#uiBlocker').hide();
             resetFormData();
 
@@ -485,7 +509,7 @@ const storeLandlord = async () => {
             console.error('API error:', response.data.error);
         }
     } catch (error) {
-        
+
         $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
@@ -503,55 +527,64 @@ const storeLandlord = async () => {
 }
 
 const resetFormData = async () => {
-    
-            formData.step = '1';
-            formData.full_name = '';
-            formData.email = '';
-            formData.phone_number = '';
-            formData.company_name = '';
 
-            formData.street_address = '';
-            formData.appartment_number = '';
-            formData.neighbourhood = '';
-            formData.property_type = '';
-            formData.number_of_units = '';
-            formData.year_built = '';
-            formData.major_renovation = '';
+    formData.step = '1';
+    formData.full_name = '';
+    formData.email = '';
+    formData.phone_number = '';
+    formData.company_name = '';
 
-            formData.size_square_feet = '';
-            formData.number_of_bedrooms = '';
-            formData.number_of_bathrooms = '';
-            formData.rental_type = '';
-            formData.monthly_rent = '';
-            formData.security_deposit = '';
-            formData.lease_duration = '';
-            formData.renwal_option = '';
-            formData.list_of_amenities = '';
-            formData.special_feature = '';
+    formData.street_address = '';
+    formData.appartment_number = '';
+    formData.neighbourhood = '';
+    formData.property_type = '';
+    formData.number_of_units = '';
+    formData.year_built = '';
+    formData.major_renovation = '';
 
-            formData.tenant_characteristics = '';
-            formData.credit_score = '';
-            formData.income_requirements = '';
-            formData.rental_history = '';
-            formData.special_note = '';
-            
-            selectedFiles = [];
+    formData.size_square_feet = '';
+    formData.number_of_bedrooms = '';
+    formData.number_of_bathrooms = '';
+    formData.rental_type = '';
+    formData.monthly_rent = '';
+    formData.security_deposit = '';
+    formData.lease_duration = '';
+    formData.renwal_option = '';
+    formData.list_of_amenities = '';
+    formData.special_feature = '';
 
-            $('[name]').val('');
-       
+    formData.tenant_characteristics = '';
+    formData.credit_score = '';
+    formData.income_requirements = '';
+    formData.rental_history = '';
+    formData.special_note = '';
+
+    selectedFiles = [];
+
+    $('[name]').val('');
+
 }
 
 
 $(document).ready(() => {
 
-    $('input,select,textarea').on('keyup', function(e) {
-      $(this).removeClass('is-invalid');
+
+    $('input').on('input', function (event) {
+        if ($(this).attr('numField') == 'true') {
+            let val = $(this).val();
+            // Replace any character that is not a digit (0-9)
+            $(this).val(val.replace(/[^0-9]/g, ''));
+        }
     });
-    $('input,select,textarea').on('change', function(e) {
-      $(this).removeClass('is-invalid');
+
+    $('input,select,textarea').on('keyup', function (e) {
+        $(this).removeClass('is-invalid');
+    });
+    $('input,select,textarea').on('change', function (e) {
+        $(this).removeClass('is-invalid');
     });
     // number not allowed
-    $('[name="full_name"]').on('keydown', function(e) {
+    $('[name="full_name"]').on('keydown', function (e) {
         var key = e.keyCode || e.which;
         var char = String.fromCharCode(key);
         var controlKeys = ['Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'];
@@ -565,9 +598,9 @@ $(document).ready(() => {
         }
     });
     // onlly numbers allowed
-    $('input[type="number"],input[type="email"]').on('keydown', function(e) {
+    $('input[type="number"],input[type="email"]').on('keydown', function (e) {
         var maxLength = $(this).attr("maxlength");
-        
+
         var controlKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete'];
         if (controlKeys.includes(e.key)) {
             return;
@@ -581,10 +614,10 @@ $(document).ready(() => {
     $('#file-input').on('change', function (event) {
         const files = event.target.files;
         var allfileslength = files.length + selectedFiles.length;
-        
-        if(allfileslength > 7){
-          toastr.error('You can upload a maximum of 7 images.');
-          return;
+
+        if (allfileslength > 7) {
+            toastr.error('You can upload a maximum of 7 images.');
+            return;
         }
 
         $('#image-container').empty();
@@ -593,17 +626,29 @@ $(document).ready(() => {
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
 
-            // Check if the file is an image
-            if (!file.type.startsWith('image/')) {
-                toastr.error('Please select only image files.');
+            // Check if the file is a valid jpg, jpeg, or png image
+            const validImageTypes = ['image/jpeg', 'image/png'];
+            const validExtensions = ['jpg', 'jpeg', 'png'];
+
+            const fileType = file.type;
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+
+            // Validate MIME type and file extension
+            if (!validImageTypes.includes(fileType) || !validExtensions.includes(fileExtension)) {
+                toastr.error('Please select only JPG, JPEG, or PNG image files.');
                 continue;
             }
 
             selectedFiles.push(file);
         }
+
         // Update the display
         displaySelectedFiles();
     });
+
+
+
+
     function displaySelectedFiles() {
         const $imageContainer = $('#image-container');
         $imageContainer.empty(); // Clear previous images
@@ -629,6 +674,7 @@ $(document).ready(() => {
 })
 </script>
 
+
 <style scoped>
 /* Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
@@ -642,28 +688,33 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-.white{
+.white {
     color: #fff;
 }
-.image-upload{
-    width:100%;
+
+.image-upload {
+    width: 100%;
 }
-#image-container{
-    overflow-x:auto;
-    width:100%;
-    margin-left:0px;
+
+#image-container {
+    overflow-x: auto;
+    width: 100%;
+    margin-left: 0px;
 }
+
 #image-container::-webkit-scrollbar {
     height: 4px;
     width: 100%;
-    background-color:gray;
-    border-radius:10px;
+    background-color: gray;
+    border-radius: 10px;
 }
+
 #image-container::-webkit-scrollbar-thumb {
     height: 4px;
-    background-color:gold;
-    border-radius:10px;
+    background-color: gold;
+    border-radius: 10px;
 }
+
 .new-form-section {
     margin-bottom: 5rem;
     background-color: #012252;
@@ -675,7 +726,7 @@ fieldset {
 
 .image-container {
     display: grid;
-    grid-template-columns: repeat(autoplay  );
+    grid-template-columns: repeat(autoplay);
     width: 100%;
     gap: 10px;
     align-items: flex-end;
@@ -807,7 +858,8 @@ button {
     border-bottom: 1px solid #ff0000 !important;
 }
 
-.input-field.is-invalid, .was-validated .input-field:invalid {
+.input-field.is-invalid,
+.was-validated .input-field:invalid {
     border-color: #dc3545;
     padding-right: calc(1.5em + .75rem);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");

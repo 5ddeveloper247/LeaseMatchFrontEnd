@@ -9,9 +9,12 @@
                             <h1 ref="heading">Lorem Ipsum Freoewu Trebdsshd Rttsdy</h1>
                         </div>
                         <div class="mt-4">
-                            <p ref="paragraph" class="text-white main-content-p">A renovated home available for rent. 2
-                                bedrooms, 2 full baths, living and dining rooms</p>
+                            <p ref="paragraph" class="text-white main-content-p"
+                                style="font-weight: bold; font-style: italic;">
+                                A renovated home available for rent. 2 bedrooms, 2 full baths, living and dining rooms
+                            </p>
                         </div>
+
                         <div ref="span" class="main-content-span"><span class="main-price">$5000/mo</span></div>
                         <div>
                             <RouterLink to="/registerForm">
@@ -53,7 +56,8 @@
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-house" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-person" style="font-size:36px;"></i>
+
                                 </div>
                                 <h4 class="box-about-title">Vetted Renters</h4>
                                 <div class="box-about-divider mt-4"></div>
@@ -80,8 +84,12 @@
                                                                 style="color: #04d7e8; font-size: 25px;"></i>4K+</span>
                                                     </h3>
 
-                                                    <p class="etheme-icon-box-description">
-                                                        Vetted Renters </p>
+                                                    <p class="etheme-icon-box-description"
+                                                        style="font-weight: bold; font-style: italic !important;">
+                                                        Vetted Renters
+                                                    </p>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +102,7 @@
                         <div class="col-md-6 mb-4">
                             <div class="box-about">
                                 <div class="box-about-icon">
-                                    <i class="fa-solid fa-person" style="font-size:36px;"></i>
+                                    <i class="fa-solid fa-house" style="font-size:36px;"></i>
                                 </div>
                                 <h4 class="box-about-title">Vetted Landlords</h4>
                                 <div class="box-about-divider mt-4"></div>
@@ -135,7 +143,7 @@
                             <div class="box-about">
                                 <div class="box-about-icon">
                                     <i class="fa-solid fa-gauge" style="font-size:36px;"></i>
-                                    
+
                                 </div>
                                 <h4 class="box-about-title">Average time to match</h4>
                                 <div class="box-about-divider mt-4"></div>
@@ -178,7 +186,7 @@
                             <div class="box-about">
                                 <div class="box-about-icon">
                                     <i class="fa-solid fa-check-double" style="font-size:36px;"></i>
-                                    
+
                                 </div>
                                 <h4 class="box-about-title">Success Rate</h4>
                                 <div class="box-about-divider  mt-4 "></div>
@@ -237,7 +245,8 @@
                         <div class="tab-content">
                             <div id="home" class="container tab-pane active text-white main-tab-content p-0">
                                 <br>
-                                <p>At LeaseMatch, we leverage cutting-edge proprietary AI technology to seamlessly
+                                <p style="font-weight: bold; font-style: italic;">
+                                    At LeaseMatch, we leverage cutting-edge proprietary AI technology to seamlessly
                                     connect landlords with vetted, ready-to-move-in tenants, ensuring a perfect match
                                     every time.
                                     Our commitment to excellence is reflected in our deep understanding of New York
@@ -247,10 +256,10 @@
                                     LeaseMatch specializes in all types of housing, but we take particular pride in our
                                     expertise in placing Section 8 tenants, CityFHEPS voucher holders, as well as SOTA
                                     and HASA clients. Our extensive knowledge and robust connections within the NYC
-                                    housing market empower us to secure the ideal apartment for you
-
+                                    housing market empower us to secure the ideal apartment for you.
                                 </p>
                             </div>
+
 
 
                         </div>

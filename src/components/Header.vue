@@ -34,7 +34,7 @@ onUnmounted(() => {
                         (347) 754-5807</span>
                 </li>
                 <li class="text-white list-style"><i class="fa fa-envelope" aria-hidden="true"
-                        style="font-size: 10px;"></i><span class="ms-2">leashMatch@gmail.com</span></li>
+                        style="font-size: 10px;"></i><span class="ms-2">LeaseMatch.nyc@gmail.com</span></li>
             </ul>
             <ul class="d-flex m-0">
                 <div class="d-flex justify-content-end " style="gap: 10px;">
@@ -66,8 +66,9 @@ onUnmounted(() => {
     <nav class="navbar navbar-expand-lg navbar-light fixed-top container bg-header">
         <!-- <div class="container bg-light"> -->
         <RouterLink class="navbar-brand mx-3 p-0" to="/">
-            <img src="../assets/images/logo-dark-150.png" alt="" width="150" height="50">
+            <img src="../assets/images/logo-dark-150.png" alt="Logo" style="max-width: 150px; height: auto;" />
         </RouterLink>
+
         <button ref="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">

@@ -35,7 +35,7 @@ function toggleChatbot() {
 
 <template>
     <!-- footer section -->
-    <section class="deneb_cta">
+    <!-- <section class="deneb_cta">
         <div class="container">
             <div class="cta_wrapper">
                 <div class="row align-items-center">
@@ -55,7 +55,7 @@ function toggleChatbot() {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <footer class="deneb_footer bg-footer">
         <div class="widget_wrapper">
             <div class="container">
@@ -158,14 +158,14 @@ function toggleChatbot() {
                             <div class="footer-tags d-flex w-100" style="gap: 30px;">
                                 <div class="row gy-3 w-100">
                                     <div
-                                        class="col-12 col-md-6 py-3 py-md-0 d-flex align-items-center justify-content-start gap-4">
-                                        <RouterLink to="/waitlist">| Waitlist Removal</RouterLink>
-                                        <RouterLink to="/policy">| Refund Policy</RouterLink>
+                                        class="col-12 col-md-6 py-1 py-md-0 d-flex align-items-center justify-content-start gap-4">
+                                        <RouterLink to="/waitlist">|Waitlist Removal</RouterLink>
+                                        <RouterLink to="/policy">|Refund Policy</RouterLink>
                                     </div>
                                     <div
                                         class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end gap-5">
-                                        <RouterLink to="/privacy">| Privacy Policy</RouterLink>
-                                        <RouterLink to="/terms"> | Terms & Conditions</RouterLink>
+                                        <RouterLink to="/privacy">|Privacy Policy</RouterLink>
+                                        <RouterLink to="/terms"> |Terms & Conditions</RouterLink>
                                     </div>
                                 </div>
                             </div>
@@ -175,6 +175,7 @@ function toggleChatbot() {
                                 <p>Copyright © 2024 <a href="#" class="site-color"
                                         style="text-decoration: none;">LeaseMatch.NYC</a>. All Rights Reserved.</p>
                             </div>
+
                         </div>
                     </div>
                 </div>

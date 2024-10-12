@@ -20,7 +20,8 @@
             <div class="row g-0 box-aboutt justify-content-between">
                 <div class="col-lg-6">
                     <div class="about-image pb-4 pb-lg-0">
-                        <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100" style="object-fit: cover;">
+                        <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100"
+                            style="object-fit: cover;">
                     </div>
                 </div>
                 <!-- part2 -->
@@ -76,8 +77,8 @@
                                     space in the city.</p>
                             </div>
                         </div>
-                        <a class="button main-content-btn theme_btn1 my-2" href="contact-us.html">Get in Touch
-                            <span></span><span></span><span></span><span></span></a>
+                        <!-- <a class="button main-content-btn theme_btn1 my-2" href="contact-us.html">Get in Touch
+                            <span></span><span></span><span></span><span></span></a> -->
                     </div>
 
 
