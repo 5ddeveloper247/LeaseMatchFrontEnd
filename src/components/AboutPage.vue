@@ -4,17 +4,14 @@
 
 
 <template>
-
     <section class="about-banner my-5">
-
         <div class="container-fluid gif-banner p-0">
             <div class="banner-overlay"></div>
-            <img src="../assets/images/banner2.png" class="h-100 w-100">
+            <img src="../assets/images/about_banner.jpg" class="h-100 w-100" style="object-fit: cover;">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
                 <h1>ABOUT US</h1>
             </div>
-
         </div>
     </section>
     <!-- section 1 -->
@@ -23,31 +20,32 @@
             <div class="row g-0 box-aboutt justify-content-between">
                 <div class="col-lg-6">
                     <div class="about-image pb-4 pb-lg-0">
-                        <img src="../assets/images/Average-time-to-match.jpg" class="h-100 w-100">
+                        <img src="../assets/images/leas_match_banner_bg_about.jpg" class="h-100 w-100" style="object-fit: cover;">
                     </div>
                 </div>
                 <!-- part2 -->
                 <div class="col-lg-5 box-tabss-main ">
                     <div class="box-tabss-main-inner">
-                        <h2>New York’s rental matchmaker</h2>
+                        <h2>New York’s Rental Matchmaker</h2>
                         <div class="divider-small"></div>
-                        <br>
+                        <!-- <br> -->
                         <!-- Nav tabs -->
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div id="home" class="container tab-pane text-white main-tab-content p-0 active"><br>
+                            <div id="home" class="container tab-pane text-white main-tab-content p-0 active mt-3">
+                                <!-- <br> -->
 
                                 <p>Our AI-powered platform transforms the rental experience in New York City,
                                     specializing in both market-rate and subsidized housing. With deep expertise in NYS
                                     housing guidelines and city voucher programs like Section 8, CityFHEPS, HASA, and
                                     SOTA, we're bridging the gap between diverse housing needs and available units. Our
                                     proprietary AI model analyzes countless factors to deliver the most compatible
-                                    matches for renters and landlords alike.
+                                    matches for renters and landlords alike.<br>
                                     Renters enjoy 24/7 application submissions and real-time updates on suitable
                                     properties, drastically cutting search times. Our AI continuously refines its
                                     matching criteria, ensuring renters see only the most relevant options. Landlords
                                     benefit from our focus on real-time availability, ensuring efficient matches with
-                                    compatible tenants, especially in the complex world of subsidized housing.
+                                    compatible tenants, especially in the complex world of subsidized housing.<br>
                                     LeaseMatch.NYC seamlessly integrates technology with NYC's unique rental market,
                                     creating a steady flow of opportunities across all sectors. We're not just matching
                                     properties and tenants; we're optimizing the entire rental process, making it
@@ -78,7 +76,7 @@
                                     space in the city.</p>
                             </div>
                         </div>
-                        <a class="button main-content-btn theme_btn1" href="contact-us.html">Get in Touch
+                        <a class="button main-content-btn theme_btn1 my-2" href="contact-us.html">Get in Touch
                             <span></span><span></span><span></span><span></span></a>
                     </div>
 
