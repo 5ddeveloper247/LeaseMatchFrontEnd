@@ -560,7 +560,8 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <label class="fieldlabels p-0">Password * <small style="font-size: 0.5rem;">(Must be one capital, small, number and special
+                    <label class="fieldlabels p-0">Password * <small style="font-size: 0.5rem;">(Must be one capital,
+                        small, number and special
                         character)</small></label>
                     <div class="form_blk pass_blk" style="display: flex; align-items: center;">
                       <input type="password" v-model="formData.password" name="password" class="pass_input m-0"
@@ -577,7 +578,7 @@
                     <div class="form_blk pass_blk">
                       <input type="password" v-model="formData.password_confirmation" name="password_confirmation"
                         class="pass_input m-0" placeholder="Enter Confirm Password" maxlength="20">
-                        <i class="icon-eye view_pass" id="eye"
+                      <i class="icon-eye view_pass" id="eye"
                         style="font-size: 12px; width: 15px; height: 15px; margin-top:13px; margin-left: 10px; cursor: pointer;"></i>
                     </div>
                   </div>
@@ -703,7 +704,6 @@ const formData = {
 
 var serverError = '';  // String to hold general server error messages
 
-
 const nextTab = async () => {
 
   const data = new FormData();
@@ -758,7 +758,6 @@ const nextTab = async () => {
   }
 }
 const storeRegister = async () => {
-
   const data = new FormData();
   Object.entries(formData).forEach(([key, value]) => {
     data.append(key, value);
@@ -780,20 +779,23 @@ const storeRegister = async () => {
 
 
     if (response.data.success) {
-
       $('#uiBlocker').hide();
       formData.step++;
       next();
       resetFormData();
+      // $("#step_14").hide();
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
       serverError = ''; // Clear any server error messages
-
-    } else {
+    }
+    else {
       $('#uiBlocker').hide();
       toastr.error('API error:', response.data.error);
       console.error('API error:', response.data.error);
     }
-  } catch (error) {
-
+  }
+  catch (error) {
     $('#uiBlocker').hide();
     if (error.response && error.response.status === 422) {
       // Handle validation errors
@@ -927,6 +929,9 @@ const resetFormData = async () => {
   selectedFiles = [];
 
   $('[name]').val('');
+  const $imageContainer = $('#image-container');
+  $imageContainer.empty()
+
 }
 
 $(document).ready(() => {
@@ -1070,6 +1075,7 @@ $(document).ready(() => {
   // })
   function displaySelectedFiles() {
     const $imageContainer = $('#image-container');
+    $imageContainer.empty()
     if (selectedFiles.length < 8) {
       $imageContainer.empty() // Clear previous images
       selectedFiles.forEach((file, index) => {

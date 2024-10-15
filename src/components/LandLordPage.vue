@@ -108,7 +108,7 @@
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year Built*</label>
                                     <input type="text" class="input-field" v-model="formData.year_built"
-                                        name="year_built" maxlength="4" placeholder="yy" pattern="\d{4}"
+                                        name="year_built" maxlength="4" placeholder="yyyy" pattern="\d{4}"
                                         title="Please enter a 2-digit year" />
                                 </div>
 
@@ -562,6 +562,8 @@ const resetFormData = async () => {
     selectedFiles = [];
 
     $('[name]').val('');
+    const $imageContainer = $('#image-container');
+    $imageContainer.empty(); // Clear previous images
 
 }
 
