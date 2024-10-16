@@ -27,8 +27,8 @@
                   <h2 class="fs-title text-center mb-4">Personal Information</h2>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Name*</label>
-                    <input type="text" v-model="formData.name" name="name" id="username" placeholder="Enter your name"
-                      class="form-control" maxlength="50" />
+                    <input type="text" v-model="formData.name" ref="firstInput" name="name" id="username"
+                      placeholder="Enter your name" class="form-control" maxlength="50" />
                   </div>
                   <div class="group col-md-6">
                     <label class="fieldlabels p-0">Date of Birth*</label>
@@ -625,7 +625,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref,onMounted } from 'vue';
 import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
@@ -636,6 +636,8 @@ var current_fs, next_fs, previous_fs;
 var opacity;
 var current = 1;
 var selectedFiles = [];
+const firstInput = ref(null);
+
 
 
 
@@ -704,7 +706,10 @@ const formData = {
 };
 
 var serverError = '';  // String to hold general server error messages
-
+// Focus the input field when the component is mounted
+onMounted(() => {
+  firstInput.value.focus();
+});
 const nextTab = async () => {
 
   const data = new FormData();

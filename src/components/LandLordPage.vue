@@ -44,7 +44,7 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name" class="input-field"
+                                    <input type="text" v-model="formData.full_name" ame="full_name" class="input-field"
                                         placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
@@ -321,11 +321,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
+
 const tabs = ref([
     {
         id: 'personal-tab-pane',
@@ -405,6 +406,7 @@ const selectTab = (tabId, index) => {
     // activeTab.value = tabId;
     // formData.step = index+1;
 }
+
 
 //next tab function
 const nextTab = async () => {
