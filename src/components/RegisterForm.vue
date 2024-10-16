@@ -288,19 +288,20 @@
                         under the age of
                         18)</small></label>
                     <input type="text" numField="true" v-model="formData.number_of_adults" name="number_of_adults"
-                      class="form-control" placeholder="Number of Adults" maxlength="6" />
+                      class="form-control" placeholder="Number of Adults" maxlength="2" />
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">
+                    <label class="fieldlabels p-0" style="font-size: 0.8rem !important;">
                       Number of Children*
-                      <small style="font-size: 0.8rem;">(Household member under the age of 18)</small>
+                      <small>(Household member under the age of 12)</small>
                     </label>
 
+
                     <input type="text" numField="true" v-model="formData.number_of_child" name="number_of_child"
-                      class="form-control" placeholder="Number of Children" maxlength="6" />
+                      class="form-control" placeholder="Number of Children" maxlength="2" />
                   </div>
                 </div>
               </div>
@@ -1032,15 +1033,17 @@ $(document).ready(() => {
   // const selectedFiles = []
   // Event listener for file input change
   $('#file-input').on('change', function (event) {
-
     const files = event.target.files;
 
     var allfileslength = files.length + selectedFiles.length;
 
     if (allfileslength > 7) {
       toastr.error('You can upload a maximum of 7 images.');
+      // Clear the file input value to allow re-uploading the same file later
+      $('#file-input').val('');
       return;
     }
+
     // Clear previous images in the container
     $('#image-container').empty();
 
@@ -1059,7 +1062,10 @@ $(document).ready(() => {
 
     // Display selected files
     displaySelectedFiles();
+    // Clear the file input value to allow re-uploading the same file later
+    $('#file-input').val('');
   });
+
 
 
   // $('#file-input').on('change', function (event) {

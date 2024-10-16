@@ -646,6 +646,7 @@ $(document).ready(() => {
 
         // Update the display
         displaySelectedFiles();
+        $('#file-input').val('');
     });
 
 
