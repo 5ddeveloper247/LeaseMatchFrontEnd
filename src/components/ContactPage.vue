@@ -22,8 +22,8 @@
                             <div class="mb-5 row">
                                 <div class="col contact-field">
                                     <!-- <label>Your Name</label> -->
-                                    <input type="text" class="form-control" v-model="formData.name" name="name"
-                                        placeholder="Your Name" maxlength="50">
+                                    <input type="text" ref="firstInput" class="form-control" v-model="formData.name"
+                                        name="name" placeholder="Your Name" maxlength="50">
                                 </div>
                                 <div class="col contact-field">
                                     <!-- <label for="email_addr">Email address</label> -->
@@ -191,7 +191,7 @@
 
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
@@ -203,7 +203,10 @@ var formData = {
     phone_number: '',
     message: ''
 };
-
+const firstInput = ref(null);
+onMounted(() => {
+    firstInput.value.focus();
+});
 const storeContact = async () => {
 
     const data = new FormData();

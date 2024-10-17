@@ -44,8 +44,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" ame="full_name" class="input-field"
-                                        placeholder="Full Name" maxlength="50" />
+                                    <input type="text" v-model="formData.full_name" ame="full_name"
+                                        class="input-field firstInput" placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
@@ -572,7 +572,7 @@ const resetFormData = async () => {
 
 $(document).ready(() => {
 
-
+    $('.firstInput').focus();
     $('input').on('input', function (event) {
         if ($(this).attr('numField') == 'true') {
             let val = $(this).val();
