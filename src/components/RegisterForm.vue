@@ -625,7 +625,7 @@
 </template>
 
 <script setup>
-import { ref,onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
@@ -1039,9 +1039,9 @@ $(document).ready(() => {
   // Event listener for file input change
   $('#file-input').on('change', function (event) {
     const files = event.target.files;
-
     var allfileslength = files.length + selectedFiles.length;
 
+    // Check if total files exceed the limit
     if (allfileslength > 7) {
       toastr.error('You can upload a maximum of 7 images.');
       // Clear the file input value to allow re-uploading the same file later
@@ -1055,13 +1055,15 @@ $(document).ready(() => {
     // Validate and add selected files to selectedFiles array
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
+      const fileType = file.type;
 
-      // Check if the file is an image
-      if (!file.type.startsWith('image/')) {
-        toastr.error('Please select only image files.');
+      // Check if the file is an image of the allowed types (jpeg, png, jpg)
+      if (!fileType.match('image/jpeg') && !fileType.match('image/png') && !fileType.match('image/jpg')) {
+        toastr.error('Only JPEG, PNG, and JPG images are allowed.');
         continue;
       }
 
+      // Add the valid image file to the selectedFiles array
       selectedFiles.push(file);
     }
 

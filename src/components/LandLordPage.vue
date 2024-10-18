@@ -107,7 +107,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year Built*</label>
-                                    <input type="text" class="input-field" v-model="formData.year_built"
+                                    <input type="text" class="input-field" numfield="true" v-model="formData.year_built"
                                         name="year_built" maxlength="4" placeholder="yyyy" pattern="\d{4}"
                                         title="Please enter a 2-digit year" />
                                 </div>
