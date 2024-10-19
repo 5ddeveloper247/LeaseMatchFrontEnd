@@ -7,7 +7,7 @@
     <section class="about-banner my-5">
         <div class="container-fluid gif-banner p-0">
             <div class="banner-overlay"></div>
-            <img src="../assets/images/about_banner.jpg" class="h-100 w-100" style="object-fit: cover;">
+            <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" style="object-fit: cover;">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
                 <h1>ABOUT US</h1>
@@ -170,7 +170,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="question_image">
-                        <img src="../assets/images/about-3.webp" class="h-100 w-100 ">
+                        <img src="../assets/banners/About_us.gif" class="h-100 w-100 ">
                     </div>
                 </div>
             </div>

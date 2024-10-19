@@ -97,13 +97,13 @@ export default {
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/newyork.jpg">
+                                <img class="img-fluid process-image h-100 w-100" src="../assets/slider/slider_1.webp">
                             </div>
                             <div class="image-container" data-step="2" style="display: none;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/choose.jpg">
+                                <img class="img-fluid process-image h-100 w-100" src="../assets/slider/slider_2.webp">
                             </div>
                             <div class="image-container" data-step="3" style="display: none;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/ai.jpeg">
+                                <img class="img-fluid process-image h-100 w-100" src="../assets/slider/slider_3.webp">
                             </div>
 
                         </div>

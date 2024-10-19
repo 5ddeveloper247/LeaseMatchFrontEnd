@@ -44,7 +44,7 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" ame="full_name"
+                                    <input type="text" v-model="formData.full_name" name="full_name"
                                         class="input-field firstInput" placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
