@@ -12,13 +12,14 @@ import TermsAndCondition from '@/components/TermsAndCondition.vue'
 import Login from '@/components/Login.vue'
 import ForgetPass from '@/components/ForgetPass.vue'
 import OtpSection from '@/components/OtpSection.vue'
+import CommercialInquiry from '@/components/CommercialInquiry.vue'
 
 
 
 
 
 const router = createRouter({
-  mode:'history',
+  mode: 'history',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -97,11 +98,16 @@ const router = createRouter({
       path: '/OtpSection',
       name: 'OtpSection',
       component: OtpSection
+    },
+    {
+      path: '/inquiry',
+      name: 'CommercialInquiry',
+      component: CommercialInquiry
     }
   ],
 
   scrollBehavior() {
-    return {left: 0, top: 0};
+    return { left: 0, top: 0 };
   }
 })
 
