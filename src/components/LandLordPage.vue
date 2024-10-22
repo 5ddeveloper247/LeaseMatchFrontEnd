@@ -44,12 +44,12 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name"
-                                        class="input-field firstInput" placeholder="Full Name" maxlength="50" />
+                                    <input v-focus="index === 0" type="text" v-model="formData.full_name"
+                                        name="full_name" class="input-field " placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
-                                        class="input-field" maxlength="100" />
+                                        class="input-field " maxlength="100" />
                                 </div>
                             </div>
                             <div class="row mt-5">
@@ -71,13 +71,13 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" class="input-field" v-model="formData.street_address"
+                            <input type="text" class="input-field firstInput" v-model="formData.street_address"
                                 name="street_address" maxlength="100" />
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
-                                    <input type="text" class="input-field" v-model="formData.appartment_number"
-                                        name="appartment_number" maxlength="10" />
+                                    <input v-focus="index == 1" type="text" class="input-field focused-2"
+                                        v-model="formData.appartment_number" name="appartment_number" maxlength="10" />
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Borough/Neighborhood*</label>
@@ -133,7 +133,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)*</label>
-                                    <input type="text" numField="true" class="input-field"
+                                    <input type="text" numField="true" class="input-field focused-3"
                                         v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
                                 <div class="group col-md-6">
@@ -224,9 +224,9 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
-                                    <input type="text" class="input-field" v-model="formData.tenant_characteristics"
-                                        name="tenant_characteristics" placeholder="e.g., Non_smoker, No Pets"
-                                        maxlength="255">
+                                    <input type="text" class="input-field focused-4"
+                                        v-model="formData.tenant_characteristics" name="tenant_characteristics"
+                                        placeholder="e.g., Non_smoker, No Pets" maxlength="255">
                                 </div>
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Credit Score Range*</label>
@@ -258,7 +258,7 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea class="input-field" maxlength="255" v-model="formData.special_note"
+                                <textarea class="input-field focused-5" maxlength="255" v-model="formData.special_note"
                                     name="special_note" style="color:white;"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
@@ -310,9 +310,11 @@
                         </div>
                         <!-- <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
-                        <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3">
-                            <RouterLink to="/" style="text-decoration: none;">Go Back</RouterLink>
-                        </button>
+                        <div class="row d-flex justify-content-center">
+                            <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3 w-25">
+                                <RouterLink to="/" style="text-decoration: none; color:black;">Go Back</RouterLink>
+                            </button>
+                        </div>
                     </fieldset>
                 </div>
             </div>
@@ -321,7 +323,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import axiosInstance from '@/plugins/axios';
 
 import toastr from 'toastr';
@@ -400,7 +402,6 @@ var serverError = '';  // String to hold general server error messages
 
 //track active tabs
 const activeTab = ref(tabs.value[0].id);
-
 //tab selection function
 const selectTab = (tabId, index) => {
     // activeTab.value = tabId;
@@ -469,11 +470,13 @@ const nextTab = async () => {
 //prev tab function
 const previousTab = () => {
     const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+    alert(currentIndex)
     if (currentIndex < tabs.value.length - 1) {
         activeTab.value = tabs.value[currentIndex - 1].id
         formData.step--;
     }
 }
+
 
 const storeLandlord = async () => {
     const data = new FormData();
@@ -528,6 +531,31 @@ const storeLandlord = async () => {
     }
 }
 
+onMounted(() => {
+    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+})
+
+watch(activeTab, (newVal, oldVal) => {
+    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+    if (currentIndex == 0) {
+        $('#focused-1').focus();
+    }
+    if (currentIndex == 1) {
+        alert("foc")
+        $('.focused-2').focus();
+    }
+    if (currentIndex == 2) {
+        $('.focused-3').focus();
+    }
+    if (currentIndex == 3) {
+        $('.focused-4').focus();
+    }
+    if (currentIndex == 4) {
+        $('.focused-5').focus();
+    }
+
+    console.log(currentIndex)
+});
 const resetFormData = async () => {
 
     formData.step = '1';
@@ -560,19 +588,21 @@ const resetFormData = async () => {
     formData.income_requirements = '';
     formData.rental_history = '';
     formData.special_note = '';
-
     selectedFiles = [];
 
     $('[name]').val('');
     const $imageContainer = $('#image-container');
     $imageContainer.empty(); // Clear previous images
+}
 
+const vFocus = {
+    mounted: (el) => el.focus()
 }
 
 
 $(document).ready(() => {
 
-    $('.firstInput').focus();
+
     $('input').on('input', function (event) {
         if ($(this).attr('numField') == 'true') {
             let val = $(this).val();
@@ -682,6 +712,9 @@ $(document).ready(() => {
 
 <style scoped>
 /* Chrome, Safari, Edge, Opera */
+.focused-style {}
+
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;

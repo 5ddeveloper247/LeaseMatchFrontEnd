@@ -1016,7 +1016,7 @@ $(document).ready(() => {
     } else {
       $(".mand-staric1").hide();
     }
-  });
+  }); 
   // if disability is yes then mandatory staric show otherwise not
   $('#disability').on('change', function (e) {
     var value = $(this).val();
