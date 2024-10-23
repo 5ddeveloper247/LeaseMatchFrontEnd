@@ -745,7 +745,7 @@ const nextTab = async () => {
     } else {
       $('#uiBlocker').hide();
       toastr.error('API error:', response.data.error);
-      console.error('API error:', response.data.error);
+      
     }
   } catch (error) {
 
@@ -798,7 +798,6 @@ const storeRegister = async () => {
     else {
       $('#uiBlocker').hide();
       toastr.error('API error:', response.data.error);
-      console.error('API error:', response.data.error);
     }
   }
   catch (error) {
@@ -818,7 +817,7 @@ const storeRegister = async () => {
 }
 const next = async () => {
   current_fs = $("#step_" + current);//.parent();
-  console.log(current_fs);
+ 
   next_fs = $("#step_" + current).next();//.parent()
 
   $('#progressbar li').eq($('fieldset').index(next_fs)).addClass('active');

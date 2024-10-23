@@ -196,15 +196,18 @@
                             <br><br>
                             <div class="row justify-content-center">
                                 <div class="col-7 text-center">
-                                    <h5 class="text-white text-center">You Have Successfully Submitted you inquiry!</h5>
+                                    <h5 class="text-white text-center">You Have Successfully Submitted Your's Inquiry!
+                                    </h5>
                                 </div>
                             </div>
                         </div>
                         <!-- <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
-                        <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3">
-                            <RouterLink to="/" style="text-decoration: none;">Go Back</RouterLink>
-                        </button>
+                        <div class="row d-flex justify-content-center">
+                            <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3 w-25">
+                                <RouterLink to="/" style="text-decoration: none; color:black;">Go Back</RouterLink>
+                            </button>
+                        </div>
                     </fieldset>
                 </div>
             </div>
@@ -329,7 +332,7 @@ const nextTab = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-            console.error('API error:', response.data.error);
+           
         }
     } catch (error) {
 
@@ -372,7 +375,6 @@ const handleCheckboxChange = (value) => {
         otherTypeOfSpace.value = '';
     }
 
-    console.log("Selected Type of Space:", typeOfSpace.value);
 };
 
 const handlePrefferedLeaseTerm = (value) => {
@@ -412,7 +414,7 @@ const storeLandlord = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-            console.error('API error:', response.data.error);
+           
         }
     } catch (error) {
 

@@ -54,7 +54,7 @@ function SendAjaxRequestToServer(
     spinner_button,
     submit_button
 ) {
-    // console.log(data, url, dataType);
+
     $.ajax({
         type: requestType,
         url: base_url+url,
@@ -71,7 +71,7 @@ function SendAjaxRequestToServer(
             if (typeof callBack === "function") {
                 callBack(response);
             } else {
-                console.log("error");
+                
             }
         },
         complete: function (data) {
@@ -83,7 +83,7 @@ function SendAjaxRequestToServer(
             if (typeof callBack === "function") {
                 callBack(response);
             } else {
-                console.log("error");
+                
             }
         },
     });
@@ -91,7 +91,7 @@ function SendAjaxRequestToServer(
 
 
 // $(document).on('click', '#guest_form_submit', function (e) {
-//     console.log('hamza');
+//     
 // 	e.preventDefault();
 // 	let type = 'POST';
 // 	let url = '/saveGuestUserDetails';

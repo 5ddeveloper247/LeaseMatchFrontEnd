@@ -37,6 +37,7 @@
             </ul>
 
             <div class="tab-content col-7" id="myTabContent">
+                <input type="hidden" id="focus-tracker" value="" />
                 <div class="tab-pane fade" :class="{ 'show active': activeTab === tab.id }" v-for="(tab, index) in tabs"
                     :key="tab.id" :id="tab.id">
                     <!-- fieldsets -->
@@ -44,8 +45,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input v-focus="index === 0" type="text" v-model="formData.full_name"
-                                        name="full_name" class="input-field " placeholder="Full Name" maxlength="50" />
+                                    <input type="text" id="focused-1" v-model="formData.full_name" name="full_name"
+                                        class="input-field " placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
@@ -71,12 +72,12 @@
                     <fieldset v-if="index === 1">
                         <div class="form-card">
                             <label class="fieldlabels p-0">Street Address*</label>
-                            <input type="text" class="input-field firstInput" v-model="formData.street_address"
+                            <input type="text" class="input-field" id="focused-2" v-model="formData.street_address"
                                 name="street_address" maxlength="100" />
                             <div class="row ">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Apartment/Unit Number*</label>
-                                    <input v-focus="index == 1" type="text" class="input-field focused-2"
+                                    <input v-focus="index == 1" type="text" class="input-field "
                                         v-model="formData.appartment_number" name="appartment_number" maxlength="10" />
                                 </div>
                                 <div class="group col-md-6">
@@ -133,7 +134,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Size (square footage)*</label>
-                                    <input type="text" numField="true" class="input-field focused-3"
+                                    <input type="text" numField="true" class="input-field" id="focused-3"
                                         v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
                                 <div class="group col-md-6">
@@ -224,7 +225,7 @@
                             <div class="row">
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
-                                    <input type="text" class="input-field focused-4"
+                                    <input type="text" class="input-field" id="focused-4"
                                         v-model="formData.tenant_characteristics" name="tenant_characteristics"
                                         placeholder="e.g., Non_smoker, No Pets" maxlength="255">
                                 </div>
@@ -258,8 +259,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea class="input-field focused-5" maxlength="255" v-model="formData.special_note"
-                                    name="special_note" style="color:white;"></textarea>
+                                <textarea class="input-field focused-5" maxlength="255" id="focused-5"
+                                    v-model="formData.special_note" name="special_note" style="color:white;"></textarea>
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -329,6 +330,7 @@ import axiosInstance from '@/plugins/axios';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
+const trackActiveTabIndex = ref(0)
 const tabs = ref([
     {
         id: 'personal-tab-pane',
@@ -402,6 +404,7 @@ var serverError = '';  // String to hold general server error messages
 
 //track active tabs
 const activeTab = ref(tabs.value[0].id);
+
 //tab selection function
 const selectTab = (tabId, index) => {
     // activeTab.value = tabId;
@@ -447,7 +450,7 @@ const nextTab = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-            console.error('API error:', response.data.error);
+           
         }
     } catch (error) {
 
@@ -470,7 +473,6 @@ const nextTab = async () => {
 //prev tab function
 const previousTab = () => {
     const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
-    alert(currentIndex)
     if (currentIndex < tabs.value.length - 1) {
         activeTab.value = tabs.value[currentIndex - 1].id
         formData.step--;
@@ -511,7 +513,7 @@ const storeLandlord = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-            console.error('API error:', response.data.error);
+           
         }
     } catch (error) {
 
@@ -533,29 +535,18 @@ const storeLandlord = async () => {
 
 onMounted(() => {
     const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+
+
+
 })
 
 watch(activeTab, (newVal, oldVal) => {
     const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
-    if (currentIndex == 0) {
-        $('#focused-1').focus();
-    }
-    if (currentIndex == 1) {
-        alert("foc")
-        $('.focused-2').focus();
-    }
-    if (currentIndex == 2) {
-        $('.focused-3').focus();
-    }
-    if (currentIndex == 3) {
-        $('.focused-4').focus();
-    }
-    if (currentIndex == 4) {
-        $('.focused-5').focus();
-    }
+    // trackActiveTabIndex.value = currentIndex;
+    $('#focus-tracker').val(currentIndex).trigger('change');
 
-    console.log(currentIndex)
 });
+
 const resetFormData = async () => {
 
     formData.step = '1';
@@ -582,7 +573,6 @@ const resetFormData = async () => {
     formData.renwal_option = '';
     formData.list_of_amenities = '';
     formData.special_feature = '';
-
     formData.tenant_characteristics = '';
     formData.credit_score = '';
     formData.income_requirements = '';
@@ -601,7 +591,31 @@ const vFocus = {
 
 
 $(document).ready(() => {
+    focused()
+    $('#focus-tracker').on('change', function () {
+        focused()
+    });
 
+    function focused() {
+        const currentIndex = $('#focus-tracker').val();
+        if (currentIndex == 0) {
+            $('#focused-1').get(0).focus();
+        }
+        if (currentIndex == 1) {
+
+            $('#focused-2').get(0).focus();
+
+        }
+        if (currentIndex == 2) {
+            $('#focused-3').get(0).focus();
+        }
+        if (currentIndex == 3) {
+            $('#focused-4').get(0).focus();
+        }
+        if (currentIndex == 4) {
+            $('#focused-5').get(0).focus();
+        }
+    }
 
     $('input').on('input', function (event) {
         if ($(this).attr('numField') == 'true') {
