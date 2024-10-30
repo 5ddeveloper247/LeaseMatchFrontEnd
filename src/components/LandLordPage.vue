@@ -259,8 +259,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea class="input-field focused-5" maxlength="255" id="focused-5"
-                                    v-model="formData.special_note" name="special_note" style="color:white;"></textarea>
+                                <input type="text" class="input-field" maxlength="100" v-model="formData.special_note"
+                                name="special_note" style="color:white; width:25rem">
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -924,4 +924,19 @@ button {
     background-color: #fff;
     color: #000;
 } */
+ 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important; 
+    box-shadow: 0 0 0px 1000px #012252 inset !important;
+    -webkit-text-fill-color: #fff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
 </style>

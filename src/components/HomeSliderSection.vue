@@ -134,25 +134,26 @@ export default {
                                 border-bottom: 2px solid black;
                                 padding: 0px;">Read More</button>
 
+
                                     <div class="row justify-content-around">
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>4K+</span><span>Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>60 Day</span><span>Avg</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -212,21 +213,21 @@ export default {
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>4k+</span><span>Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>60 Day </span><span>Avg</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -276,21 +277,21 @@ export default {
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>4k+</span><span>Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>125K</span><span>Downloads</span>
+                                                <div class="d-flex flex-column"><span>60 Day</span><span>Avg</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -358,7 +359,8 @@ export default {
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle" src="../assets/images/Landlord-partnerships.jpg">
+                                    <img class="source-profile rounded-circle"
+                                        src="../assets/images/Landlord-partnerships.jpg">
                                     <div class="source-info media-body pt-3">
                                         <div>Henles querr</div>
                                         <div>london,uk</div>
@@ -385,7 +387,8 @@ export default {
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle" src="../assets/images/Landlord-partnerships.jpg">
+                                    <img class="source-profile rounded-circle"
+                                        src="../assets/images/Landlord-partnerships.jpg">
                                     <div class="source-info media-body pt-3">
                                         <div>Henles querr</div>
                                         <div>london,uk</div>
@@ -438,7 +441,8 @@ export default {
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle" src="../assets/images/Average-time-to-match.jpg">
+                                    <img class="source-profile rounded-circle"
+                                        src="../assets/images/Average-time-to-match.jpg">
                                     <div class="source-info media-body pt-3">
                                         <div>Henles querr</div>
                                         <div>london,uk</div>
@@ -465,7 +469,8 @@ export default {
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle" src="../assets/images/Average-time-to-match.jpg">
+                                    <img class="source-profile rounded-circle"
+                                        src="../assets/images/Average-time-to-match.jpg">
                                     <div class="source-info media-body pt-3">
                                         <div>Henles querr</div>
                                         <div>london,uk</div>
@@ -513,5 +518,30 @@ export default {
 <style scoped>
 p {
     color: #000 !important;
+}
+
+.font {
+    font-size: 13px;
+}
+
+.right {
+    margin-right: 11%;
+}
+
+@media (max-width: 768px) {
+    .font {
+        font-size: 9px;
+    }
+
+    .space {
+        margin-top: -7%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .progress-pills-container::before {
+        width: 90px !important;
+
+    }
 }
 </style>

@@ -294,6 +294,7 @@ $(document).ready(() => {
 </script>
 
 <style scoped>
+
 /* Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -336,5 +337,24 @@ input[type="number"] {
 
 .theme_btn2:hover {
     color: #ffffffba !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #16d5e9 inset !important; 
+    box-shadow: 0 0 0px 1000px #16d5e9 inset !important;
+    -webkit-text-fill-color: #fff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:focus, 
+textarea:focus, 
+select:focus {
+    background-color: transparent !important;
 }
 </style>

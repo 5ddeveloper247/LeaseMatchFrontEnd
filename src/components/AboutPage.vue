@@ -36,7 +36,7 @@
                             <div id="home" class="container tab-pane text-white main-tab-content p-0 active mt-3">
                                 <!-- <br> -->
 
-                                <p>Our AI-powered platform transforms the rental experience in New York City,
+                                <p style="font-weight:600;">Our AI-powered platform transforms the rental experience in New York City,
                                     specializing in both market-rate and subsidized housing. With deep expertise in NYS
                                     housing guidelines and city voucher programs like Section 8, CityFHEPS, HASA, and
                                     SOTA, we're bridging the gap between diverse housing needs and available units. Our

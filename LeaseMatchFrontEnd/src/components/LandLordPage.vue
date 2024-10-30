@@ -260,8 +260,10 @@
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <textarea class="input-field" maxlength="255" v-model="formData.special_note"
-                                    name="special_note" style="color:white;"></textarea>
+                                <input type="text" class="input-field" maxlength="100" v-model="formData.special_note"
+                                    name="special_note" style="color:white; width:25rem">
+
+
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">

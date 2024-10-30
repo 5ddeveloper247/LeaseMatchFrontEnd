@@ -15,7 +15,7 @@
 
                     <div class="col-md-7">
                         <h1 class="contact-title font-weight">Send us a message</h1>
-                        <p class="site-color">If you have any questions about membership or usage, please fill out the
+                        <p>If you have any questions about membership or usage, please fill out the
                             form and our team
                             will get back to you within 24 hours.</p>
                         <form id="contact_form" action="javascript:;" method="">
@@ -182,8 +182,6 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.756018040521!2d-73.99114862513332!3d40.745393835572294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a608a76275%3A0x87eb7025ae519021!2s1178%20Broadway%203rd%20Floor%20%233989%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2s!4v1724061675164!5m2!1sen!2s"
                     width="100%" style="border: 0; height:83vh" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
             </div>
         </div>
     </section>
@@ -334,4 +332,25 @@ input[type="number"] {
 .theme_btn2:hover {
     color: #ffffffba !important;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #16d5e9 inset !important; 
+    box-shadow: 0 0 0px 1000px #16d5e9 inset !important;
+    -webkit-text-fill-color: #fff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:focus, 
+textarea:focus, 
+select:focus {
+    background-color: transparent !important;
+}
+
+
 </style>
