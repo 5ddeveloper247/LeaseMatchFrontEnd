@@ -112,11 +112,12 @@ export default {
                                         platform for bridging the gap between renters and landlords in the bustling
                                         heart of New York City. Our service caters to a diverse range of clients,
                                         including those who are currently housed, individuals actively seeking a new
-                                        home, and holders of housing vouchers.
+                                        home, and holders of housing vouchers.We maintain a dynamic and up-to-date
+                                        roster of verified renters, creating a dependable environment for landlords
+                                      
                                     </p>
                                     <div class="more-text">
-                                        <p>We maintain a dynamic and up-to-date
-                                            roster of verified renters, creating a dependable environment for landlords
+                                        <p>
                                             and
                                             offering a wide array of options for prospective tenants. This ensures that
                                             everyone involved in the housing process, from landlords to tenants,
@@ -159,6 +160,12 @@ export default {
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
+
                             </div>
                         </div>
                     </div>
