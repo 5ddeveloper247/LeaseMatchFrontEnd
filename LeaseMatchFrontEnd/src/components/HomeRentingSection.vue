@@ -9,6 +9,7 @@ export default {
                 $(".rounded-circle").removeClass("active");
                 $(".process-heading").removeClass("active");
 
+                // Display the elements for the selected step
                 $(`.image-container[data-step=${step}]`).show();
                 $(`.process-text[data-step=${step}]`).show().addClass("active");
                 $(`.line[data-step=${step}]`).css("height", "-webkit-fill-available");
@@ -26,7 +27,6 @@ export default {
         });
     }
 }
-
 </script>
 
 
@@ -97,13 +97,13 @@ export default {
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/newyork.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/img1.png">
                             </div>
                             <div class="image-container" data-step="2" style="display: none;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/choose.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/img2.png">
                             </div>
                             <div class="image-container" data-step="3" style="display: none;">
-                                <img class="img-fluid process-image h-100 w-100" src="../assets/images/ai.jpeg">
+                                <img class="img-fluid process-image" src="../assets/images/img3.png">
                             </div>
 
                         </div>
@@ -129,7 +129,7 @@ export default {
                         <div class="card-body quality-content1 text-white h-100 d-flex flex-column">
                             <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5>
-                            <h1 class="mb-3">I am <span class="quality-transform2 font-weight">R</span>enter</h1>
+                            <h1 class="mb-3">I am a <span class="quality-transform2 font-weight">R</span>enter</h1>
                             <p class="mb-3" style="font-weight: bold; font-style: italic;">Discover your ideal New York
                                 apartment effortlessly. Our cutting-edge AI
                                 analyzes your preferences to match you with vetted, available listings—simplifying your
@@ -147,7 +147,7 @@ export default {
                         <div class="card-body quality-content2 text-white h-100 d-flex flex-column">
                             <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5>
-                            <h1 class="mb-3">I am <span class="quality-transform1 font-weight">L</span>andLord</h1>
+                            <h1 class="mb-3">I am a <span class="quality-transform1 font-weight">L</span>andLord</h1>
                             <p class="mb-3" style="font-weight: bold; font-style: italic;">Submit the landlord form, and
                                 let our AI match you with New York’s only
                                 accurate and vetted list of viable renters, doing the work for you.</p>
@@ -164,3 +164,6 @@ export default {
     </section>
 
 </template>
+<style scoped>
+
+</style>

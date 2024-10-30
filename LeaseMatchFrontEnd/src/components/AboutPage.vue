@@ -10,7 +10,7 @@
             <img src="../assets/images/about_banner.jpg" class="h-100 w-100" style="object-fit: cover;">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
-                <h1>ABOUT US</h1>
+                <h1>Who We Are</h1>
             </div>
         </div>
     </section>

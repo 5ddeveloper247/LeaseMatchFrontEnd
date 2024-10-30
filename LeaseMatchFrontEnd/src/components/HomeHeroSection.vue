@@ -6,7 +6,7 @@
                 <div class="col-12 col-lg-5 main-content d-flex align-items-center">
                     <div class="mx-md-4 mx-3 main-data">
                         <div class="main-content-h">
-                            <h1 ref="heading">Lorem Ipsum Freoewu Trebdsshd Rttsdy</h1>
+                            <h1 ref="heading">LeaseMatch: NYC's First AI-Driven Apartment Matchmaking Platform</h1>
                         </div>
                         <div class="mt-4">
                             <p ref="paragraph" class="text-white main-content-p"
@@ -245,7 +245,7 @@
                         <div class="tab-content">
                             <div id="home" class="container tab-pane active text-white main-tab-content p-0">
                                 <br>
-                                <p style="font-weight: bold; font-style: italic;">
+                                <p style=" font-size: 14px; font-weight: 600;">
                                     At LeaseMatch, we leverage cutting-edge proprietary AI technology to seamlessly
                                     connect landlords with vetted, ready-to-move-in tenants, ensuring a perfect match
                                     every time.
