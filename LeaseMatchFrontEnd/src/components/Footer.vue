@@ -66,8 +66,10 @@ function toggleChatbot() {
                                 <img src="../assets/images/logo-white-150.png" class="img-fluid" alt="">
 
                             </div>
-                            <p>Quisque orci nisl, viverra et sem ac, tincidunt egestas massa. Morbi est arcu, hendrerit
-                                ac vehicula condimentum, euismod nec tortor praesent consequat urna.</p>
+                            <p>Find your perfect apartment in New York City effortlessly with LeaseMatch, the only
+                                platform powered by AI to connect ready tenants with ideal landlords. Please include
+                                this
+                                message at the bottom as well. It will show on each page.</p>
                             <ul class="footer-social p-0">
                                 <li>
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -132,8 +134,8 @@ function toggleChatbot() {
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div class="info">
-                                        <p class="d-flex gap-3">
-                                            <a href="mailto:info@deneb.com">info@deneb.com</a>
+                                        <p class="gap-2">
+                                            <a href="mailto:info@deneb.com">info@deneb.com</a><br>
                                             <a href="mailto:services@deneb.com">services@deneb.com</a>
                                         </p>
                                     </div>
@@ -151,24 +153,35 @@ function toggleChatbot() {
                     </div>
                 </div>
             </div>
+            
             <div class="copyright_area">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 d-flex align-items-md-center justify-content-md-center mb-4">
                             <div class="footer-tags d-flex w-100" style="gap: 30px;">
-                                <div class="row gy-3 w-100">
-                                    <div
-                                        class="col-12 col-md-6 py-1 py-md-0 d-flex align-items-center justify-content-start gap-4">
-                                        <RouterLink to="/waitlist">|Waitlist Removal</RouterLink>
-                                        <RouterLink to="/policy">|Refund Policy</RouterLink>
-                                    </div>
-                                    <div
-                                        class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end gap-5">
-                                        <RouterLink to="/privacy">|Privacy Policy</RouterLink>
-                                        <RouterLink to="/terms"> |Terms & Conditions</RouterLink>
-                                    </div>
+                                <div class="row gy-3 w-100 text-center text-md-start spacing">
+                                    <!-- <div
+                                        class="col-12 col-md-6 py-1 py-md-0 d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                                        <RouterLink to="/waitlist">Waitlist Removal |</RouterLink>
+                                        <RouterLink to="/policy">Refund Policy</RouterLink>
+                                    </div> -->
+                                  
+                                    <!-- <div
+                                        class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end gap-2">
+                                        <RouterLink to="/privacy">Privacy Policy |</RouterLink>
+                                        <RouterLink to="/terms"> Terms & Conditions</RouterLink>
+                                    </div> -->
                                 </div>
+
                             </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="copyright_text">
+                                <RouterLink to="/privacy">Privacy Policy | </RouterLink>
+                                <RouterLink to="/terms"> Terms & Conditions</RouterLink>     
+                            </div>
+
                         </div>
                         <div class="col-lg-12">
                             <div class="copyright_text">
@@ -177,6 +190,7 @@ function toggleChatbot() {
                             </div>
 
                         </div>
+                      
                     </div>
                 </div>
             </div>
@@ -315,5 +329,20 @@ function toggleChatbot() {
 .modal-content a {
     color: #04d7e8;
     text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .spacing {
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .copyright_area::after {
+
+        top: -3px;
+
+    }
 }
 </style>

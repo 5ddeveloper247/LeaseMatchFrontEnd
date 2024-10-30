@@ -44,8 +44,8 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <input type="text" v-model="formData.full_name" name="full_name" class="input-field"
-                                        placeholder="Full Name" maxlength="50" />
+                                    <input type="text" ref="fullNameInput" v-model="formData.full_name" name="full_name"
+                                        class="input-field" placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
                                     <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
@@ -66,6 +66,8 @@
                         </div>
                         <button @click="nextTab" v-if="index < tabs.length - 1"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                       
+
                     </fieldset>
 
                     <fieldset v-if="index === 1">
@@ -321,8 +323,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+
 import axiosInstance from '@/plugins/axios';
+import { ref, onMounted } from 'vue';
+
 
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
@@ -396,6 +400,8 @@ const formData = {
 };
 var errors = {}; // Object to hold field-specific error messages
 var serverError = '';  // String to hold general server error messages
+
+
 
 //track active tabs
 const activeTab = ref(tabs.value[0].id);
@@ -672,6 +678,15 @@ $(document).ready(() => {
         });
     }
 })
+
+
+
+onMounted(() => {
+    const fullNameInput = document.querySelector('[name="full_name"]');
+    if (fullNameInput) fullNameInput.focus();
+});
+
+
 </script>
 
 
@@ -872,4 +887,22 @@ button {
     background-color: #fff;
     color: #000;
 } */
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important; 
+    box-shadow: 0 0 0px 1000px #012252 inset !important;
+    -webkit-text-fill-color: #fff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
 </style>
