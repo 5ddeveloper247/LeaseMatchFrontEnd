@@ -48,7 +48,7 @@
                                 <textarea class="form-control" v-model="formData.message" name="message" rows="5"
                                     placeholder="Message"></textarea>
                             </div>
-                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-2 "
+                            <button type="button" class="btn btn-contact btn-lg theme_btn2 mb-4 "
                                 @click="storeContact">Send Message</button>
                         </form>
                     </div>

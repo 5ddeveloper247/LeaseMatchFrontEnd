@@ -11,7 +11,7 @@
   </section>
 
   <!-- package section -->
-  <section class="package_sec-1 bg-package my-5 pb-5">
+  <section class="package_sec-1 bg-package mt-5 pb-5">
     <div class="container">
       <div class="row gy-5 align-items-center justify-content-center" v-show="pricing.length" transition name="fade">
         <div class="col-12 col-sm-6 col-lg-4" v-for="(value, index) in pricing" :key="index">

@@ -10,7 +10,7 @@
             <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" style="object-fit: cover;">
 
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
-                <h1>ABOUT US</h1>
+                <h1>Who we are</h1>
             </div>
         </div>
     </section>
@@ -144,7 +144,7 @@
     </section>
     <!-- section 3 agents -->
 
-    <section class="about_sec-4 my-5 bg-about py-5">
+    <section class="about_sec-4 mb-5 mt-3 bg-about py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

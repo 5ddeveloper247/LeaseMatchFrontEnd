@@ -667,7 +667,7 @@ body {
         --s: 12px;
         padding: var(--s);
         border: var(--s) solid #0000;
-        width: 90%;
+        width: 78%;
         height: 110%;
     }
 
@@ -697,8 +697,8 @@ body {
         --s: 5px;
         padding: var(--s);
         border: var(--s) solid #0000;
-        width: 100%;
-        height: 90%;
+        width: 98%;
+        height: 98%;
     }
 
     .image-container {

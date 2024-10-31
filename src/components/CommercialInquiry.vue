@@ -95,10 +95,12 @@
 
                             </div>
                         </div>
+                        <div class="btn">
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button @click="nextTab" v-if="index < tabs.length - 1"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 2">
@@ -145,10 +147,12 @@
                             </div>
 
                         </div>
+                        <div class="btn">
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
 
@@ -174,10 +178,12 @@
                             </div>
 
                         </div>
+                        <div class="btn">
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 4">
@@ -204,9 +210,10 @@
                         <!-- <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
                         <div class="row d-flex justify-content-center">
-                            <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3 w-25">
+                            <button type="submit" class="buttn next action-button px-5 py-1 mt-5 mx-3">
                                 <RouterLink to="/" style="text-decoration: none; color:black;">Go Back</RouterLink>
                             </button>
+                            
                         </div>
                     </fieldset>
                 </div>
@@ -627,7 +634,7 @@ input[type="number"] {
 }
 
 .new-form-section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     background-color: #012252;
 }
 
@@ -788,4 +795,29 @@ button {
     background-color: #fff;
     color: #000;
 } */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important; 
+    box-shadow: 0 0 0px 1000px #012252 inset !important;
+    -webkit-text-fill-color: #fff !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+@media (max-width: 320px) {
+.btn{
+    margin-left:-18%;
+}
+h5 {
+    font-size: 13px;
+}
+}
+.buttn{
+    width:11rem;
+}
 </style>

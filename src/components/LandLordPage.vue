@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <section class="new-form-section container p-3 ps-4 ps-md-5 p-md-5">
+    <section class="new-form-section container p-3 ps-md-5 p-md-5">
         <div class="row">
             <ul class="nav nav-tabs mt-4 col-5 d-flex flex-column gap-3" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation" v-for="(tab, index) in tabs" :key="index">
@@ -81,7 +81,7 @@
                                         v-model="formData.appartment_number" name="appartment_number" maxlength="10" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Borough/Neighborhood*</label>
+                                    <label class="fieldlabels p-0">Neighborhood*</label>
                                     <input type="text" class="input-field" v-model="formData.neighbourhood"
                                         name="neighbourhood" maxlength="100" />
                                 </div>
@@ -121,10 +121,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="btn">
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 2">
@@ -213,10 +215,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="pre">
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 3">
@@ -768,7 +772,7 @@ input[type="number"] {
 }
 
 .new-form-section {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     background-color: #012252;
 }
 
@@ -938,5 +942,16 @@ select:-webkit-autofill:focus {
     box-shadow: 0 0 0px 1000px #012252 inset !important;
     -webkit-text-fill-color: #fff !important; 
     transition: background-color 5000s ease-in-out 0s;
+}
+@media (max-width: 480px) {
+.btn{
+    margin-left: -21%;
+}
+}
+
+@media (max-width: 480px) {
+    .pre{
+    margin-left:-10%;
+}
 }
 </style>

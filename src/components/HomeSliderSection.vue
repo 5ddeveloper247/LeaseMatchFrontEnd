@@ -118,7 +118,7 @@ export default {
                                     </p>
                                     <div class="more-text">
                                         <p>
-                                            and
+                                            and 
                                             offering a wide array of options for prospective tenants. This ensures that
                                             everyone involved in the housing process, from landlords to tenants,
                                             benefits

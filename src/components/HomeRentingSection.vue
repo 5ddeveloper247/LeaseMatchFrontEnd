@@ -39,7 +39,7 @@ export default {
                 <h1 class="process-contentt pb-md-5 pb-3 px-lg-4 site-color divide-heading">
                     Renting As Easy As It Gets
                 </h1>
-                <p class="pb-md-5 pb-3 px-lg-4 site-color">LeaseMatch.NYC simplifies your apartment hunt, by making it
+                <p class="pb-md-5 pb-3 px-lg-4 site-color margin">LeaseMatch.NYC simplifies your apartment hunt, by making it
                     as simple as 1-2-3!</p>
                 <div class="row">
                     <div class="col-md-7 col-12">
@@ -164,3 +164,15 @@ export default {
     </section>
 
 </template>
+<style scoped>
+
+.margin{
+    margin-top: -11%;
+}
+@media (max-width: 320px) {
+.margin{
+    margin-top: -26%;
+}
+}
+
+</style>
