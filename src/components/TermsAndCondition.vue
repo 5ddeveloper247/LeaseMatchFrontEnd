@@ -8,7 +8,7 @@
             <div class="banner-overlay"></div>
             <img src="../assets/images/banner2.png" class="h-100 w-100">
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
-                <h1>TERMS & CONDITIONS</h1>
+                <h1 class="text-white">TERMS & CONDITIONS</h1>
             </div>
         </div>
     </section>
@@ -90,6 +90,7 @@ h1 {
 h2 {
     font-weight: 600; /* Semi-bold for subheadings */
     margin-top: 20px; /* Space above each subheading */
+    font-size:14px;
 }
 
 .text-dark {

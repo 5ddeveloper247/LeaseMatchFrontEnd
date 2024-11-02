@@ -36,23 +36,21 @@
                             <div id="home" class="container tab-pane text-white main-tab-content p-0 active mt-3">
                                 <!-- <br> -->
 
-                                <p style="font-weight:600;">Our AI-powered platform transforms the rental experience in New York City,
-                                    specializing in both market-rate and subsidized housing. With deep expertise in NYS
-                                    housing guidelines and city voucher programs like Section 8, CityFHEPS, HASA, and
-                                    SOTA, we're bridging the gap between diverse housing needs and available units. Our
-                                    proprietary AI model analyzes countless factors to deliver the most compatible
-                                    matches for renters and landlords alike.<br>
-                                    Renters enjoy 24/7 application submissions and real-time updates on suitable
-                                    properties, drastically cutting search times. Our AI continuously refines its
-                                    matching criteria, ensuring renters see only the most relevant options. Landlords
-                                    benefit from our focus on real-time availability, ensuring efficient matches with
-                                    compatible tenants, especially in the complex world of subsidized housing.<br>
-                                    LeaseMatch.NYC seamlessly integrates technology with NYC's unique rental market,
-                                    creating a steady flow of opportunities across all sectors. We're not just matching
-                                    properties and tenants; we're optimizing the entire rental process, making it
-                                    smoother and more accessible for everyone involved. Our AI's ability to learn and
-                                    adapt means that with each successful match, the entire system becomes more
-                                    efficient and effective for all users.
+                                <p style="font-weight:600;">We're revolutionizing New York City's rental landscape,
+                                    tackling both market-rate and subsidized housing with cutting-edge technology. Our
+                                    platform is built on a deep understanding of NYS housing guidelines and city voucher
+                                    programs, bridging the gap between diverse housing needs and available units.
+                                    For renters, we've streamlined the search process. Submit applications anytime and
+                                    receive instant updates on matching properties. Landlords benefit from our focus on
+                                    real-time availability and tenant compatibility, especially in the complex world of
+                                    subsidized housing.
+                                    By integrating smart technology with NYC's unique rental market, we're creating a
+                                    steady flow of opportunities across all sectors. We're not just connecting
+                                    properties and
+                                    tenants – we're optimizing the entire rental process, making it smoother and more
+                                    accessible for everyone. With each successful match, our system grows more
+                                    efficient,
+                                    continually improving the experience for all users
 
                                 </p>
 
@@ -239,7 +237,7 @@
     </section> -->
 
     <!-- subscription -->
-    <section class="bg-subscription mb-5">
+    <!-- <section class="bg-subscription mb-5">
         <div class="subsribe-overlay"></div>
         <div class="container">
             <div class="row justify-content-center align-items-center ">
@@ -260,5 +258,5 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 </template>

@@ -8,7 +8,7 @@
             <div class="banner-overlay"></div>
             <img src="../assets/images/banner2.png" class="h-100 w-100">
             <div class="position-absolute text-white" style="top:40%; left: 50%; transform: translateX(-50%);">
-                <h1>PRIVACY POLICY</h1>
+                <h1 class="text-white">PRIVACY POLICY</h1>
             </div>
         </div>
     </section>
