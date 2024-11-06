@@ -232,7 +232,7 @@ h1 {
 #logon .log_blk {
     position: relative;
     background: #fff;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 1rem;
     -webkit-box-shadow: 0 0.7rem 1.5rem -0.5rem rgba(8, 1, 28, 0.08), 0 -0.5rem 1rem -0.6rem rgba(8, 1, 28, 0.03);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

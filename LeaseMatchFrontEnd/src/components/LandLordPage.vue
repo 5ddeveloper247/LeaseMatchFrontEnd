@@ -122,6 +122,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
                         <button type="button" @click="nextTab"

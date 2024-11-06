@@ -122,9 +122,9 @@ export default {
                 Get Started with Lease Match <br>as a Renter or Landlord
             </h1>
         </div> -->
-            <div class="row mx-lg-5 mt-md-5 mb-md-5 py-3 justify-content-center">
+            <div class="row mx-lg-5 mt-md-5 mb-md-5 py-3 justify-content-center space">
 
-                <div class="col-md-6 col-lg-6 mt-5 mb-md-5 mb-1 d-flex">
+                <div class="col-md-6 col-lg-6 mt-5  mb-1 d-flex">
                     <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
                         <div class="card-body quality-content1 text-white h-100 d-flex flex-column">
                             <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
@@ -142,7 +142,7 @@ export default {
                 </div>
 
 
-                <div class="col-md-6 col-lg-6 mt-3 mt-md-5 mb-md-5 mb-1 d-flex">
+                <div class="col-md-6 col-lg-6 mt-3 mt-md-5  mb-1 d-flex">
                     <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
                         <div class="card-body quality-content2 text-white h-100 d-flex flex-column">
                             <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
@@ -166,12 +166,23 @@ export default {
 </template>
 <style scoped>
 
+
 .margin{
     margin-top: -11%;
 }
 @media (max-width: 320px) {
 .margin{
     margin-top: -26%;
+}
+.space{
+    padding-top: 0rem !important;
+    padding-bottom: 3rem !important;
+}
+}
+@media (min-width: 375px) {
+.space{
+    padding-top: 0rem !important;
+    padding-bottom: 3rem !important;
 }
 }
 

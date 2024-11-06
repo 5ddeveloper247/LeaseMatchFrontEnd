@@ -168,7 +168,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="question_image">
-                        <img src="../assets/banners/About_us.gif" class="h-100 w-100 ">
+                        <img style="border-radius: 12px;" src="../assets/banners/About_us.gif" class="h-100 w-100 ">
                     </div>
                 </div>
             </div>
@@ -260,3 +260,12 @@
         </div>
     </section> -->
 </template>
+<style scoped>
+.box-tabss-main::before {
+ 
+    left: -13px;
+ 
+}
+
+
+</style>

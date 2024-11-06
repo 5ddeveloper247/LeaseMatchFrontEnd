@@ -53,7 +53,7 @@
                                         class="input-field " maxlength="100" />
                                 </div>
                             </div>
-                            <div class="row mt-5">
+                            <div class="row fields">
                                 <div class="group col-md-6">
                                     <input type="text" numField="true" v-model="formData.phone_number"
                                         name="phone_number" class="input-field" placeholder="Enter your phone number"
@@ -121,9 +121,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn">
+                        <div class="btn align">
                         <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
+                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
@@ -215,9 +215,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pre">
+                        <div class="align">
                         <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
+                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
@@ -253,17 +253,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="align">
                         <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
+                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                            </div>
                     </fieldset>
 
                     <fieldset v-if="index === 4">
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0">Special Instructions or Notes*</label>
-                                <input type="text" class="input-field" maxlength="100" v-model="formData.special_note"
+                                <input type="text" id="focused-5" class="input-field" maxlength="100" v-model="formData.special_note"
                                 name="special_note" style="color:white; width:25rem">
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
@@ -287,17 +289,19 @@
                             </div>
 
                         </div>
+                        <div class="align">
                         <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
+                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
                         <button type="button" @click="nextTab"
                             class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                            </div>
                     </fieldset>
 
                     <fieldset v-if="index === 5">
                         <div class="form-card">
                             <!-- Finish tab content here -->
                             <h2 class="text-white text-center">
-                                <strong>SUCCESS !</strong>
+                                <strong class="size">SUCCESS !</strong>
                             </h2>
                             <br>
                             <div class="row justify-content-center">
@@ -309,16 +313,18 @@
                             <br><br>
                             <div class="row justify-content-center">
                                 <div class="col-7 text-center">
-                                    <h5 class="text-white text-center">You Have Successfully Signed Up</h5>
+                                    <h5 class="text-white text-center head">You Have Successfully Signed Up
+                                    </h5>
                                 </div>
                             </div>
                         </div>
                         <!-- <button type="button" @click="previousTab"
                             class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button> -->
                         <div class="row d-flex justify-content-center">
-                            <button type="submit" class="next action-button px-5 py-1 mt-5 mx-3 w-25">
+                            <button type="submit" class="buttn next action-button px-5 py-1 mt-5 mx-3">
                                 <RouterLink to="/" style="text-decoration: none; color:black;">Go Back</RouterLink>
                             </button>
+
                         </div>
                     </fieldset>
                 </div>
@@ -729,6 +735,10 @@ $(document).ready(() => {
 
 
 <style scoped>
+.row {
+   
+    margin-left:0;
+}
 /* Chrome, Safari, Edge, Opera */
 .focused-style {}
 
@@ -945,13 +955,117 @@ select:-webkit-autofill:focus {
 }
 @media (max-width: 480px) {
 .btn{
-    margin-left: -21%;
+    margin-left: 22%;
 }
 }
 
 @media (max-width: 480px) {
     .pre{
     margin-left:-10%;
+}
+}
+.fields{
+    margin-top:9%;
+}
+@media (max-width: 480px) {
+    .fields{
+    margin-top:1%;
+
+}
+}
+@media (min-width: 498px) {
+.align{
+    margin-left: -9%;
+}
+}
+@media (min-width: 425px) {
+.align{
+    margin-left: -76%;
+}
+}
+@media (min-width: 375px) {
+.align{
+    margin-left: -103%;
+}
+}
+@media (min-width: 320px) {
+.align{
+    margin-left: -114%;
+    
+}
+.btn{
+    margin-right:-12%;
+}
+}
+.btn{
+    margin-right:-6%;
+}
+@media (min-width: 425px) {
+    .align {
+        margin-left: -76%;
+    }
+
+    .butt {
+        margin-right: -11%;
+        padding-top: 26%;
+    }
+}
+
+@media (min-width: 375px) {
+    .align {
+        margin-left: -103%;
+    }
+
+    .butt {
+        margin-right: -11%;
+        padding-top: 40%;
+    }
+}
+
+@media (max-width: 320px) {
+    .align {
+        margin-left: -114%;
+        margin-top: 10%;
+    }
+
+    .btn {
+        margin-right: -12%;
+    }
+
+}
+
+.btn {
+    margin-right: -6%;
+}
+
+button {
+    margin-left: -1%;
+    margin-right: -33%;
+}
+
+.butt {
+    margin-right: -1%;
+    padding-top: 36%;
+}
+
+.head {
+
+    font-size: 13px;
+}
+
+.buttn {
+
+    width: 12rem;
+}
+.size{
+    font-size: 15px;
+}
+@media (max-width: 425px) {
+#image-container {
+    overflow-x: auto;
+    width: 100%;
+    /* margin-left: 0px; */
+    display: none;
 }
 }
 </style>

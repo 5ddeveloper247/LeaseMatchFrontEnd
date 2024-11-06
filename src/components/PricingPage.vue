@@ -36,7 +36,8 @@
               </ul>
             </div>
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
-              <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Get Started</a>
+              <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
+              <a href="#" class="btn btn-package theme_btn2">Comming Soon</a>
             </div>
             <div class="card-footer pricing-card-footer text-center" v-else="index !==0">
               <a href="#" class="btn btn-package theme_btn2">Comming Soon</a>

@@ -95,11 +95,11 @@
 
                             </div>
                         </div>
-                        <div class="btn">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
-                        <button @click="nextTab" v-if="index < tabs.length - 1"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        <div class="align">
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button @click="nextTab" v-if="index < tabs.length - 1"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
                     </fieldset>
 
@@ -147,12 +147,13 @@
                             </div>
 
                         </div>
-                        <div class="btn">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        <div class="align">
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
+
                     </fieldset>
 
 
@@ -178,11 +179,11 @@
                             </div>
 
                         </div>
-                        <div class="btn">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-5 py-1 mt-5 mx-3">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        <div class="align butt">
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
                     </fieldset>
 
@@ -190,7 +191,7 @@
                         <div class="form-card">
                             <!-- Finish tab content here -->
                             <h2 class="text-white text-center">
-                                <strong>SUCCESS !</strong>
+                                <strong class="size">SUCCESS !</strong>
                             </h2>
                             <br>
                             <div class="row justify-content-center">
@@ -202,7 +203,8 @@
                             <br><br>
                             <div class="row justify-content-center">
                                 <div class="col-7 text-center">
-                                    <h5 class="text-white text-center">You Have Successfully Submitted Your's Inquiry!
+                                    <h5 class="text-white text-center head">You Have Successfully Submitted Your's
+                                        Inquiry!
                                     </h5>
                                 </div>
                             </div>
@@ -213,7 +215,7 @@
                             <button type="submit" class="buttn next action-button px-5 py-1 mt-5 mx-3">
                                 <RouterLink to="/" style="text-decoration: none; color:black;">Go Back</RouterLink>
                             </button>
-                            
+
                         </div>
                     </fieldset>
                 </div>
@@ -339,7 +341,7 @@ const nextTab = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-           
+
         }
     } catch (error) {
 
@@ -421,7 +423,7 @@ const storeLandlord = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-           
+
         }
     } catch (error) {
 
@@ -804,20 +806,99 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important; 
+    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important;
     box-shadow: 0 0 0px 1000px #012252 inset !important;
-    -webkit-text-fill-color: #fff !important; 
+    -webkit-text-fill-color: #fff !important;
     transition: background-color 5000s ease-in-out 0s;
 }
-@media (max-width: 320px) {
-.btn{
-    margin-left:-18%;
+
+@media (max-width: 480px) {
+    .btn {
+        margin-left: 22%;
+    }
 }
-h5 {
+
+@media (max-width: 480px) {
+    .pre {
+        margin-left: -10%;
+    }
+}
+
+.fields {
+    margin-top: 9%;
+}
+
+@media (max-width: 480px) {
+    .fields {
+        margin-top: 1%;
+
+    }
+}
+
+@media (min-width: 498px) {
+    .align {
+        margin-left: -9%;
+    }
+}
+
+@media (min-width: 425px) {
+    .align {
+        margin-left: -76%;
+    }
+
+    .butt {
+        margin-right: -11%;
+        padding-top: 26%;
+    }
+}
+
+@media (min-width: 375px) {
+    .align {
+        margin-left: -103%;
+    }
+
+    .butt {
+        margin-right: -11%;
+        padding-top: 40%;
+    }
+}
+
+@media (max-width: 320px) {
+    .align {
+        margin-left: -114%;
+        margin-top: 10%;
+    }
+
+    .btn {
+        margin-right: -12%;
+    }
+
+}
+
+.btn {
+    margin-right: -6%;
+}
+
+button {
+    margin-left: -1%;
+    margin-right: -33%;
+}
+
+.butt {
+    margin-right: -1%;
+    padding-top: 36%;
+}
+
+.head {
+
     font-size: 13px;
 }
+
+.buttn {
+
+    width: 12rem;
 }
-.buttn{
-    width:11rem;
+.size{
+    font-size: 15px;
 }
 </style>

@@ -108,17 +108,16 @@ export default {
                                     <h1 class="mb-3 site-color">Expansive <span
                                             class="font-weight progress-head">Renter</span> Network
                                     </h1>
-                                    <p class="mb-3 site-color " id="pauseSwiper">LeaseMatch.NYC stands as the premier
+                                    <p class="mb-3 site-color right" id="pauseSwiper">LeaseMatch.NYC stands as the premier
                                         platform for bridging the gap between renters and landlords in the bustling
                                         heart of New York City. Our service caters to a diverse range of clients,
                                         including those who are currently housed, individuals actively seeking a new
-                                        home, and holders of housing vouchers.We maintain a dynamic and up-to-date
-                                        roster of verified renters, creating a dependable environment for landlords
-                                      
+                                        home, and holders of housing vouchers.
                                     </p>
-                                    <div class="more-text">
-                                        <p>
-                                            and 
+                                    <div class="more-text site-color right">
+                                        <p>We maintain a dynamic and up-to-date
+                                            roster of verified renters, creating a dependable environment for landlords
+                                            and
                                             offering a wide array of options for prospective tenants. This ensures that
                                             everyone involved in the housing process, from landlords to tenants,
                                             benefits
@@ -135,37 +134,30 @@ export default {
                                 border-bottom: 2px solid black;
                                 padding: 0px;">Read More</button>
 
-
                                     <div class="row justify-content-around">
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>4K+</span><span>Renters</span>
+                                                <div class="d-flex flex-column"><span>4k+ </span><span class="font">Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
+                                                <div class="d-flex flex-column"><span>1k+ </span><span class="font">Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>60 Day</span><span>Avg</span>
+                                                <div class="d-flex flex-column"><span>60 Day </span><span class="font">Avg</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
-
                             </div>
                         </div>
                     </div>
@@ -191,14 +183,14 @@ export default {
                                     <h1 class="mb-3 site-color">Strategic <span class="font-weight progress-head2"
                                             style="color: blue;">Landlord</span> Alliances
                                     </h1>
-                                    <p class="mb-3 site-color " id="pauseSwiper"> With a wealth of experience in New
+                                    <p class="mb-3 site-color right" id="pauseSwiper"> With a wealth of experience in New
                                         York’s real estate market,
                                         LeaseMatch.NYC has built strong relationships with top developers and landlords
                                         across the state. Our platform is a testament to our deep understanding of the
                                         needs
                                         of both tenants and landlords. We continuously invite applications from
                                         distinguished landlords,</p>
-                                    <div class="more-text">
+                                    <div class="more-text site-color right">
                                         <p>aiming to enhance our already impressive registry with
                                             top-tier property options.
                                             Our meticulously crafted form, designed to capture
@@ -220,21 +212,21 @@ export default {
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>4k+</span><span>Renters</span>
+                                                <div class="d-flex flex-column"><span>4k+ </span><span class="font">Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
+                                                <div class="d-flex flex-column"><span>1k+ </span><span class="font">Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>60 Day </span><span>Avg</span>
+                                                <div class="d-flex flex-column"><span>60 Day </span><span class="font">Avg</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -267,7 +259,7 @@ export default {
                                             class="font-weight progress-head3"
                                             style="color: goldenrod !important;">Matchmaking </span>Timeline
                                     </h1>
-                                    <p class="mb-3 site-color "> Our platform is changing the way you find homes in New
+                                    <p class="mb-3 site-color right "> Our platform is changing the way you find homes in New
                                         York
                                         City. With our advanced AI, we quickly match your application with a wide range
                                         of
@@ -284,21 +276,21 @@ export default {
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>4k+</span><span>Renters</span>
+                                                <div class="d-flex flex-column"><span>4k+ </span><span class="font">Renters</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills2 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>1k+</span><span>Landlords</span>
+                                                <div class="d-flex flex-column"><span>1k+ </span><span class="font">Landlords</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
                                             <div
                                                 class="progress-pills3 d-flex text-center text-white align-items-center justify-content-center">
-                                                <div class="d-flex flex-column"><span>60 Day</span><span>Avg</span>
+                                                <div class="d-flex flex-column"><span>60 Day </span><span class="font">Avg</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -315,8 +307,8 @@ export default {
 
 
     <!-- section6 -->
-    <section class="sec my-5">
-        <div class="container">
+    <section class="sec my-2">
+        <div class="container space">
             <div class="row">
                 <h1 class="site-color text-center">Customer Satisfaction</h1>
                 <div class="flipster-carousel pt-md-3" id="carousel">
@@ -526,29 +518,26 @@ export default {
 p {
     color: #000 !important;
 }
-
-.font {
-    font-size: 13px;
+.font{
+    font-size:13px;
 }
-
-.right {
+.right{
     margin-right: 11%;
 }
 
 @media (max-width: 768px) {
-    .font {
-        font-size: 9px;
-    }
-
-    .space {
-        margin-top: -7%;
-    }
+    .font{
+    font-size:9px;
+} 
+.space{
+    margin-top:-7%;
 }
-
+}
 @media screen and (max-width: 350px) {
     .progress-pills-container::before {
         width: 90px !important;
-
+        
     }
 }
+
 </style>
