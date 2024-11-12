@@ -71,7 +71,7 @@
 
                     <fieldset v-if="index === 1">
                         <div class="form-card">
-                            <label class="fieldlabels p-0">Street Address*</label>
+                            <label class="fieldlabels p-0" id="focused-2">Street Address*</label>
                             <input type="text" class="input-field" id="focused-2" v-model="formData.street_address"
                                 name="street_address" maxlength="100" />
                             <div class="row ">
@@ -135,7 +135,7 @@
                             <!-- 1 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Size (square footage)*</label>
+                                    <label class="fieldlabels p-0" id="focused-3">Size (square footage)*</label>
                                     <input type="text" numField="true" class="input-field" id="focused-3"
                                         v-model="formData.size_square_feet" name="size_square_feet" maxlength="6">
                                 </div>
@@ -228,7 +228,7 @@
                             <!-- 1 -->
                             <div class="row">
                                 <div class="group col-md-6">
-                                    <label class="fieldlabels p-0">Ideal Tenant Characteristics*</label>
+                                    <label class="fieldlabels p-0" id="focused-4">Ideal Tenant Characteristics*</label>
                                     <input type="text" class="input-field" id="focused-4"
                                         v-model="formData.tenant_characteristics" name="tenant_characteristics"
                                         placeholder="e.g., Non_smoker, No Pets" maxlength="255">
@@ -264,7 +264,7 @@
                     <fieldset v-if="index === 4">
                         <div class="form-card">
                             <div class="row">
-                                <label class="fieldlabels p-0">Special Instructions or Notes*</label>
+                                <label class="fieldlabels p-0" id="focused-5">Special Instructions or Notes*</label>
                                 <input type="text" id="focused-5" class="input-field" maxlength="100" v-model="formData.special_note"
                                 name="special_note" style="color:white; width:25rem">
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
@@ -810,7 +810,7 @@ fieldset {
 .nav-link .highlight {
     position: absolute;
     left: -25.5%;
-    bottom: 17px;
+    bottom: -5px;
     height: 3px;
     background-color: gold;
     width: 100%;
