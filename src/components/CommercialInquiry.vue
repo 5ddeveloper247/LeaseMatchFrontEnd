@@ -668,13 +668,41 @@ fieldset {
 
 .nav-link .highlight {
     position: absolute;
-    left: -25.5%;
-    bottom: 17px;
-    height: 3px;
+    left: -22.9%;
+    bottom: -5px;
+    height: 2px;
     background-color: gold;
     width: 100%;
     transition: width 0.3s;
     rotate: 90deg;
+}
+
+@media (max-width: 1200px) {
+    .nav-link .highlight {
+        left: -23.5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-link .highlight {
+        left: -24%;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-link .highlight {
+        position: absolute;
+        left: -24.2%;
+        bottom: -2px;
+    }
+}
+
+@media (max-width: 567px) {
+    .nav-link .highlight {
+        position: absolute;
+        left: -25%;
+        bottom: -2px;
+    }
 }
 
 .nav-link.active .highlight {

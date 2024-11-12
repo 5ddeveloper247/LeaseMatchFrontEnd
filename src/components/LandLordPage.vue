@@ -122,10 +122,10 @@
                             </div>
                         </div>
                         <div class="btn align">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
                     </fieldset>
 
@@ -216,10 +216,10 @@
                             </div>
                         </div>
                         <div class="align">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
                         </div>
                     </fieldset>
 
@@ -254,19 +254,20 @@
                             </div>
                         </div>
                         <div class="align">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
-                            </div>
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 4">
                         <div class="form-card">
                             <div class="row">
                                 <label class="fieldlabels p-0" id="focused-5">Special Instructions or Notes*</label>
-                                <input type="text" id="focused-5" class="input-field" maxlength="100" v-model="formData.special_note"
-                                name="special_note" style="color:white; width:25rem">
+                                <input type="text" id="focused-5" class="input-field" maxlength="100"
+                                    v-model="formData.special_note" name="special_note"
+                                    style="color:white; width:25rem">
                                 <label class="fieldlabels p-0 mt-4">Photos of the Property</label>
                                 <div class="row">
                                     <div class="group col-md-12">
@@ -290,11 +291,11 @@
 
                         </div>
                         <div class="align">
-                        <button type="button" @click="previousTab"
-                            class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
-                        <button type="button" @click="nextTab"
-                            class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
-                            </div>
+                            <button type="button" @click="previousTab"
+                                class="previous action-button-previous px-4 py-1 mt-5 mx-0">Previous</button>
+                            <button type="button" @click="nextTab"
+                                class="next action-button px-5 py-1 mt-5 mx-3">Next</button>
+                        </div>
                     </fieldset>
 
                     <fieldset v-if="index === 5">
@@ -460,7 +461,7 @@ const nextTab = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-           
+
         }
     } catch (error) {
 
@@ -523,7 +524,7 @@ const storeLandlord = async () => {
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-           
+
         }
     } catch (error) {
 
@@ -736,9 +737,10 @@ $(document).ready(() => {
 
 <style scoped>
 .row {
-   
-    margin-left:0;
+
+    margin-left: 0;
 }
+
 /* Chrome, Safari, Edge, Opera */
 .focused-style {}
 
@@ -809,13 +811,41 @@ fieldset {
 
 .nav-link .highlight {
     position: absolute;
-    left: -25.5%;
+    left: -22.5%;
     bottom: -5px;
-    height: 3px;
+    height: 2px;
     background-color: gold;
     width: 100%;
     transition: width 0.3s;
     rotate: 90deg;
+}
+
+@media (max-width: 1200px) {
+    .nav-link .highlight {
+        left: -23.5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-link .highlight {
+        left: -24%;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-link .highlight {
+        position: absolute;
+        left: -24.2%;
+        bottom: -2px;
+    }
+}
+
+@media (max-width: 567px) {
+    .nav-link .highlight {
+        position: absolute;
+        left: -25%;
+        bottom: -2px;
+    }
 }
 
 .nav-link.active .highlight {
@@ -938,7 +968,7 @@ button {
     background-color: #fff;
     color: #000;
 } */
- 
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -948,58 +978,68 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important; 
+    -webkit-box-shadow: 0 0 0px 1000px #012252 inset !important;
     box-shadow: 0 0 0px 1000px #012252 inset !important;
-    -webkit-text-fill-color: #fff !important; 
+    -webkit-text-fill-color: #fff !important;
     transition: background-color 5000s ease-in-out 0s;
 }
+
 @media (max-width: 480px) {
-.btn{
-    margin-left: 22%;
-}
+    .btn {
+        margin-left: 22%;
+    }
 }
 
 @media (max-width: 480px) {
-    .pre{
-    margin-left:-10%;
+    .pre {
+        margin-left: -10%;
+    }
 }
-}
-.fields{
-    margin-top:9%;
-}
-@media (max-width: 480px) {
-    .fields{
-    margin-top:1%;
 
+.fields {
+    margin-top: 9%;
 }
+
+@media (max-width: 480px) {
+    .fields {
+        margin-top: 1%;
+
+    }
 }
+
 @media (min-width: 498px) {
-.align{
-    margin-left: -9%;
+    .align {
+        margin-left: -9%;
+    }
 }
-}
+
 @media (min-width: 425px) {
-.align{
-    margin-left: -76%;
+    .align {
+        margin-left: -76%;
+    }
 }
-}
+
 @media (min-width: 375px) {
-.align{
-    margin-left: -103%;
+    .align {
+        margin-left: -103%;
+    }
 }
-}
+
 @media (min-width: 320px) {
-.align{
-    margin-left: -114%;
-    
+    .align {
+        margin-left: -114%;
+
+    }
+
+    .btn {
+        margin-right: -12%;
+    }
 }
-.btn{
-    margin-right:-12%;
+
+.btn {
+    margin-right: -6%;
 }
-}
-.btn{
-    margin-right:-6%;
-}
+
 @media (min-width: 425px) {
     .align {
         margin-left: -76%;
@@ -1057,15 +1097,17 @@ button {
 
     width: 12rem;
 }
-.size{
+
+.size {
     font-size: 15px;
 }
+
 @media (max-width: 425px) {
-#image-container {
-    overflow-x: auto;
-    width: 100%;
-    /* margin-left: 0px; */
-    display: none;
-}
+    #image-container {
+        overflow-x: auto;
+        width: 100%;
+        /* margin-left: 0px; */
+        display: none;
+    }
 }
 </style>

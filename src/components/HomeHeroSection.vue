@@ -15,7 +15,7 @@
                             </p>
                         </div>
 
-                        <div ref="span" class="main-content-span"><span class="main-price">$5000/mo</span></div>
+                        <!-- <div ref="span" class="main-content-span"><span class="main-price">$5000/mo</span></div> -->
                         <div>
                             <RouterLink to="/registerForm">
                                 <button ref="enrollLink" class="main-btn mt-4 font-weight theme_btn2">Register
