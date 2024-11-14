@@ -11,7 +11,7 @@
                         <div class="mt-4">
                             <p ref="paragraph" class="text-white main-content-p"
                                 style="font-weight: bold; font-style: italic;">
-                                A renovated home available for rent. 2 bedrooms, 2 full baths, living and dining rooms
+                                Whether it's your first apartment, or you're a seasoned renter, let us do the matchmaking for you!
                             </p>
                         </div>
 

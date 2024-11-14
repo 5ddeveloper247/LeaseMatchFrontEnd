@@ -89,7 +89,7 @@ onUnmounted(() => {
                     <RouterLink class="nav-link" to="/landlord">Landlord Portal</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink class="nav-link" to="/inquiry">Inquiry Now</RouterLink>
+                    <RouterLink class="nav-link" to="/inquiry">Commercial Inquiry</RouterLink>
                 </li>
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/contact">Contact</RouterLink>

@@ -6,7 +6,6 @@
         </div>
     </div>
     <div class="container p-0 img-con text-center">
-        <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
         <div class="img-text px-1 px-md-5">
             <div class="img-heading px-1 px-md-5 py-3">
                 <h2 class="text-white">
@@ -710,7 +709,7 @@ fieldset {
 }
 
 .img-con {
-    background-image: url('../assets/images/form-wizard.jpg');
+    background-image: url('../assets/images/inquiry-bg.jpg');
     /* position: relative; */
     margin-top: 10rem;
     background-position: center;
@@ -730,7 +729,7 @@ fieldset {
 
 .img-heading {
     border: 1px solid #fff;
-    background-color: #0000003a;
+    background-color: #0000006f;
 }
 
 .nav-link {
