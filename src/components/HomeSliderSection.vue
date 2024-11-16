@@ -1,6 +1,4 @@
 <script>
-
-
 export default {
     mounted() {
         // swiper-index
@@ -30,18 +28,20 @@ export default {
         });
 
         // read more btn
-        $(document).ready(() => {
-            $(".more-text").hide();
-            $(".readMoreBtn").text("Read More");
+        // $(document).ready(() => {
+        //     $(".more-text").hide();
+        //     $(".readMoreBtn").text("Read More");
 
-            $(".readMoreBtn").click(function () {
-                var $text = $(this).prev(".more-text");
-                $text.toggle();
-                $(this).text(function (_, text) {
-                    return text === "Read More" ? "Read Less" : "Read More";
-                });
-            });
-        });
+        //     $(".readMoreBtn").click(function () {
+        //         var $text = $(this).prev(".more-text");
+        //         $text.toggle();
+        //         $(this).text(function (_, text) {
+        //             return text === "Read More" ? "Read Less" : "Read More";
+        //         });
+        //     });
+        // });
+
+        
 
         // fliper-index
         $(document).ready(() => {
@@ -55,7 +55,7 @@ export default {
                 pagination: true,
             });
 
-            var $pagination = $(".flipster__pagination");
+            var $pagination = $(" .flipster__pagination");
             var $flipItems = $carousel.find(".flip-item");
 
             $flipItems.each(function (index) {
@@ -127,12 +127,12 @@ export default {
                                             every New Yorker finds a place they can call home. </p>
                                     </div>
 
-                                    <button onclick="toggleVisibility()" class="readMoreBtn" style="display: block;
-                                margin-bottom: 20px;
-                                border: none;
-                                background: transparent;
-                                border-bottom: 2px solid black;
-                                padding: 0px;">Read More</button>
+                                    <!-- <button class="readMoreBtn" style="
+                                        margin-bottom: 20px;
+                                        border: none;
+                                        background: transparent;
+                                        border-bottom: 2px solid black;
+                                        padding: 0px;">Read More</button> -->
 
                                     <div class="row justify-content-around">
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
@@ -201,12 +201,12 @@ export default {
                                             real estate, promises a swift response within 24 hours. </p>
                                     </div>
 
-                                    <button onclick="toggleVisibility()" class="readMoreBtn" style="display: block;
-                                margin-bottom: 20px;
-                                border: none;
-                                background: transparent;
-                                border-bottom: 2px solid black;
-                                padding: 0px;">Read More</button>
+                                    <!-- <button onclick="toggleVisibility()" class="readMoreBtn" style="
+                                        margin-bottom: 20px;
+                                        border: none;
+                                        background: transparent;
+                                        border-bottom: 2px solid black;
+                                        padding: 0px;">Read More</button> -->
 
                                     <div class="row justify-content-around">
                                         <div class="col-4 progress-pills-container d-flex justify-content-center">
