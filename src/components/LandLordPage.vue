@@ -7,7 +7,7 @@
     </div>
     <div class="container p-0 img-con text-center">
         <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
-        <div class="img-text px-1 px-md-5">
+        <div class="img-text px-1 px-md-5"> 
             <div class="img-heading px-1 px-md-5 py-3">
                 <h2 class="text-white">
                     JOIN OUR EXCLUSIVE LEASE MATCH NETWORK
@@ -115,7 +115,7 @@
 
                                 <div class="group col-md-6">
                                     <label class="fieldlabels p-0">Year of Last Major Renovation <small
-                                            style="font-size: 0.5rem;">(if applicable)</small></label>
+                                            style="font-size: 0.4rem;">(if applicable)</small></label>
                                     <input type="text" class="input-field" numField="true"
                                         v-model="formData.major_renovation" name="major_renovation" maxlength="4" />
                                 </div>
