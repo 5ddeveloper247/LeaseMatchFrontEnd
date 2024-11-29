@@ -7,7 +7,7 @@
     </div>
     <div class="container p-0 img-con text-center">
         <!-- <img class="w-100" src="../assets/images/form-wizard.jpg" alt=""> -->
-        <div class="img-text px-1 px-md-5"> 
+        <div class="img-text px-1 px-md-5">
             <div class="img-heading px-1 px-md-5 py-3">
                 <h2 class="text-white">
                     JOIN OUR EXCLUSIVE LEASE MATCH NETWORK
@@ -181,7 +181,7 @@
                                 <div class="group col-md-4">
                                     <label class="fieldlabels p-0">Minimum Lease Duration (Month)*</label>
                                     <input type="text" numField="true" class="input-field"
-                                        v-model="formData.lease_duration" name="lease_duration" maxlength="3" />
+                                        v-model="formData.lease_duration" name="lease_duration" maxlength="2" />
                                 </div>
                             </div>
                             <!-- 4 -->
@@ -813,9 +813,9 @@ fieldset {
     position: absolute;
     left: -22.5%;
     bottom: -5px;
-    height: 2px;
+    height: 1px;
     background-color: gold;
-    width: 100%;
+    width: 50%;
     transition: width 0.3s;
     rotate: 90deg;
 }
@@ -850,6 +850,7 @@ fieldset {
 
 .nav-link.active .highlight {
     width: 50%;
+
 }
 
 .img-con {

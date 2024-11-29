@@ -8,6 +8,6 @@ const axiosInstance = axios.create({
     'Accept': 'application/json',
     'Content-Type': ''
   }
-}); 
+});
 
 export default axiosInstance;
