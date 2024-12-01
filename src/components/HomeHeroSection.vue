@@ -31,7 +31,7 @@
                         <div class="shade-overlay"></div>
                         <video id="myVideo" class="h-100 w-100" style="object-fit: cover" autoplay>
                             <source
-                                src="https://www.leasematch.nyc/wp-content/uploads/2023/12/LeaseMatch.NYC-Your-Dream-Home-1.mp4">
+                                src="../assets/banners/LeaseMatch.NYC - Your Dream Home.mp4">
                         </video>
                         <div v-if="showControls" class="video-controls"
                             :style="{ top: buttonTop + 'px', left: buttonLeft + 'px' }">
