@@ -439,32 +439,40 @@ const nextTab = async () => {
     }
 
     try {
-
         $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/validate', data);
 
         if (response.data.success) {
-
             $('#uiBlocker').hide();
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+
+            if (formData.step === 5) {
+                // Validate on step 5 before advancing
+                const isStep5Valid = await validateStep5();  // Custom validation for step 5
+                if (!isStep5Valid) {
+                    toastr.error('Please complete all required fields on Step 5.');
+                    return;
+                }
+            }
+
             if (currentIndex < tabs.value.length - 1) {
                 formData.step++;
 
-                if (formData.step == '6') {
+                if (formData.step === 6) {
+                    // Step 6, submit the form
                     storeLandlord();
                 } else {
-                    activeTab.value = tabs.value[currentIndex + 1].id
+                    activeTab.value = tabs.value[currentIndex + 1].id;
                 }
             }
+
             serverError = ''; // Clear any server error messages
         } else {
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-
         }
     } catch (error) {
-
         $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
@@ -479,16 +487,20 @@ const nextTab = async () => {
             serverError = 'An unexpected error occurred. Please try again.';
         }
     }
-}
+};
+
+// Custom validation for Step 5
+const validateStep5 = () => {
+    return new Promise((resolve) => {
+        // Add your step 5 validation logic here (e.g., check form fields)
+        const isValid = true; // Replace this with actual validation logic
+        resolve(isValid);
+    });
+};
+
 
 //prev tab function
-const previousTab = () => {
-    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
-    if (currentIndex < tabs.value.length - 1) {
-        activeTab.value = tabs.value[currentIndex - 1].id
-        formData.step--;
-    }
-}
+
 
 
 const storeLandlord = async () => {
@@ -506,28 +518,30 @@ const storeLandlord = async () => {
     }
 
     try {
-
         $('#uiBlocker').show();
         $('[name]').removeClass('is-invalid');
         const response = await axiosInstance.post('/landlord/store', data);
 
         if (response.data.success) {
-
             $('#uiBlocker').hide();
-            resetFormData();
+            resetFormData(); // Reset the form data after successful submission
 
+            // Move to the next tab after successful submission
             const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
             if (currentIndex < tabs.value.length - 1) {
-                activeTab.value = tabs.value[currentIndex + 1].id
+                activeTab.value = tabs.value[currentIndex + 1].id;
             }
+
             serverError = ''; // Clear any server error messages
         } else {
+            // If submission fails, move back to step 5 for validation
+            formData.step = 5;
             $('#uiBlocker').hide();
             toastr.error('API error:', response.data.error);
-
         }
     } catch (error) {
-
+        // Roll back to step 5 on any error
+        formData.step = 5;
         $('#uiBlocker').hide();
         if (error.response && error.response.status === 422) {
             // Handle validation errors
@@ -537,13 +551,24 @@ const storeLandlord = async () => {
                 inputField.addClass('is-invalid');
             });
         } else {
+            console.log(error);
             // Handle other errors
             toastr.error('An unexpected error occurred. Please try again.');
             serverError = 'An unexpected error occurred. Please try again.';
         }
     }
-}
+};
 
+
+
+
+const previousTab = () => {
+    const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
+    if (currentIndex < tabs.value.length - 1) {
+        activeTab.value = tabs.value[currentIndex - 1].id
+        formData.step--;
+    }
+}
 onMounted(() => {
     const currentIndex = tabs.value.findIndex(tab => tab.id === activeTab.value);
 
