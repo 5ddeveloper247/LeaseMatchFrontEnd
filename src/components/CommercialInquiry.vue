@@ -666,6 +666,7 @@ fieldset {
 }
 
 .nav-link .highlight {
+    display: none;
     position: absolute;
     left: -22.9%;
     bottom: -5px;
@@ -674,6 +675,7 @@ fieldset {
     width: 100%;
     transition: width 0.3s;
     rotate: 90deg;
+    
 }
 
 @media (max-width: 1200px) {
