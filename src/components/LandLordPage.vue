@@ -843,6 +843,7 @@ fieldset {
     width: 50%;
     transition: width 0.3s;
     rotate: 90deg;
+    display: none;
 }
 
 @media (max-width: 1200px) {
