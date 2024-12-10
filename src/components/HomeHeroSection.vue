@@ -3,7 +3,7 @@
     <section class="sec-1 main-section mt-5">
         <div class="container-fluid main-fluid">
             <div class="row">
-                <div class="col-12 col-lg-5 main-content d-flex align-items-center">
+                <div class="col-12 col-lg-5 main-content d-flex align-items-center text-center">
                     <div class="mx-md-4 mx-3 main-data">
                         <div class="main-content-h">
                             <h1 ref="heading">LeaseMatch: NYC's First AI-Driven Apartment Matchmaking Platform</h1>
