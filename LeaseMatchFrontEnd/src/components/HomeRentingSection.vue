@@ -135,7 +135,7 @@ export default {
                                 analyzes your preferences to match you with vetted, available listings—simplifying your
                                 search with a single click.</p>
                             <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
-                                <RouterLink to="/registerForm" class="quality-icon">Register</RouterLink>
+                                <RouterLink to="/registerForm" class="quality-icon">Renter Portal</RouterLink>
                             </div>
                         </div>
                     </div>
