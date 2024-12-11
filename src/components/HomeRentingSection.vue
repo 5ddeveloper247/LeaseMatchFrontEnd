@@ -127,15 +127,15 @@ export default {
                 <div class="col-md-6 col-lg-6 mt-5  mb-1 d-flex">
                     <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
                         <div class="card-body quality-content1 text-white h-100 d-flex flex-column">
-                            <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
-                                with</h5>
+                            <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
+                                with</h5> -->
                             <h1 class="mb-3">I am a <span class="quality-transform2 font-weight">R</span>enter</h1>
                             <p class="mb-3" style="font-weight: bold; font-style: italic;">Discover your ideal New York
                                 apartment effortlessly. Our cutting-edge AI
                                 analyzes your preferences to match you with vetted, available listings—simplifying your
                                 search with a single click.</p>
                             <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
-                                <RouterLink to="/registerForm" class="quality-icon">Register</RouterLink>
+                                <RouterLink to="/registerForm" class="quality-icon">Renter Portal</RouterLink>
                             </div>
                         </div>
                     </div>
@@ -145,8 +145,8 @@ export default {
                 <div class="col-md-6 col-lg-6 mt-3 mt-md-5  mb-1 d-flex">
                     <div class="quality-content text-capitalize px-lg-5 px-2 py-lg-4 py-2 card-equal-height">
                         <div class="card-body quality-content2 text-white h-100 d-flex flex-column">
-                            <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
-                                with</h5>
+                            <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
+                                with</h5> -->
                             <h1 class="mb-3">I am a <span class="quality-transform1 font-weight">L</span>andLord</h1>
                             <p class="mb-3" style="font-weight: bold; font-style: italic;">Submit the landlord form, and
                                 let our AI match you with New York’s only

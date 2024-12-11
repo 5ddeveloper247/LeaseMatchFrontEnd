@@ -135,8 +135,8 @@ function toggleChatbot() {
                                     </div>
                                     <div class="info">
                                         <p class="gap-2">
-                                            <a href="mailto:info@deneb.com">info@deneb.com</a><br>
-                                            <a href="mailto:services@deneb.com">services@deneb.com</a>
+                                            <a href="mailto:leasematch.nyc@gmail.com">leasematch.nyc@gmail.com</a><br>
+                                            <!-- <a href="mailto:services@deneb.com">services@deneb.com</a> -->
                                         </p>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@ function toggleChatbot() {
                     </div>
                 </div>
             </div>
-            
+
             <div class="copyright_area">
                 <div class="container">
                     <div class="row">
@@ -165,7 +165,7 @@ function toggleChatbot() {
                                         <RouterLink to="/waitlist">Waitlist Removal |</RouterLink>
                                         <RouterLink to="/policy">Refund Policy</RouterLink>
                                     </div> -->
-                                  
+
                                     <!-- <div
                                         class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-end gap-2">
                                         <RouterLink to="/privacy">Privacy Policy |</RouterLink>
@@ -179,7 +179,7 @@ function toggleChatbot() {
                         <div class="col-lg-12">
                             <div class="copyright_text">
                                 <RouterLink to="/privacy">Privacy Policy | </RouterLink>
-                                <RouterLink to="/terms"> Terms & Conditions</RouterLink>     
+                                <RouterLink to="/terms"> Terms & Conditions</RouterLink>
                             </div>
 
                         </div>
@@ -190,7 +190,7 @@ function toggleChatbot() {
                             </div>
 
                         </div>
-                      
+
                     </div>
                 </div>
             </div>
