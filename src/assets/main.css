@@ -233,7 +233,7 @@ body {
     font-size: 24px;
 }
 
-.main-content-h h1::after {
+.main-content-h .heading::after {
     content: "";
     display: block;
     background-color: white;

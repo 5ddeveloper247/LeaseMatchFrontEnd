@@ -6,7 +6,8 @@
                 <div class="col-12 col-lg-5 main-content d-flex align-items-center text-center">
                     <div class="mx-md-4 mx-3 main-data">
                         <div class="main-content-h">
-                            <h1 ref="heading">LeaseMatch: NYC's First AI-Driven Apartment Matchmaking Platform</h1>
+                            <h1 class="" ref="heading">LeaseMatch.NYC</h1>
+                            <h1 class="heading" ref="heading">New York’s First AI-Driven Matchmaking Platform</h1>
                         </div>
                         <div class="mt-4">
                             <p ref="paragraph" class="text-white main-content-p"
