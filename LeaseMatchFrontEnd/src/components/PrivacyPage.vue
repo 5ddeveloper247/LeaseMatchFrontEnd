@@ -19,8 +19,9 @@
                 <div class="col footer-items">
                     <h2 class="site-color">Lease Match – Data Handling and Usage Consent</h2>
                     <p class="text-dark">
-                        By submitting your information to Lease Match, you acknowledge and agree to the following terms
-                        regarding the use, storage, and dissemination of your data:
+                        <!-- By submitting your information to Lease Match, you acknowledge and agree to the following terms
+                        regarding the use, storage, and dissemination of your data: -->
+                       
                     </p>
                     <p class="text-dark">
                         <span class="font-weight">Data Storage and Perpetuity:</span> You hereby grant Lease Match the
@@ -85,5 +86,4 @@ h2 {
 }
 
 /* Specific styles for different sections */
-
 </style>

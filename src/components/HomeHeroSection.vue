@@ -228,7 +228,7 @@
                     <div class="box-tabss-main-inner">
                         <h2>About Our Company</h2>
                         <div class="divider-small"></div>
-                        <br>
+                        <!-- <br> -->
                         <!-- Tabs -->
                         <!-- <ul class="nav nav-tabs main-tab-about" role="tablist">
                             <li class="nav-item tab-about-item">
