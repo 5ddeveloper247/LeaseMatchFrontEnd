@@ -39,7 +39,8 @@ export default {
                 <h1 class="process-contentt pb-md-5 pb-3 px-lg-4 site-color divide-heading">
                     Renting As Easy As It Gets
                 </h1>
-                <p class="pb-md-5 pb-3 px-lg-4 site-color margin">LeaseMatch.NYC simplifies your apartment hunt, by making it
+                <p class="pb-md-5 pb-3 px-lg-4 site-color margin">LeaseMatch.NYC simplifies your apartment hunt, by
+                    making it
                     as simple as 1-2-3!</p>
                 <div class="row">
                     <div class="col-md-7 col-12">
@@ -97,13 +98,13 @@ export default {
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">
-                                <img class="img-fluid process-image" src="../assets/slider/slider_1.webp">
+                                <img class="img-fluid process-image" src="../assets/images/start_application.jpg">
                             </div>
                             <div class="image-container" data-step="2" style="display: none;">
-                                <img class="img-fluid process-image " src="../assets/slider/slider_2.webp">
+                                <img class="img-fluid process-image " src="../assets/images/choose_plan.jpg">
                             </div>
                             <div class="image-container" data-step="3" style="display: none;">
-                                <img class="img-fluid process-image" src="../assets/slider/slider_3.webp">
+                                <img class="img-fluid process-image" src="../assets/images/renting_as_easy.jpg">
                             </div>
 
                         </div>
@@ -130,11 +131,12 @@ export default {
                             <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5> -->
                             <h1 class="mb-3">I am a <span class="quality-transform2 font-weight">R</span>enter</h1>
-                            <p class="mb-3" style="font-weight: bold; font-style: italic;">Discover your ideal New York
+                            <p class="mb-3 text-center " style="font-weight: bold; font-style: italic;text-align: justify;">Discover your ideal New York
                                 apartment effortlessly. Our cutting-edge AI
                                 analyzes your preferences to match you with vetted, available listings—simplifying your
                                 search with a single click.</p>
-                            <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
+                            <div class="mt-auto d-flex text-white align-items-center justify-content-center"
+                                style="gap: 15px;">
                                 <RouterLink to="/registerForm" class="quality-icon">Renter Portal</RouterLink>
                             </div>
                         </div>
@@ -148,10 +150,14 @@ export default {
                             <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5> -->
                             <h1 class="mb-3">I am a <span class="quality-transform1 font-weight">L</span>andLord</h1>
-                            <p class="mb-3" style="font-weight: bold; font-style: italic;">Submit the landlord form, and
-                                let our AI match you with New York’s only
-                                accurate and vetted list of viable renters, doing the work for you.</p>
-                            <div class="mt-auto d-flex text-white align-items-center" style="gap: 15px;">
+                            <p class="mb-3 text-center"
+                                style="font-weight: bold; font-style: italic; text-align: justify;">
+                                Submit the landlord form, and let our AI match you with New York’s only
+                                accurate and vetted list of viable renters, doing the work for you.
+                            </p>
+
+                            <div class="mt-auto d-flex text-white align-items-center justify-content-center"
+                                style="gap: 15px;">
                                 <RouterLink to="/landlord" class="quality-icon">LandLord Portal</RouterLink>
                             </div>
                         </div>
@@ -165,25 +171,25 @@ export default {
 
 </template>
 <style scoped>
-
-
-.margin{
+.margin {
     margin-top: -11%;
 }
+
 @media (max-width: 320px) {
-.margin{
-    margin-top: -26%;
-}
-.space{
-    padding-top: 0rem !important;
-    padding-bottom: 3rem !important;
-}
-}
-@media (min-width: 375px) {
-.space{
-    padding-top: 0rem !important;
-    padding-bottom: 3rem !important;
-}
+    .margin {
+        margin-top: -26%;
+    }
+
+    .space {
+        padding-top: 0rem !important;
+        padding-bottom: 3rem !important;
+    }
 }
 
+@media (min-width: 375px) {
+    .space {
+        padding-top: 0rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
 </style>

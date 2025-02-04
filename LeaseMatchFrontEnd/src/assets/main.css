@@ -512,7 +512,7 @@ body {
 
 /* 4th section */
 .image-banner {
-    background: linear-gradient(rgba(29, 59, 95, 0.5), rgba(29, 59, 95, 0.5)), url('../assets/images/renter_background.jpg');
+    background: linear-gradient(rgba(29, 59, 95, 0.5), rgba(29, 59, 95, 0.5)), url('../assets/images/renter_backgroundx.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

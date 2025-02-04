@@ -12,7 +12,8 @@
                         <div class="mt-4">
                             <p ref="paragraph" class="text-white main-content-p"
                                 style="font-weight: bold; font-style: italic;">
-                                Whether it's your first apartment, or you're a seasoned renter, let us do the matchmaking for you!
+                                Whether it's your first apartment, or you're a seasoned renter, let us do the
+                                matchmaking for you!
                             </p>
                         </div>
 
@@ -31,8 +32,7 @@
                         @mouseleave="hideButton">
                         <div class="shade-overlay"></div>
                         <video id="myVideo" class="h-100 w-100" style="object-fit: cover" autoplay>
-                            <source
-                                src="../assets/banners/LeaseMatch.NYC - Your Dream Home.mp4">
+                            <source src="../assets/banners/LeaseMatch.NYC - Your Dream Home.mp4">
                         </video>
                         <div v-if="showControls" class="video-controls"
                             :style="{ top: buttonTop + 'px', left: buttonLeft + 'px' }">
@@ -260,9 +260,6 @@
                                     housing market empower us to secure the ideal apartment for you.
                                 </p>
                             </div>
-
-
-
                         </div>
                         <!-- Call to Action Button -->
                         <a href="/contact" class="button main-content-btn theme_btn1">
@@ -276,17 +273,19 @@
 
 </template>
 
-
-
-
 <script setup>
 import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
+import axios from 'axios';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+import axiosInstance from '@/plugins/axios';
 
 const buttonTop = ref(0);
 const buttonLeft = ref(0);
 const showControls = ref(false);
 const playIcon = ref('fa fa-play');
+const testimonials = ref([]);
 
 
 const heading = ref(null);
@@ -367,10 +366,10 @@ onMounted(() => {
         stagger: .1
     });
 });
+
+
+   
 </script>
-
-
-
 
 <style scoped>
 .video-container {

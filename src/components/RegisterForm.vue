@@ -87,10 +87,10 @@
                 <!-- 2 -->
                 <div class="row">
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Minimum Bedrooms Needed* </label>
+                    <label class="fieldlabels p-0">Add Studio* </label>
                     <select class="form-select" v-model="formData.min_bedrooms_needed" name="min_bedrooms_needed"
                       aria-label="Default select example">
-                      <option value="">- Select a Minimum Bedrooms Needed -</option>
+                      <option value="">- Select a Minimum Needed -</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -216,7 +216,7 @@
                 <div class="row">
 
                   <div class="group col-md-6">
-                    <label class="fieldlabels p-0">Certification Details<span class="mand-staric1">*</span> </label>
+                    <label class="fieldlabels p-0">Certification Details<span class="mand-staric1"></span> </label>
                     <input type="text" v-model="formData.certification_detail" name="certification_detail"
                       class="form-control" placeholder="Certification Details" maxlength="100" />
                   </div>
@@ -508,7 +508,7 @@
                 </div>
                 <div class="row">
                   <div class="group col-md-12">
-                    <label class="fieldlabels p-0">Are you willing to work with a licensed real estate Broker?*</label>
+                    <label class="fieldlabels p-0"> Willing to work with Broker?*</label>
                     <select class="form-select" v-model="formData.work_with_broker" name="work_with_broker"
                       aria-label="Default select example">
                       <option value="">- Select a Legal Right to Rent -</option>
@@ -525,7 +525,7 @@
                         <label for="file-input">
                           <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                         </label>
-                        <p class="site-color text-dark text-center p-0" id="upload-text">Upload document*</p>
+                        <p class="site-color text-dark text-center p-0" id="upload-text">Upload document</p>
                       </div>
                       <input type="file" id="file-input" name="files" accept="image/*" multiple="false" />
                       <div id="image-container"></div>
