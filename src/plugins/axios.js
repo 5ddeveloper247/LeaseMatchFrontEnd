@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/5d/v1', // Change this to your Laravel API URL
-  //baseURL: 'https://lmb.leasematch.nyc/api/5d/v1', // Change this to your Laravel API URL
+  //baseURL: 'http://127.0.0.1:8000/api/5d/v1', // Change this to your Laravel API URL
+  baseURL: 'https://lmb.leasematch.nyc/api/5d/v1', // Change this to your Laravel API URL
   headers: {
     'Content-Type': 'application/json/multipart/form-data',
     'Accept': 'application/json',
@@ -10,4 +10,4 @@ const axiosInstance = axios.create({
   }
 });
 
-export default axiosInstance;  
+export default axiosInstance;    
