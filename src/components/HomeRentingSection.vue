@@ -98,13 +98,13 @@ export default {
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">
-                                <img class="img-fluid process-image" src="../assets/images/start_application.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/renting_as_easy.jpg">
                             </div>
                             <div class="image-container" data-step="2" style="display: none;">
-                                <img class="img-fluid process-image " src="../assets/images/choose_plan.jpg">
+                                <img class="img-fluid process-image " src="../assets/images/start_application.jpg">
                             </div>
                             <div class="image-container" data-step="3" style="display: none;">
-                                <img class="img-fluid process-image" src="../assets/images/renting_as_easy.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/choose_plan.jpg">
                             </div>
 
                         </div>
@@ -130,8 +130,11 @@ export default {
                         <div class="card-body quality-content1 text-white h-100 d-flex flex-column">
                             <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5> -->
-                            <h1 class="mb-3">I am a <span class="quality-transform2 font-weight">R</span>enter</h1>
-                            <p class="mb-3 text-center " style="font-weight: bold; font-style: italic;text-align: justify;">Discover your ideal New York
+                            <h1 class="mb-3 text-center">I am a <span
+                                    class="quality-transform2 font-weight">R</span>enter</h1>
+                            <p class="mb-3 text-center "
+                                style="font-weight: bold; font-style: italic;text-align: justify;">Discover your ideal
+                                New York
                                 apartment effortlessly. Our cutting-edge AI
                                 analyzes your preferences to match you with vetted, available listings—simplifying your
                                 search with a single click.</p>
@@ -149,7 +152,8 @@ export default {
                         <div class="card-body quality-content2 text-white h-100 d-flex flex-column">
                             <!-- <h5 class="mb-3" style="font-weight: bold; font-style: italic;">Ensure production quality
                                 with</h5> -->
-                            <h1 class="mb-3">I am a <span class="quality-transform1 font-weight">L</span>andLord</h1>
+                            <h1 class="mb-3 text-center">I am a <span
+                                    class="quality-transform1 font-weight">L</span>andLord</h1>
                             <p class="mb-3 text-center"
                                 style="font-weight: bold; font-style: italic; text-align: justify;">
                                 Submit the landlord form, and let our AI match you with New York’s only
