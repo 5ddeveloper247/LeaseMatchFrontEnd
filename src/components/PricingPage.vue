@@ -39,7 +39,7 @@
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
               <a href="https://lmb.leasematch.nyc/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
               <a :href="`https://lmb.leasematch.nyc/customer/login?type=trial&plan=${value.id}`"
-                class=" mt-2 btn btn-package theme_btn2">
+                class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
               </a>
 
