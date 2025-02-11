@@ -279,7 +279,8 @@ import { RouterLink } from 'vue-router';
 import axios from 'axios';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
-import axiosInstance from '@/plugins/axios';
+import { axiosInstance } from '@/plugins/axios';
+import { baseURL } from '@/plugins/axios';
 
 const buttonTop = ref(0);
 const buttonLeft = ref(0);
@@ -368,7 +369,7 @@ onMounted(() => {
 });
 
 
-   
+
 </script>
 
 <style scoped>

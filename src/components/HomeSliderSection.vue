@@ -1,61 +1,80 @@
 <script>
 export default {
     mounted() {
-        $(document).ready(() => {
-            var swiper = new Swiper('.mySwiper', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                autoplay: {
-                    delay: 7000,
-                    disableOnInteraction: false,
-                },
-            });
+        // $(document).ready(() => {
+        //     var swiper = new Swiper('.mySwiper', {
+        //         slidesPerView: 1,
+        //         spaceBetween: 30,
+        //         loop: true,
+        //         pagination: {
+        //             el: '.swiper-pagination',
+        //             clickable: true,
+        //         },
+        //         autoplay: {
+        //             delay: 7000,
+        //             disableOnInteraction: false,
+        //         },
+        //     });
 
-        });
-        $(document).ready(() => {
-            var $carousel = $('#carousel').flipster({
-                itemContainer: '.flip-items',
-                itemSelector: '.flip-item',
-                start: 'center',
-                style: 'coverflow',
-                spacing: '-0.9',
-                click: true,
-                pagination: true,
-            });
+        // });
+        // $(document).ready(() => {
+        //     var $carousel = $('#carousel').flipster({
+        //         itemContainer: '.flip-items',
+        //         itemSelector: '.flip-item',
+        //         start: 'center',
+        //         style: 'coverflow',
+        //         spacing: '-0.9',
+        //         click: true,
+        //         pagination: true,
+        //     });
 
-            var $pagination = $(" .flipster__pagination");
-            var $flipItems = $carousel.find(".flip-item");
+        //     var $pagination = $(" .flipster__pagination");
+        //     var $flipItems = $carousel.find(".flip-item");
 
-            $flipItems.each(function (index) {
-                var $dot = $("<li class='flipster__pagination__item'></li>").appendTo($pagination);
-                $dot.on("click", function () {
-                    $carousel.flipster("jump", index);
-                    $pagination.find(".flipster__pagination__item").removeClass("flipster__pagination__item--current");
-                    $dot.addClass("flipster__pagination__item--current");
-                });
-            });
+        //     $flipItems.each(function (index) {
+        //         var $dot = $("<li class='flipster__pagination__item'></li>").appendTo($pagination);
+        //         $dot.on("click", function () {
+        //             $carousel.flipster("jump", index);
+        //             $pagination.find(".flipster__pagination__item").removeClass("flipster__pagination__item--current");
+        //             $dot.addClass("flipster__pagination__item--current");
+        //         });
+        //     });
 
-            $carousel.on("flipster:change", function (e, index) {
-                $pagination.find(".flipster__pagination__item").removeClass("flipster__pagination__item--current");
-                $pagination.find(".flipster__pagination__item").eq(index).addClass("flipster__pagination__item--current");
-            });
+        //     $carousel.on("flipster:change", function (e, index) {
+        //         $pagination.find(".flipster__pagination__item").removeClass("flipster__pagination__item--current");
+        //         $pagination.find(".flipster__pagination__item").eq(index).addClass("flipster__pagination__item--current");
+        //     });
 
-            $pagination.find(".flipster__pagination__item").eq(0).addClass("flipster__pagination__item--current"); // Set the first pagination item as active
-        });
+        //     $pagination.find(".flipster__pagination__item").eq(0).addClass("flipster__pagination__item--current"); // Set the first pagination item as active
+        // });
     }
 }
 
 </script>
 <script setup>
-import { ref, onBeforeMount, onMounted } from 'vue';
-import axiosInstance from '@/plugins/axios';
+import { ref, onBeforeMount, onMounted, computed } from 'vue';
+import { axiosInstance } from '@/plugins/axios';
+import { baseURL } from '@/plugins/axios';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
+
+const modules = ref([Autoplay, EffectCoverflow]);
+const coverflowEffect = {
+    rotate: 0,
+    stretch: 100,
+    depth: 300,
+    modifier: 2,
+    slideShadows: false,
+};
+const autoplay = {
+    delay: 3500,
+    disableOnInteraction: false
+}
 
 const testimonials = ref([]);
 onMounted(async () => {
@@ -75,6 +94,9 @@ onMounted(async () => {
     }
 
 });
+const parsedUrl = computed(() => baseURL.split('/api')[0]);
+
+
 
 </script>
 <template>
@@ -320,93 +342,45 @@ onMounted(async () => {
         <div class="container space">
             <div class="row">
                 <h1 class="site-color text-center">Customer Satisfaction</h1>
-                <div class="flipster-carousel pt-md-3" id="carousel">
-                    <div class="flip-items pb-5 pt-3">
-                        <!-- <div class="flip-items pb-5 pt-3" v-for="testimonial in testimonials" :key="testimonial.id"> -->
-                        <div class="flip-item text-center text-md-left">
-                            <div class="item-inner shadow-lg rounded">
-                                <h5 class="mb-2">Amazing</h5>
+                <swiper class="slider" :loop="true" :effect="'coverflow'" :slides-per-view="3" :autoplay="autoplay"
+                    :speed="1000" :space-between="110" :modules="modules" :coverflow-effect="{
+                        rotate: 25,
+                        stretch: 30,
+                        depth: 300,
+                        modifier: 1,
+                        slideShadows: false
+                    }" :centered-slides="true" style="overflow: hidden; width: 100%;">
+
+                    <swiper-slide class="landing-card py-4 px-3 rounded-3 text-center"
+                        v-for="testimonial in testimonials " :key="testimonial.id"
+                        style="display: flex; justify-content: center; align-items: center; ">
+
+                        <div class="flip-items" style="max-width: 100%; text-align: center;">
+                            <div class="item-inner shadow-lg rounded" style="padding: 20px; border-radius: 10px;">
+                                <h5 class="mb-2">{{ testimonial?.title }}</h5>
                                 <div class="ratings site-color mb-3">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
+                                    <i v-for="star in 5" :key="star" class="fa fa-star"
+                                        :style="{ color: star <= testimonial.rating ? '#FFD700' : '#D3D3D3' }">
+                                    </i>
                                 </div>
                                 <div class="mb-3 text-justify">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora libero
-                                    hic consequuntur ut amet molestias accusantium dolorum non in? Ea dicta expedita
-                                    dolores quam qui quaerat accusamus tempora corrupti.
+                                    {{ testimonial?.description }}
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle" src="../assets/images/banner-image.jpg">
-                                    <div class="source-info media-body pt-3">
-                                        <div>Henles querr</div>
-                                        <div>london,uk</div>
+                                    <img v-if="testimonial.path !== ''" class="source-profile rounded-circle"
+                                        :src="parsedUrl + testimonial.path"
+                                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
+                                    <div class="source-info media-body pt-3" style="text-align: left;">
+                                        <div>{{ testimonial?.name }}</div>
+                                        <div>{{ testimonial?.address }}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- 6 -->
-                        <div class="flip-item text-center text-md-left">
-                            <div class="item-inner shadow-lg rounded">
-                                <h5 class="mb-2">Amazing</h5>
-                                <div class="ratings site-color mb-3">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="mb-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora libero
-                                    hic consequuntur ut amet molestias accusantium dolorum non in? Ea dicta expedita
-                                    dolores quam qui quaerat accusamus tempora corrupti.
-                                </div>
+                    </swiper-slide>
+                </swiper>
 
-                                <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle"
-                                        src="../assets/images/Average-time-to-match.jpg">
-                                    <div class="source-info media-body pt-3">
-                                        <div>Henles querr</div>
-                                        <div>london,uk</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 7 -->
-                        <div class="flip-item text-center text-md-left">
-                            <div class="item-inner shadow-lg rounded">
-                                <h5 class="mb-2">Amazing</h5>
-                                <div class="ratings site-color mb-3">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="mb-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora libero
-                                    hic consequuntur ut amet molestias accusantium dolorum non in? Ea dicta expedita
-                                    dolores quam qui quaerat accusamus tempora corrupti.
-                                </div>
-
-                                <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img class="source-profile rounded-circle"
-                                        src="../assets/images/625b10a58137b364b18df2ea_iStock-94179607.jpg">
-                                    <div class="source-info media-body pt-3">
-                                        <div>Henles querr</div>
-                                        <div>london,uk</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item-end -->
-                    </div>
-                    <ul class="flipster__pagination"></ul>
-                </div>
             </div>
         </div>
     </section>

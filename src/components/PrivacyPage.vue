@@ -1,4 +1,15 @@
 <script setup>
+import { ref, onMounted } from "vue";
+
+const currentDate = ref("");
+
+onMounted(() => {
+    currentDate.value = new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+});
 </script>
 
 <template>
@@ -18,6 +29,9 @@
             <div class="row">
                 <div class="col footer-items">
                     <h2 class="site-color">Lease Match – Data Handling and Usage Consent</h2>
+                    <span class="font-weight">Privacy Policy and Data Usage Agreement</span><br><span
+                        class="font-weight">Effective Date: {{ currentDate }}</span><br>
+
                     <p class="text-dark">
                         <!-- By submitting your information to Lease Match, you acknowledge and agree to the following terms
                         regarding the use, storage, and dissemination of your data: -->
@@ -46,7 +60,8 @@
 
                     </p>
                     <p class="text-dark">
-                        <span class="font-weight">Ownership and Transfer of Data:</span> By using our platform, you
+                        <span class="font-weight">2. Ownership and Transfer of Data</span> <br> By using our platform,
+                        you
                         acknowledge and consent to the following:
                         <br>
                         <span class="font-weight">● Data Ownership Transfer:</span>
@@ -63,7 +78,8 @@
 
                     </p>
                     <p class="text-dark">
-                        <span class="font-weight">Exclusive Right to Monetize Data</span> <br> ● LeaseMatch.AI retains
+                        <span class="font-weight">3. Exclusive Right to Monetize Data</span> <br> ● LeaseMatch.AI
+                        retains
                         the
                         exclusive right to forward, license, sell, or otherwise
                         commercialize the data collected from users for its sole profit. This may include
@@ -73,7 +89,7 @@
 
                     </p>
                     <p class="text-dark">
-                        <span class="font-weight">Security Agreement and Security Interests
+                        <span class="font-weight">4. Security Agreement and Security Interests
                             <br></span> In the event that a security interest is granted in connection with
                         user-provided
                         data or any
@@ -86,7 +102,7 @@
 
                     </p>
                     <p class="text-dark">
-                        <span class="font-weight">Security Measures:</span> <br>
+                        <span class="font-weight">4. Security Measures:</span> <br>
                         While we retain significant rights over user data, we are committed to protecting the integrity
                         of
                         that data through: <br>
@@ -96,14 +112,15 @@
 
                     </p>
                     <p class="text-dark">
-                        <span class="font-weight"> User Consent and Agreement:</span> <br>
+                        <span class="font-weight">5. User Consent and Agreement:</span> <br>
                         1. The collection, storage, and transfer of your data as outlined above. <br>
                         2. The Company’s right to sell, transfer, or monetize your data without further notice or
                         compensation to you. <br>
                         3. The binding nature of this agreement and all associated clauses under applicable laws
                     </p>
                     <p class="text-dark">
-                        For questions or concerns regarding this  Privacy Policy, please <router-link to="/contact">Contact Us</router-link>. Should e hyperlink to
+                        For questions or concerns regarding this Privacy Policy, please <router-link
+                            to="/contact">Contact Us</router-link>. Should e hyperlink to
                         contact s page
                     </p>
                 </div>

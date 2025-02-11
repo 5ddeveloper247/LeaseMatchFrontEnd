@@ -37,7 +37,11 @@
             </div>
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
-              <a href="https://lmb.leasematch.nyc/customer/login" class="btn btn-package theme_btn2">Buy Now</a>
+              <a href="https://lmb.leasematch.nyc/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
+              <a :href="`https://lmb.leasematch.nyc/customer/login?type=trial&plan=${value.id}`"
+                class=" mt-2 btn btn-package theme_btn2">
+                Start a Free Trial
+              </a>
 
             </div>
             <div class="card-footer pricing-card-footer text-center" v-else="index !==0">
@@ -52,7 +56,7 @@
 
 <script setup>
 import { ref, onBeforeMount } from 'vue';
-import axiosInstance from '@/plugins/axios';
+import { axiosInstance } from '@/plugins/axios';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
