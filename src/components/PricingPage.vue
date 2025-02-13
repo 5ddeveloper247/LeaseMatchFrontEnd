@@ -37,9 +37,8 @@
             </div>
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
-              <a href="https://lmb.leasematch.nyc/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
-              <a v-if="value.free_trial == 1"
-                :href="`https://lmb.leasematch.nyc/customer/login?type=trial&plan=${value.id}`"
+              <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
+              <a v-if="value.free_trial == 1" :href="`http://127.0.0.1:8000/customer/login?type=trial&plan=${value.id}`"
                 class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
               </a>

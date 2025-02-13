@@ -120,8 +120,7 @@ onMounted(() => {
                     </p>
                     <p class="text-dark">
                         For questions or concerns regarding this Privacy Policy, please <router-link
-                            to="/contact">Contact Us</router-link>. Should e hyperlink to
-                        contact s page
+                            to="/contact">Contact Us</router-link>. 
                     </p>
                 </div>
             </div>
