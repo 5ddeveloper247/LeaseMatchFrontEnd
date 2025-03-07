@@ -34,12 +34,12 @@ onUnmounted(() => {
                         (347) 754-5807</span>
                 </li>
                 <li class="text-white list-style"><i class="fa fa-envelope" aria-hidden="true"
-                        style="font-size: 10px;"></i><span class="ms-2">LeaseMatch.nyc@gmail.com</span></li>
+                        style="font-size: 10px;"></i><span class="ms-2">info@leasematch.nyc</span></li>
             </ul>
             <ul class="d-flex m-0">
                 <div class="d-flex justify-content-end " style="gap: 10px;">
                     <li class="list-style sc-icon">
-                        <a href="#" class="social-media"><i class="fa-brands fa-facebook"
+                        <a href="https://www.facebook.com/share/161TecDxfj/?mibextid=wwXIfr" class="social-media"><i class="fa-brands fa-facebook"
                                 style="font-size: 12px;"></i></a>
                     </li>
                     <li class="list-style">
@@ -47,7 +47,7 @@ onUnmounted(() => {
                                 style="font-size: 12px;"></i></a>
                     </li>
                     <li class="list-style">
-                        <a href="#" class="social-media"><i class="fa-brands fa-instagram"
+                        <a href="https://www.instagram.com/leasematch?igsh=MXdiaXpmMDBoYnR0OQ%3D%3D&utm_source=qr" class="social-media"><i class="fa-brands fa-instagram"
                                 style="font-size: 12px;"></i></a>
                     </li>
                     <li class="list-style">
@@ -81,6 +81,9 @@ onUnmounted(() => {
                 </li>
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/about">About us</RouterLink>
+                </li>
+                <li class="nav-item">
+                    <RouterLink class="nav-link" to="/registerForm">Register</RouterLink>
                 </li>
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/pricing">Pricing</RouterLink>

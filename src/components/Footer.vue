@@ -72,13 +72,13 @@ function toggleChatbot() {
                                 message at the bottom as well. It will show on each page.</p>
                             <ul class="footer-social p-0">
                                 <li>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.facebook.com/share/161TecDxfj/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fab fa-x-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/leasematch?igsh=MXdiaXpmMDBoYnR0OQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fab fa-youtube"></i></a>
@@ -135,7 +135,7 @@ function toggleChatbot() {
                                     </div>
                                     <div class="info">
                                         <p class="gap-2">
-                                            <a href="mailto:leasematch.nyc@gmail.com">leasematch.nyc@gmail.com</a><br>
+                                            <a href="mailto:info@leasematch.nyc">info@leasematch.nyc</a><br>
                                             <!-- <a href="mailto:services@deneb.com">services@deneb.com</a> -->
                                         </p>
                                     </div>

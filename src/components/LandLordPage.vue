@@ -49,7 +49,7 @@
                                         class="input-field " placeholder="Full Name" maxlength="50" />
                                 </div>
                                 <div class="group col-md-6">
-                                    <input type="email" v-model="formData.email" name="email" placeholder="Email Id"
+                                    <input type="email" v-model="formData.email" name="email" placeholder="Email"
                                         class="input-field " maxlength="100" />
                                 </div>
                             </div>

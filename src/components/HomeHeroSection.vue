@@ -3,7 +3,7 @@
     <section class="sec-1 main-section mt-5">
         <div class="container-fluid main-fluid">
             <div class="row">
-                <div class="col-12 col-lg-5 main-content d-flex align-items-center text-center">
+                <div class="col-12 col-lg-4 main-content d-flex align-items-center text-center">
                     <div class="mx-md-4 mx-3 main-data">
                         <div class="main-content-h">
                             <h1 class="" ref="heading">LeaseMatch.NYC</h1>
@@ -20,14 +20,14 @@
                         <!-- <div ref="span" class="main-content-span"><span class="main-price">$5000/mo</span></div> -->
                         <div>
                             <RouterLink to="/registerForm">
-                                <button ref="enrollLink" class="main-btn mt-4 font-weight theme_btn2">Register
+                                <button ref="enrollLink" class="main-btn mt-4 font-weight theme_btn3" style="height: 50px;width: 170px;">Sign Up
                                     <span></span><span></span><span></span><span></span>
                                 </button>
                             </RouterLink>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-7 p-0">
+                <div class="col-12 col-lg-8 p-0">
                     <div class="video-container" @mousemove="updateButtonPosition" @mouseenter="showButton"
                         @mouseleave="hideButton">
                         <div class="shade-overlay"></div>

@@ -5,7 +5,7 @@
       <div class="banner-overlay"></div>
       <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" />
       <div class="banner-text">
-        <h1>PRICING</h1>
+        <h1>Pricing</h1>
       </div>
     </div>
   </section>
