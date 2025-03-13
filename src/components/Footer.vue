@@ -67,9 +67,7 @@ function toggleChatbot() {
 
                             </div>
                             <p>Find your perfect apartment in New York City effortlessly with LeaseMatch, the only
-                                platform powered by AI to connect ready tenants with ideal landlords. Please include
-                                this
-                                message at the bottom as well. It will show on each page.</p>
+                                platform powered by AI to connect ready tenants with ideal landlords.</p>
                             <ul class="footer-social p-0">
                                 <li>
                                     <a href="https://www.facebook.com/share/161TecDxfj/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>

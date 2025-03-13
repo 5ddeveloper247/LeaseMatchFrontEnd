@@ -3,7 +3,7 @@
   <section class="about-banner my-5">
     <div class="container-fluid gif-banner p-0">
       <div class="banner-overlay"></div>
-      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" />
+      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" style="object-fit: cover;" />
       <div class="banner-text">
         <h1>Pricing</h1>
       </div>
@@ -37,11 +37,17 @@
             </div>
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
-              <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
+              <!-- <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a> -->
+              <RouterLink class=" m-2 btn btn-package theme_btn2" to="/registerForm">Start a Free Trial</RouterLink>
+              <!-- <a v-if="value.free_trial == 1" :href="`http://127.0.0.1:8000/customer/login?type=trial&plan=${value.id}`"
+                class=" m-2 btn btn-package theme_btn2">
+                Start a Free Trial
+              </a> -->
+              <!-- <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a>
               <a v-if="value.free_trial == 1" :href="`http://127.0.0.1:8000/customer/login?type=trial&plan=${value.id}`"
                 class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
-              </a>
+              </a> -->
 
             </div>
             <div class="card-footer pricing-card-footer text-center" v-else="index !==0">
