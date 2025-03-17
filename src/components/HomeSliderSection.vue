@@ -352,7 +352,7 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
                     }" :centered-slides="true" style="overflow: hidden; width: 100%;">
 
                     <swiper-slide class="landing-card py-4 px-3 rounded-3 text-center"
-                        v-for="testimonial in testimonials " :key="testimonial.id"
+                        v-for="testimonial in testimonials" :key="testimonial.id"
                         style="display: flex; justify-content: center; align-items: center; ">
 
                         <div class="flip-items" style="max-width: 100%; text-align: center;">
@@ -368,9 +368,11 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
                                 </div>
 
                                 <div class="source media flex-md-row d-flex justify-content-around">
-                                    <img v-if="testimonial.path !== ''" class="source-profile rounded-circle"
-                                        :src="parsedUrl + testimonial.path"
+                                    <img class="source-profile rounded-circle" src="../assets/images/faq-img-01.png"
                                         style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
+                                    <!-- <img v-if="testimonial.path !== ''" class="source-profile rounded-circle"
+                                        :src="parsedUrl + testimonial.path" 
+                                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;"> -->
                                     <div class="source-info media-body pt-3" style="text-align: left;">
                                         <div>{{ testimonial?.name }}</div>
                                         <div>{{ testimonial?.address }}</div>
