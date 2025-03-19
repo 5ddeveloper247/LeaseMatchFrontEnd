@@ -55,6 +55,8 @@ export default {
 import { ref, onBeforeMount, onMounted, computed } from 'vue';
 import { axiosInstance } from '@/plugins/axios';
 import { baseURL } from '@/plugins/axios';
+// Testimonial Component
+import Testimonial from '@/components/Testimonial.vue';
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -340,7 +342,7 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
     <!-- section6 -->
     <section class="sec my-2">
         <div class="container space">
-            <div class="row">
+            <!-- <div class="row">
                 <h1 class="site-color text-center">Customer Satisfaction</h1>
                 <swiper class="slider" :loop="true" :effect="'coverflow'" :slides-per-view="3" :autoplay="autoplay"
                     :speed="1000" :space-between="110" :modules="modules" :coverflow-effect="{
@@ -370,9 +372,7 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
                                 <div class="source media flex-md-row d-flex justify-content-around">
                                     <img class="source-profile rounded-circle" src="../assets/images/faq-img-01.png"
                                         style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;">
-                                    <!-- <img v-if="testimonial.path !== ''" class="source-profile rounded-circle"
-                                        :src="parsedUrl + testimonial.path" 
-                                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%;"> -->
+                                    
                                     <div class="source-info media-body pt-3" style="text-align: left;">
                                         <div>{{ testimonial?.name }}</div>
                                         <div>{{ testimonial?.address }}</div>
@@ -382,6 +382,11 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
                         </div>
                     </swiper-slide>
                 </swiper>
+
+            </div> -->
+            <div class="row">
+                
+                <Testimonial :testimonials="testimonials"/>
 
             </div>
         </div>
