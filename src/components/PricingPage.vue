@@ -3,7 +3,7 @@
   <section class="about-banner my-5">
     <div class="container-fluid gif-banner p-0">
       <div class="banner-overlay"></div>
-      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" style="object-fit: cover;" />
+      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" style="object-fit:fill;" />
       <div class="banner-text">
         <h1>Pricing</h1>
       </div>

@@ -31,7 +31,7 @@
                     <div class="video-container" @mousemove="updateButtonPosition" @mouseenter="showButton"
                         @mouseleave="hideButton">
                         <div class="shade-overlay"></div>
-                        <video id="myVideo" class="h-100 w-100" style="object-fit: cover" autoplay>
+                        <video id="myVideo" class="h-100 w-100" style="object-fit:fill" autoplay>
                             <source src="../assets/banners/LeaseMatch.NYC - Your Dream Home.mp4">
                         </video>
                         <div v-if="showControls" class="video-controls"
