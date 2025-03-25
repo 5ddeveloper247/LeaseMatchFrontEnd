@@ -3,7 +3,7 @@
   <section class="about-banner my-5">
     <div class="container-fluid gif-banner p-0">
       <div class="banner-overlay"></div>
-      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" style="object-fit:fill;" />
+      <img src="../assets/banners/Banner-2.jpeg.jpg" class="h-100 w-100" loading="lazy" alt="Pricing Banner" style="object-fit:cover;" />
       <div class="banner-text">
         <h1>Pricing</h1>
       </div>
@@ -102,12 +102,13 @@ onBeforeMount(() => {
 }
 
 .banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 59%);
+    opacity: 1;
 }
 
 .banner-text {

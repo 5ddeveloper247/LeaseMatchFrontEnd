@@ -398,4 +398,7 @@ onMounted(() => {
     background: rgba(0, 0, 0, 0.3);
     pointer-events: none;
 }
+.main-content{
+    padding: 4rem 0rem !important;
+}
 </style>
