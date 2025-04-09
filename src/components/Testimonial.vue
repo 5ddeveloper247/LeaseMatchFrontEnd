@@ -45,7 +45,7 @@
               <div class="source media d-flex align-items-center">
                 <img 
                   class="source-profile" 
-                  src="../assets/images/faq-img-01.png"
+                  :src="testimonial?.path" 
                   alt="User Image"
                 />
                 <div class="source-info media-body ps-3">
