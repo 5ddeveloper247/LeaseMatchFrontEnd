@@ -13,6 +13,12 @@
   <!-- package section -->
   <section class="package_sec-1 bg-package mt-5 pb-5">
     <div class="container">
+      <!-- Set Note for first select the plan then sign up  -->
+      <div class="text-center mb-4">
+        <h2 class="site-color">Choose Your Plan</h2>
+        <p>We have a plan for every need. Choose the one that fits you best.</p>
+        <p class="text-danger">Note: Please select a plan before signing up.</p>
+      </div>
       <div class="row gy-5 align-items-center justify-content-center" v-show="pricing.length" transition name="fade">
         <div class="col-12 col-sm-6 col-lg-4" v-for="(value, index) in pricing" :key="index">
           <div class="card pricing-card">
@@ -38,7 +44,13 @@
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
               <!-- <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a> -->
-              <RouterLink class=" m-2 btn btn-package theme_btn2" to="/registerForm">Start a Free Trial</RouterLink>
+                <RouterLink 
+                class="m-2 btn btn-package theme_btn2" 
+                to="/registerForm" 
+                @click="setPlainId(value.id)"
+                >
+                Start a Free Trial
+                </RouterLink>
               <!-- <a v-if="value.free_trial == 1" :href="`http://127.0.0.1:8000/customer/login?type=trial&plan=${value.id}`"
                 class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
@@ -67,7 +79,15 @@ import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
 const pricing = ref([]);
-
+// delete localStorage.plainId
+if (localStorage.getItem('plainId')) {
+  localStorage.removeItem('plainId');
+}
+// setPlainId
+const setPlainId = (id) => {
+  console.log('setPlainId', id);
+  localStorage.setItem('plainId', id);
+};
 const getAllPageData = async () => {
   try {
     const response = await axiosInstance.get('/pricing/getAllPricingList');

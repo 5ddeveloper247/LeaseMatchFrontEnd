@@ -1229,7 +1229,7 @@ input[type="number"] {
 }
 
 
-​ #msform input,
+​ #msform input, 
 #msform textarea,
 .form-select {
   padding: 8px 15px 8px 15px;
@@ -1239,11 +1239,14 @@ input[type="number"] {
   margin-top: 2px;
   width: 100%;
   box-sizing: border-box;
-  font-family: montserrat;
+  font-family: "montserrat";
   color: var(--tex-color);
   background-color: transparent;
   font-size: 16px;
   letter-spacing: 1px;
+}
+#msform label, .action-button, #msform input{
+  font-family: "montserrat";
 }
 
 fieldset input,
