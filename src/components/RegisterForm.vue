@@ -638,7 +638,15 @@ var current = 1;
 var selectedFiles = [];
 const firstInput = ref(null);
 
-
+onMounted(() => {
+  const storedData = localStorage.getItem("registrationData");
+console.log(storedData)
+  if (storedData) {
+    const formObject = JSON.parse(storedData);
+    console.log("Restored data:", formObject);
+    // optionally populate formData
+  }
+});
 
 
 
@@ -765,67 +773,76 @@ const nextTab = async () => {
 }
 const storeRegister = async () => {
   const data = new FormData();
+  const plainFormData = {};
+
   Object.entries(formData).forEach(([key, value]) => {
     data.append(key, value);
+    plainFormData[key] = value; // Store for localStorage
   });
 
   if (selectedFiles.length > 0) {
     for (let i = 0; i < selectedFiles.length; i++) {
       data.append('documents[]', selectedFiles[i]);
+      // Files cannot be stored in localStorage, so skip adding them to plainFormData
     }
   } else {
     data.append('documents', '');
   }
 
-  try {
+  const planExist = localStorage.getItem('planId') || false;
 
+  if (!planExist) {
+    localStorage.setItem("registrationData", JSON.stringify(plainFormData)); // ✅ correct
+    window.location.href = "/pricing";
+    return; // Stop further execution
+  }
+
+  try {
     $('#uiBlocker').show();
     $('[name]').removeClass('is-invalid');
+
     const response = await axiosInstance.post('/registration/store', data);
 
+    $('#uiBlocker').hide();
 
     if (response.data.success) {
-      $('#uiBlocker').hide();
       formData.step++;
       next();
       resetFormData();
-      // $("#step_14").hide();
+
       setTimeout(() => {
-        // location.reload();
-        console.log(response.data.redirect_url+"plainId="+(localStorage.getItem('plainId') || 0))
-        window.location.href = response.data.redirect_url+"&plainId="+(localStorage.getItem('plainId') || 0);
-        // delete localStorage.plainId;
-        localStorage.removeItem('plainId');
+          const planId = localStorage.getItem('planId') || 0;
+           localStorage.removeItem('planId');
+           localStorage.removeItem('registrationData');
+           window.location.href = `${response.data.redirect_url}&planId=${planId}`;
+         
       }, 3000);
-      serverError = ''; // Clear any server error messages
+
+      serverError = '';
+    } else {
+      toastr.error('API error: ' + response.data.error);
     }
-    else {
-      $('#uiBlocker').hide();
-      toastr.error('API error:', response.data.error);
-    }
-  }
-  catch (error) {
+  } catch (error) {
     $('#uiBlocker').hide();
-    if (error.response && error.response.status === 422) {
-      // Handle validation errors
+
+    if (error.response?.status === 422) {
       Object.entries(error.response.data.errors).forEach(([key, value]) => {
         toastr.error(value[0]);
-        var inputField = $('[name="' + key + '"]').addClass('is-invalid');
+        $(`[name="${key}"]`).addClass('is-invalid');
       });
     } else {
-      // Handle other errors
       toastr.error('An unexpected error occurred. Please try again.');
       serverError = 'An unexpected error occurred. Please try again.';
     }
   }
-}
+};
+
 const next = async () => {
   current_fs = $("#step_" + current);//.parent();
  
   next_fs = $("#step_" + current).next();//.parent()
 
   $('#progressbar li').eq($('fieldset').index(next_fs)).addClass('active');
-
   next_fs.show();
   current_fs.animate(
     { opacity: 0 },
@@ -853,7 +870,7 @@ const previous = async () => {
     { opacity: 0 },
     {
       step: function (now) {
-        opacity = 1 - now
+        opacity = 1 - now 
         current_fs.css({
           display: 'none',
           position: 'relative'

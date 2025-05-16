@@ -1,4 +1,10 @@
 <template>
+   <div id="uiBlocker"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:9999;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+      <img src="../assets/images/loading-spinner.gif" alt="Loading..." style="height:150px; width:150px;" />
+    </div>
+  </div>
   <!-- banner -->
   <section class="about-banner my-5">
     <div class="container-fluid gif-banner p-0">
@@ -44,13 +50,13 @@
             <div class="card-footer pricing-card-footer text-center" v-if="index == 0">
               <!-- <a href="http://lmb.gregorygadson.io/" class="btn btn-package theme_btn2">Comming Soon</a> -->
               <!-- <a href="http://127.0.0.1:8000/customer/login" class=" btn btn-package theme_btn2">Buy Now</a> -->
-                <RouterLink 
+               <button
                 class="m-2 btn btn-package theme_btn2" 
-                to="/registerForm" 
-                @click="setPlainId(value.id)"
-                >
+                to="registerForm" 
+                @click.prevent="setPlanId(value.id)"
+              >
                 Start a Free Trial
-                </RouterLink>
+            </button>
               <!-- <a v-if="value.free_trial == 1" :href="`http://127.0.0.1:8000/customer/login?type=trial&plan=${value.id}`"
                 class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
@@ -60,7 +66,6 @@
                 class=" m-2 btn btn-package theme_btn2">
                 Start a Free Trial
               </a> -->
-
             </div>
             <div class="card-footer pricing-card-footer text-center" v-else="index !==0">
               <a href="#" class="btn btn-package theme_btn2">Comming Soon</a>
@@ -79,15 +84,52 @@ import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
 const pricing = ref([]);
-// delete localStorage.plainId
-if (localStorage.getItem('plainId')) {
-  localStorage.removeItem('plainId');
+// delete localStorage.PlanId
+if (localStorage.getItem('PlanId')) {
+  localStorage.removeItem('PlanId');
 }
-// setPlainId
-const setPlainId = (id) => {
-  console.log('setPlainId', id);
-  localStorage.setItem('plainId', id);
+
+const setPlanId = async (id) => {
+  localStorage.setItem('planId', id); // Corrected key name: PlanId -> planId
+  const registrationData = localStorage.getItem('registrationData'); // Fixed typo
+  
+  if (registrationData) {
+    try {
+      $('#uiBlocker').show();
+
+      const response = await axiosInstance.post('/registration/store',  JSON.parse(registrationData));
+
+      $('#uiBlocker').hide();
+      if (response.data.success) {
+        setTimeout(() => {
+          const planId = localStorage.getItem('planId') || 0;
+          localStorage.removeItem('planId');
+          localStorage.removeItem('registrationData');
+          window.location.href = `${response.data.redirect_url}&planId=${planId}`;
+          
+        }, 2000);
+      } else {
+        toastr.error('API error: '  + response.data.error);
+      }
+    } catch (error) {
+      $('#uiBlocker').hide();
+      if (error.response && error.response.status === 422) {
+        // Handle validation errors
+        Object.entries(error.response.data.errors).forEach(([key, value]) => {
+          toastr.error(value[0]);
+        });
+      } else {
+        toastr.error('An unexpected error occurred. Please try again.');
+      }
+    }
+  } 
+  else {
+   
+    window.location.href = "/registerForm";
+  }
 };
+
+
 const getAllPageData = async () => {
   try {
     const response = await axiosInstance.get('/pricing/getAllPricingList');
