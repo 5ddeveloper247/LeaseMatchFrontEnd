@@ -98,14 +98,13 @@ const setPlanId = async (id) => {
       $('#uiBlocker').show();
 
       const response = await axiosInstance.post('/registration/store',  JSON.parse(registrationData));
-      
+
       $('#uiBlocker').hide();
       if (response.data.success) {
         setTimeout(() => {
           const planId = localStorage.getItem('planId') || 0;
           localStorage.removeItem('planId');
           localStorage.removeItem('registrationData');
-          // alert(`${response.data.redirect_url}&planId=${planId}`);
           window.location.href = `${response.data.redirect_url}&planId=${planId}`;
           
         }, 2000);

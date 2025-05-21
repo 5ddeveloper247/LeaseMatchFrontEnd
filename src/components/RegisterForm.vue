@@ -802,11 +802,7 @@ const storeRegister = async () => {
     $('[name]').removeClass('is-invalid');
 
     const response = await axiosInstance.post('/registration/store', data);
-console.log(response);
-console.log(response.data);
-console.log(response.data.data);
-console.log(response.data.data.redirect_url);
-console.log("...................................")
+
     $('#uiBlocker').hide();
 
     if (response.data.success) {
@@ -819,7 +815,7 @@ console.log("...................................")
            localStorage.removeItem('planId');
            localStorage.removeItem('registrationData');
           // alert(`${response.data.redirect_url}&planId=${planId}`);
-          //  window.location.href = `${response.data.redirect_url}&planId=${planId}`;
+           window.location.href = `${response.data.redirect_url}&planId=${planId}`;
          
       }, 3000);
 
