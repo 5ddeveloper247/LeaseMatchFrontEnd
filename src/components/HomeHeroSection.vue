@@ -19,7 +19,7 @@
 
                         <!-- <div ref="span" class="main-content-span"><span class="main-price">$5000/mo</span></div> -->
                         <div>
-                            <RouterLink to="/pricing">
+                            <RouterLink to="/registerForm">
                                 <button ref="enrollLink" class="main-btn mt-4 font-weight theme_btn3" style="height: 50px;width: 170px;">Sign Up
                                     <span></span><span></span><span></span><span></span>
                                 </button>
