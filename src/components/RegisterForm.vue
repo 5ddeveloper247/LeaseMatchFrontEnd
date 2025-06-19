@@ -625,6 +625,220 @@
 </template>
 
 <script setup>
+// import { ref, onMounted } from 'vue';
+// import  {axiosInstance} from '@/plugins/axios';
+
+// import toastr from 'toastr';
+// import 'toastr/build/toastr.min.css';
+
+// var currentStep = 1;
+// var current_fs, next_fs, previous_fs;
+// var opacity;
+// var current = 1;
+// var selectedFiles = [];
+// const firstInput = ref(null);
+
+// onMounted(() => {
+//   const storedData = localStorage.getItem("registrationData");
+// console.log(storedData)
+//   if (storedData) {
+//     const formObject = JSON.parse(storedData);
+//     console.log("Restored data:", formObject);
+//     // optionally populate formData
+//   }
+// });
+
+
+
+// const formData = {
+//   step: '1',
+//   name: '',
+//   date_of_birth: '',
+//   email: '',
+//   phone_number: '',
+
+//   preferred_location: '',
+//   preferred_property_type: '',
+//   min_bedrooms_needed: '',
+//   min_bathrooms_needed: '',
+
+//   annual_income: '',
+//   employment_status: '',
+//   employer_name: '',
+//   income_type: '',
+//   rental_budget: '',
+
+//   rental_voucher: '',
+//   voucher_type: '',
+//   certification_detail: '',
+//   certification_expiry: '',
+
+//   current_address: '',
+//   moving_reason: '',
+//   prev_landlord_contact: '',
+//   lease_violation: '',
+
+//   household_size: '',
+//   number_of_adults: '',
+//   number_of_child: '',
+
+//   has_pets: '',
+//   pet_type: '',
+//   number_of_pets: '',
+//   pet_size: '',
+
+//   disability: '',
+//   disability_type: '',
+//   special_accomodation: '',
+
+//   max_rent_to_pay: '',
+//   preffered_move_in_date: '',
+//   lease_length_preference: '',
+
+//   criminal_record: '',
+//   legal_right: '',
+
+//   reference_name: '',
+//   reference_relationship: '',
+//   contact_information: '',
+
+//   general_note: '',
+//   work_with_broker: '',
+
+//   documents: '',
+
+//   user_name: '',
+//   user_email: '',
+//   password: '',
+//   password_confirmation: ''
+// };
+
+// var serverError = '';  // String to hold general server error messages
+// // Focus the input field when the component is mounted
+// onMounted(() => {
+//   firstInput.value.focus();
+// });
+// const nextTab = async () => {
+
+//   const data = new FormData();
+//   Object.entries(formData).forEach(([key, value]) => {
+//     data.append(key, value);
+//   });
+
+//   if (selectedFiles.length > 0) {
+//     for (let i = 0; i < selectedFiles.length; i++) {
+//       data.append('documents[]', selectedFiles[i]);
+//     }
+//   } else {
+//     data.append('documents', '');
+//   }
+
+//   try {
+
+//     $('#uiBlocker').show();
+//     $('[name]').removeClass('is-invalid');
+//     const response = await axiosInstance.post('/registration/validate', data);
+
+
+//     if (response.data.success) {
+
+//       $('#uiBlocker').hide();
+//       if (formData.step == '13') {
+//         storeRegister();
+//       } else {
+//         formData.step++;
+//         next();
+//       }
+//       serverError = ''; // Clear any server error messages
+//     } else {
+//       $('#uiBlocker').hide();
+//       toastr.error('API error:', response.data.error);
+      
+//     }
+//   } catch (error) {
+
+//     $('#uiBlocker').hide();
+//     if (error.response && error.response.status === 422) {
+//       // Handle validation errors
+//       Object.entries(error.response.data.errors).forEach(([key, value]) => {
+//         toastr.error(value[0]);
+//         var inputField = $('[name="' + key + '"]').addClass('is-invalid');
+//       });
+//     } else {
+//       // Handle other errors
+//       toastr.error('An unexpected error occurred. Please try again.');
+//       serverError = 'An unexpected error occurred. Please try again.';
+//     }
+//   }
+// }
+// const storeRegister = async () => {
+//   const data = new FormData();
+//   const plainFormData = {};
+
+//   Object.entries(formData).forEach(([key, value]) => {
+//     data.append(key, value);
+//     plainFormData[key] = value; // Store for localStorage
+//   });
+
+//   if (selectedFiles.length > 0) {
+//     for (let i = 0; i < selectedFiles.length; i++) {
+//       data.append('documents[]', selectedFiles[i]);
+//       // Files cannot be stored in localStorage, so skip adding them to plainFormData
+//     }
+//   } else {
+//     data.append('documents', '');
+//   }
+
+//   const planExist = localStorage.getItem('planId') || false;
+
+//   if (!planExist) {
+//     localStorage.setItem("registrationData", JSON.stringify(plainFormData)); // ✅ correct
+//     window.location.href = "/pricing";
+//     return; // Stop further execution
+//   }
+
+//   try {
+//     $('#uiBlocker').show();
+//     $('[name]').removeClass('is-invalid');
+
+//     const response = await axiosInstance.post('/registration/store', data);
+
+//     $('#uiBlocker').hide();
+
+//     if (response.data.success) {
+//       formData.step++;
+//       next();
+//       resetFormData();
+
+//       setTimeout(() => {
+//           const planId = localStorage.getItem('planId') || 0;
+//            localStorage.removeItem('planId');
+//            localStorage.removeItem('registrationData');
+//           // alert(`${response.data.redirect_url}&planId=${planId}`);
+//            window.location.href = `${response.data.redirect_url}&planId=${planId}`;
+         
+//       }, 3000);
+
+//       serverError = '';
+//     } else {
+//       toastr.error('API error: ' + response.data.error);
+//     }
+//   } catch (error) {
+//     $('#uiBlocker').hide();
+
+//     if (error.response?.status === 422) {
+//       Object.entries(error.response.data.errors).forEach(([key, value]) => {
+//         toastr.error(value[0]);
+//         $(`[name="${key}"]`).addClass('is-invalid');
+//       });
+//     } else {
+//       toastr.error('An unexpected error occurred. Please try again.');
+//       serverError = 'An unexpected error occurred. Please try again.';
+//     }
+//   }
+// };
+
+
 import { ref, onMounted } from 'vue';
 import  {axiosInstance} from '@/plugins/axios';
 
@@ -647,8 +861,6 @@ console.log(storedData)
     // optionally populate formData
   }
 });
-
-
 
 const formData = {
   step: '1',
@@ -714,13 +926,38 @@ const formData = {
 };
 
 var serverError = '';  // String to hold general server error messages
+
 // Focus the input field when the component is mounted
 onMounted(() => {
   firstInput.value.focus();
 });
+
 const nextTab = async () => {
+  // Check if we're on step 13 and need to verify plan selection
+  if (formData.step == '13') {
+    const planExist = localStorage.getItem('planId');
+    
+    if (!planExist) {
+      // Store current form data before redirecting to pricing
+      const plainFormData = {};
+      Object.entries(formData).forEach(([key, value]) => {
+        plainFormData[key] = value;
+      });
+      
+      localStorage.setItem("registrationData", JSON.stringify(plainFormData));
+      toastr.info('Please select a pricing plan to continue with registration.');
+      
+      // Redirect to pricing page
+      window.location.href = "/pricing";
+      return; // Stop further execution
+    }
+  }
+
+  // Get planId here, outside the step 13 check
+  const planExist = localStorage.getItem('planId');
 
   const data = new FormData();
+  data.append('plan_id', planExist || 1);
   Object.entries(formData).forEach(([key, value]) => {
     data.append(key, value);
   });
@@ -734,16 +971,15 @@ const nextTab = async () => {
   }
 
   try {
-
     $('#uiBlocker').show();
     $('[name]').removeClass('is-invalid');
     const response = await axiosInstance.post('/registration/validate', data);
 
-
     if (response.data.success) {
-
       $('#uiBlocker').hide();
+      
       if (formData.step == '13') {
+        // If we reach here, plan exists, so proceed with registration
         storeRegister();
       } else {
         formData.step++;
@@ -753,10 +989,8 @@ const nextTab = async () => {
     } else {
       $('#uiBlocker').hide();
       toastr.error('API error:', response.data.error);
-      
     }
   } catch (error) {
-
     $('#uiBlocker').hide();
     if (error.response && error.response.status === 422) {
       // Handle validation errors
@@ -771,8 +1005,14 @@ const nextTab = async () => {
     }
   }
 }
+
+const planExist = localStorage.getItem('planId');
+
 const storeRegister = async () => {
   const data = new FormData();
+  // console.log('plan_id:', planExist);
+  data.append('plan_id', planExist || 1);
+
   const plainFormData = {};
 
   Object.entries(formData).forEach(([key, value]) => {
@@ -789,14 +1029,6 @@ const storeRegister = async () => {
     data.append('documents', '');
   }
 
-  const planExist = localStorage.getItem('planId') || false;
-
-  if (!planExist) {
-    localStorage.setItem("registrationData", JSON.stringify(plainFormData)); // ✅ correct
-    window.location.href = "/pricing";
-    return; // Stop further execution
-  }
-
   try {
     $('#uiBlocker').show();
     $('[name]').removeClass('is-invalid');
@@ -811,12 +1043,10 @@ const storeRegister = async () => {
       resetFormData();
 
       setTimeout(() => {
-          const planId = localStorage.getItem('planId') || 0;
-           localStorage.removeItem('planId');
-           localStorage.removeItem('registrationData');
-          // alert(`${response.data.redirect_url}&planId=${planId}`);
-           window.location.href = `${response.data.redirect_url}&planId=${planId}`;
-         
+        const planId = localStorage.getItem('planId') || 0;
+        localStorage.removeItem('planId');
+        localStorage.removeItem('registrationData');
+        window.location.href = `${response.data.redirect_url}&planId=${planId}`;
       }, 3000);
 
       serverError = '';
