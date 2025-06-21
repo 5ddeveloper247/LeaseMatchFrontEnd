@@ -626,7 +626,7 @@
 
 <script setup>
 // import { ref, onMounted } from 'vue';
-// import  {axiosInstance} from '@/plugins/axios';
+// import { axiosInstance } from '@/plugins/axios';
 
 // import toastr from 'toastr';
 // import 'toastr/build/toastr.min.css';
@@ -640,7 +640,7 @@
 
 // onMounted(() => {
 //   const storedData = localStorage.getItem("registrationData");
-// console.log(storedData)
+//   console.log(storedData)
 //   if (storedData) {
 //     const formObject = JSON.parse(storedData);
 //     console.log("Restored data:", formObject);
@@ -733,6 +733,15 @@
 //     data.append('documents', '');
 //   }
 
+//   const planExist = localStorage.getItem('planId') || false;
+
+//   if (!planExist) {
+//     localStorage.setItem("registrationData", JSON.stringify(plainFormData));
+//     window.location.href = "/pricing";
+//     return;
+//   }
+
+
 //   try {
 
 //     $('#uiBlocker').show();
@@ -753,7 +762,7 @@
 //     } else {
 //       $('#uiBlocker').hide();
 //       toastr.error('API error:', response.data.error);
-      
+
 //     }
 //   } catch (error) {
 
@@ -811,12 +820,12 @@
 //       resetFormData();
 
 //       setTimeout(() => {
-//           const planId = localStorage.getItem('planId') || 0;
-//            localStorage.removeItem('planId');
-//            localStorage.removeItem('registrationData');
-//           // alert(`${response.data.redirect_url}&planId=${planId}`);
-//            window.location.href = `${response.data.redirect_url}&planId=${planId}`;
-         
+//         const planId = localStorage.getItem('planId') || 0;
+//         localStorage.removeItem('planId');
+//         localStorage.removeItem('registrationData');
+//         // alert(`${response.data.redirect_url}&planId=${planId}`);
+//         window.location.href = `${response.data.redirect_url}&planId=${planId}`;
+
 //       }, 3000);
 
 //       serverError = '';
@@ -936,17 +945,17 @@ const nextTab = async () => {
   // Check if we're on step 13 and need to verify plan selection
   if (formData.step == '13') {
     const planExist = localStorage.getItem('planId');
-    
+
     if (!planExist) {
       // Store current form data before redirecting to pricing
       const plainFormData = {};
       Object.entries(formData).forEach(([key, value]) => {
         plainFormData[key] = value;
       });
-      
+
       localStorage.setItem("registrationData", JSON.stringify(plainFormData));
       toastr.info('Please select a pricing plan to continue with registration.');
-      
+
       // Redirect to pricing page
       window.location.href = "/pricing";
       return; // Stop further execution
@@ -977,7 +986,7 @@ const nextTab = async () => {
 
     if (response.data.success) {
       $('#uiBlocker').hide();
-      
+
       if (formData.step == '13') {
         // If we reach here, plan exists, so proceed with registration
         storeRegister();
@@ -1068,9 +1077,11 @@ const storeRegister = async () => {
   }
 };
 
+
+
 const next = async () => {
   current_fs = $("#step_" + current);//.parent();
- 
+
   next_fs = $("#step_" + current).next();//.parent()
 
   $('#progressbar li').eq($('fieldset').index(next_fs)).addClass('active');
@@ -1101,7 +1112,7 @@ const previous = async () => {
     { opacity: 0 },
     {
       step: function (now) {
-        opacity = 1 - now 
+        opacity = 1 - now
         current_fs.css({
           display: 'none',
           position: 'relative'
@@ -1267,7 +1278,7 @@ $(document).ready(() => {
     } else {
       $(".mand-staric1").hide();
     }
-  }); 
+  });
   // if disability is yes then mandatory staric show otherwise not
   $('#disability').on('change', function (e) {
     var value = $(this).val();
@@ -1515,7 +1526,10 @@ input[type="number"] {
   font-size: 16px;
   letter-spacing: 1px;
 }
-#msform label, .action-button, #msform input{
+
+#msform label,
+.action-button,
+#msform input {
   font-family: "montserrat";
 }
 
