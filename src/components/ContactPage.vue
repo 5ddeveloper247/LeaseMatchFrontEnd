@@ -79,7 +79,7 @@
                                     <div class="contact_info-detail">
 
                                         <a href="mailto:info@deneb.com">
-                                            <p>info@deneb.com</p>
+                                            <p>info@leasematch.nyc</p>
                                         </a>
 
                                     </div>

@@ -168,7 +168,7 @@
 
                                                     <h3 class="etheme-icon-box-title">
                                                         <span><i class=" me-1 fa-regular fa-circle-check"
-                                                                style="color: #04d7e8; font-size: 25px;"></i>60
+                                                                style="color: #04d7e8; font-size: 25px;"></i>90
                                                             Days</span>
                                                     </h3>
 
@@ -189,7 +189,7 @@
                                     <i class="fa-solid fa-check-double" style="font-size:36px;"></i>
 
                                 </div>
-                                <h4 class="box-about-title">Success Rate</h4>
+                                <h4 class="box-about-title">Match Rate</h4>
                                 <div class="box-about-divider  mt-4 "></div>
                                 <div class="elementor-element elementor-element-540732f e-con-full e-flex e-con e-child"
                                     data-id="540732f" data-element_type="container"
