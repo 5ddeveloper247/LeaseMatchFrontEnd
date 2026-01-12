@@ -115,8 +115,8 @@ const parsedUrl = computed(() => baseURL.split('/api')[0]);
                                     <img class="dots" src="../assets/images/dots.svg" alt="dots">
                                     <div class="video-progress-container h-100">
                                         <div class="video-image h-100">
-                                            <img src="../assets/images/Number-of-Vetted-Renters.jpg" alt="video"
-                                                class="h-100">
+                                            <img src="../assets/images/new4.png" alt="video"
+                                                class="h-100" style="object-fit: cover;">
                                         </div>
 
                                     </div>

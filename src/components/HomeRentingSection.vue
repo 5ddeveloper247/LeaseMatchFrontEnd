@@ -98,13 +98,13 @@ export default {
                         <div class="d-flex flex-column align-items-center">
                             <!-- Images -->
                             <div class="image-container" data-step="1" style="display: block;">
-                                <img class="img-fluid process-image" src="../assets/images/renting_as_easy.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/new1.png">
                             </div>
                             <div class="image-container" data-step="2" style="display: none;">
-                                <img class="img-fluid process-image " src="../assets/images/start_application.jpg">
+                                <img class="img-fluid process-image " src="../assets/images/new2.png">
                             </div>
                             <div class="image-container" data-step="3" style="display: none;">
-                                <img class="img-fluid process-image" src="../assets/images/choose_plan.jpg">
+                                <img class="img-fluid process-image" src="../assets/images/new3.png">
                             </div>
 
                         </div>
