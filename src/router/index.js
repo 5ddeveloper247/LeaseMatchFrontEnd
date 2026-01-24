@@ -13,6 +13,7 @@ import Login from '@/components/Login.vue'
 import ForgetPass from '@/components/ForgetPass.vue'
 import OtpSection from '@/components/OtpSection.vue'
 import CommercialInquiry from '@/components/CommercialInquiry.vue'
+import MatchesPage from '@/components/MatchesPage.vue'
 
 
 
@@ -103,6 +104,11 @@ const router = createRouter({
       path: '/inquiry',
       name: 'CommercialInquiry',
       component: CommercialInquiry
+    },
+    {
+      path: '/matches',
+      name: 'matches',
+      component: MatchesPage
     }
   ],
 
